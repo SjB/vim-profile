@@ -34,10 +34,6 @@ inoremap <silent> <C-V> i_CTRL_O v
 map <unique> <C-left> :tabp<CR>
 map <unique> <C-right> :tabn<CR>
 
-" map Ctrl-O to open a file using Fuzzyfinder
-noremap <silent> \ff :FuzzyFinderFile<cr>
-noremap <silent> \fb :FuzzyFinderBuffer<cr>
-
 " F9  - Run external make command
 noremap <silent> <f9> :echo "Running make..."<cr>:sil! make<cr>:cw<cr>:redraw!<cr>:echo "Make complete."<cr>
 
