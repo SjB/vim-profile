@@ -16,7 +16,8 @@ set scrolloff=4
 
 set cink+=*;
 set path+=include
-set path+=./**
+
+autocmd BufEnter * set path+=**
 
 if has("win32")
 	set clipboard=unnamed
