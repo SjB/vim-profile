@@ -1,6 +1,5 @@
 " Enable file type detection.
 filetype plugin indent on
-syntax on
 
 " pathogen.vim
 call pathogen#helptags()
