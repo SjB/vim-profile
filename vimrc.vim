@@ -1,0 +1,46 @@
+" Enable file type detection.
+filetype plugin indent on
+syntax on
+
+" pathogen.vim
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
+" vim setting
+set incsearch
+set ruler
+set showmatch
+set matchtime=2
+set nobackup
+set number
+set scrolloff=4
+
+set cink+=*;
+set path+=include
+set path+=./**
+
+if has("win32")
+	set clipboard=unnamed
+endif
+
+" set status line
+set statusline=%<%F\ %w%r%y[%{&ff}]%m\%=\ %l,%v\ \ %p%%\ %L
+
+" remap vim commands
+inoremap <silent> <C-B> i_CTRL_O
+inoremap <silent> <C-V> i_CTRL_O v
+
+" map Tab navigation 
+map <unique> <C-left> :tabp<CR>
+map <unique> <C-right> :tabn<CR>
+
+" map Ctrl-O to open a file using Fuzzyfinder
+noremap <silent> \ff :FuzzyFinderFile<cr>
+noremap <silent> \fb :FuzzyFinderBuffer<cr>
+
+" F9  - Run external make command
+noremap <silent> <f9> :echo "Running make..."<cr>:sil! make<cr>:cw<cr>:redraw!<cr>:echo "Make complete."<cr>
+
+" omni complete quick shortcut key
+imap <C-space> <C-X><C-O>
+
