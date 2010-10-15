@@ -39,3 +39,11 @@ noremap <silent> <f9> :echo "Running make..."<cr>:sil! make<cr>:cw<cr>:redraw!<c
 " omni complete quick shortcut key
 imap <C-space> <C-X><C-O>
 
+au BufRead,BufNewFile *.vala            setfiletype vala
+au BufRead,BufNewFile *.vapi            setfiletype vala
+
+" simplified buffer flipping
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+map <C-J> <C-W>j
+map <C-K> <C-W>k
