@@ -17,6 +17,8 @@ set scrolloff=4
 set cink+=*;
 set path+=include
 
+set wildignore+=*.o,*.obj,*.exe,*.bak
+
 autocmd BufEnter * set path+=**
 
 if has("win32")
