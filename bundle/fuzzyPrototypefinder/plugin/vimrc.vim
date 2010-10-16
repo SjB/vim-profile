@@ -1,4 +1,4 @@
-noremap \fc :FuzzyPrototypeFinderClass<cr>
-noremap \fg :FuzzyPrototypeFinderGlobal<cr>
-noremap \fm :FuzzyPrototypeFinderFunction<cr>
+noremap \fpc :FuzzyPrototypeFinderClass<cr>
+noremap \fpg :FuzzyPrototypeFinderGlobal<cr>
+noremap \fpm :FuzzyPrototypeFinderFunction<cr>
 
