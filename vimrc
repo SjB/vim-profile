@@ -79,7 +79,7 @@ function! MinScmStatus()
 endfunction
 
 " set status line 
-set stl=%<%f%=\ %{MinScmStatus()}%(\ [%M%R%H%W%Y,%{&ff}]%)\ [L:%l\ C:%c]\ %L[%p%%]\ Buf:\ #%n\ [%b][0x%B]
+set stl=%<%f\ %(\ [%M%R%H%W%Y,%{&ff}]%)\ %{MinScmStatus()}%=[L:%l\ C:%c]\ %L[%2p%%]\ Buf:\ #%02n\ [%3b][0x%02B]
 
 " remap vim commands
 inoremap <silent> <C-B> i_CTRL_O
