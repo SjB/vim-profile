@@ -1,1 +1,1 @@
-noremap <silent> ,I :Intellisense<cr>
+noremap <silent> <Leader>I :Intellisense<cr>

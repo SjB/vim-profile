@@ -3,6 +3,8 @@ filetype plugin indent on
 
 syntax on
 
+let mapleader = ','
+
 augroup vala
 	au!
 	au BufRead,BufNewFile *.{vala,gs,vapi}  setfiletype vala
@@ -81,33 +83,26 @@ endfunction
 " set status line 
 set stl=%<%f\ %(\ [%M%R%H%W%Y,%{&ff}]%)\ %{MinScmStatus()}%=[L:%l\ C:%c]\ %L[%2p%%]\ Buf:\ #%02n\ [%3b][0x%02B]
 
-" remap vim commands
-inoremap <silent> <C-B> i_CTRL_O
-inoremap <silent> <C-V> i_CTRL_O v
-
 " F9  - Run external make command
 noremap <silent> <f9> :echo "Running waf..."<cr>:sil! ./waf<cr>:cw<cr>:redraw!<cr>:echo "waf complete."<cr>
 
-" omni complete quick shortcut key
-imap <C-space> <C-X><C-O>
-
 " Toggle paste mode
-nmap <silent> ,p :set invpaste<cr>:set paste?<cr>
+nmap <silent> <Leader>p :set invpaste<cr>:set paste?<cr>
 
 " Turn off that stupid highlight search
-nmap <silent> ,n :set invhls<cr>:set hls?<cr>
+nmap <silent> <Leader>n :set invhls<cr>:set hls?<cr>
 
 " Set text wrapping toggles
-nmap <silent> ,w :set invwrap<cr>:set wrap?<cr>
+nmap <silent> <Leader>w :set invwrap<cr>:set wrap?<cr>
 
 " Set up retabbing on a source file
-nmap <silent> ,rr :1,$retab<cr>
+nmap <silent> <Leader>rr :1,$retab<cr>
 
 " cd to the directory containing the file in the buffer
-nmap <silent> ,cd :lcd %:h<cr>
-nmap <silent> ,md :!mkdir -p %:p:h<cr>
+nmap <silent> <Leader>cd :lcd %:h<cr>
+nmap <silent> <Leader>md :!mkdir -p %:p:h<cr>
 
-nmap <silent> ,rc :@"<cr>
+nmap <silent> <Leader>rc :@"<cr>
 
 " allow command line editing like emacs
 cnoremap <C-A>		<Home>
@@ -123,46 +118,46 @@ cnoremap <ESC><C-F>	<S-Right>
 cnoremap <ESC><C-H>	<C-W>
 
 " simplified buffer flipping
-noremap <C-H> <C-W>h
-noremap <C-L> <C-W>l
-noremap <C-J> <C-W>j
-noremap <C-K> <C-W>k
+noremap <C-H> :wincmd h<cr>
+noremap <C-L> :wincmd l<cr>
+noremap <C-J> :wincmd j<cr>
+noremap <C-K> :wincmd k<cr>
 
 " re-assign all windows keys
-noremap <silent> ,h :wincmd h<cr>
-noremap <silent> ,j :wincmd j<cr>
-noremap <silent> ,k :wincmd k<cr>
-noremap <silent> ,l :wincmd l<cr>
+noremap <silent> <Leader>h :wincmd h<cr>
+noremap <silent> <Leader>j :wincmd j<cr>
+noremap <silent> <Leader>k :wincmd k<cr>
+noremap <silent> <Leader>l :wincmd l<cr>
 
-noremap <silent> ,sb :wincmd p<cr>
-noremap <silent> ,s= :wincmd =<cr>
-noremap <silent> ,sh :resize +10<cr>
-noremap <silent> ,sh- :resize -10<cr>
-noremap <silent> ,sv :vertical resize +10<cr>
-noremap <silent> ,sv- :vertical resize -10<cr>
+noremap <silent> <Leader>sb :wincmd p<cr>
+noremap <silent> <Leader>s= :wincmd =<cr>
+noremap <silent> <Leader>sh :resize +10<cr>
+noremap <silent> <Leader>sh- :resize -10<cr>
+noremap <silent> <Leader>sv :vertical resize +10<cr>
+noremap <silent> <Leader>sv- :vertical resize -10<cr>
 
 " close windows
-noremap <silent> ,cj :wincmd j<cr>:close<cr>
-noremap <silent> ,ck :wincmd k<cr>:close<cr>
-noremap <silent> ,ch :wincmd h<cr>:close<cr>
-noremap <silent> ,cl :wincmd l<cr>:close<cr>
-noremap <silent> ,cc :close<cr>
+noremap <silent> <Leader>cj :wincmd j<cr>:close<cr>
+noremap <silent> <Leader>ck :wincmd k<cr>:close<cr>
+noremap <silent> <Leader>ch :wincmd h<cr>:close<cr>
+noremap <silent> <Leader>cl :wincmd l<cr>:close<cr>
+noremap <silent> <Leader>cc :close<cr>
+noremap <silent> <Leader>co :wincmd o<cr>
 
-" windows placement
-noremap <silent> ,ml <C-W>L
-noremap <silent> ,mk <C-W>K
-noremap <silent> ,mh <C-W>H
-noremap <silent> ,mj <C-W>J
+" windows placeme<Leader>t
+noremap <silent> <Leader>ml :wincmd L
+noremap <silent> <Leader>mk :wincmd K
+noremap <silent> <Leader>mh :wincmd H
+noremap <silent> <Leader>mj :wincmd J
 
-noremap <silent> ,bd :bd<cr>
-nmap <silent> ,ev :e $HOME/.vim/vimrc<cr>
-nmap <silent> ,sv :so $HOME/.vim/vimrc<cr>
+noremap <silent> <Leader>bd :bd<cr>
+nmap <silent> <Leader>ev :e $HOME/.vim/vimrc<cr>
+nmap <silent> <Leader>sv :so $HOME/.vim/vimrc<cr>
 
 nmap <silent> ^ :setl hls<cr>:let @/="<C-r><C-w>"<cr>
-nmap <silent> ,gs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set nohls<cr>
-nmap <silent> ,gw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
-nmap <silent> ,gW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
-
+nmap <silent> <Leader>gs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set nohls<cr>
+nmap <silent> <Leader>gw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
+nmap <silent> <Leader>gW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
 
 "configure window size and colors
 if has("gui_running")
