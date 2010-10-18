@@ -43,7 +43,7 @@ set smartcase
 set showcmd
 set synmaxcol=2048
 set timeoutlen=500
-set virtualedit=all
+"set virtualedit=all
 set wildmenu
 set wrapscan
 
