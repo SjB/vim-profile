@@ -10,7 +10,6 @@ XPTvar $author	Steve Beaulac (SjB)
 XPTvar $email	<steve@sagacity.ca>
 
 XPTvar $SParg 	''
-XPTvar $BRfun	''
 
 XPT ncacopy
 `$CS^ `file()^
