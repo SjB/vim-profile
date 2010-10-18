@@ -5,6 +5,8 @@ syntax on
 
 let mapleader = ','
 
+"setlocal spell spelllang=en_ca
+"
 augroup vala
 	au!
 	au BufRead,BufNewFile *.{vala,gs,vapi}  setfiletype vala
