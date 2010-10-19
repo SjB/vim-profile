@@ -1,12 +1,16 @@
-" Enable file type detection.
+" Enable filetype detection.
 filetype plugin indent on
 
+" Make sure syntax in on
 syntax on
 
+" Change mapleader key
 let mapleader = ','
 
+" Set spell language
 "setlocal spell spelllang=en_ca
-"
+
+" enable vala filetype detection
 augroup vala
 	au!
 	au BufRead,BufNewFile *.{vala,gs,vapi}  setfiletype vala
@@ -24,6 +28,7 @@ set textwidth=120
 " vim setting
 "set ch=2 	" Make command line two lines high
 "set backspace=eol,indent,start
+set autoindent
 set cink+=*;
 set cpoptions+=$
 set fillchars=""
@@ -44,6 +49,7 @@ set showfulltag
 set showmatch
 set showmode
 set smartcase
+set smartindent
 set showcmd
 set synmaxcol=2048
 set timeoutlen=500
@@ -59,8 +65,10 @@ set complete=.,w,b,t,i,kspell
 " These commands open folds
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 
+" Set diff mode to ingnore white space
 set diffopt+=iwhite
 
+" Set vim search path
 set path=/usr/include/**
 set path=/usr/local/include/**
 set path=~/Projects/libs/**
@@ -68,6 +76,7 @@ set path=~/Projects/libs/**
 " reset the path when entering a buffer
 autocmd BufEnter * set path+=**
 
+" window specific setting
 if has("win32")
 	set clipboard=unnamed
 	set shellslash
@@ -104,6 +113,7 @@ nmap <silent> <Leader>rr :1,$retab<cr>
 nmap <silent> <Leader>cd :lcd %:h<cr>
 nmap <silent> <Leader>md :!mkdir -p %:p:h<cr>
 
+" execute contents of register " 
 nmap <silent> <Leader>rc :@"<cr>
 
 " allow command line editing like emacs
@@ -183,3 +193,63 @@ if has("gui_running")
 	endif
 endif
 :nohls
+
+" bundle settings
+" ===============
+
+" FuzzyPrototypefinder plugin setting
+noremap <Leader>fpc :FuzzyPrototypeFinderClass<cr>
+noremap <Leader>fpg :FuzzyPrototypeFinderGlobal<cr>
+noremap <Leader>fpm :FuzzyPrototypeFinderFunction<cr>
+
+" Intellizense
+noremap <silent> <Leader>I :Intellisense<cr>
+
+" NERD_tree setting
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowBookmarks=1
+
+" map F12 to Toggle NERD Tree view
+noremap <silent> <F12> :NERDTreeToggle<cr>
+inoremap <silent> <F12> :NERDTreeToggle<cr>
+
+noremap <silent> <Leader>nt :NERDTreeToggle<cr>
+
+" omnicppcomplete setting
+"set completeopt=menuone
+let g:OmniCpp_GlobalScopeSearch=1
+let g:OmniCpp_NamespaceSearch=1
+let g:OmniCpp_DisplayMode=0
+let g:OmniCpp_ShowScopeInAbbr=1
+let g:OmniCpp_ShowPrototypeInAbbr=1
+let g:OmniCpp_ShowAccess=1
+let g:OmniCpp_DefaultNamespaces=["std"]
+let g:OmniCpp_MayCompleteDot=1
+let g:OmniCpp_MayCompleteArrow=1
+let g:OmniCpp_MayCompleteScope=1
+let g:OmniCpp_SelectFirstItem=0
+
+" vim-fuzzyfinder setting
+noremap <silent> <Leader>ff :FufFile<cr>
+noremap <silent> <Leader>fb :FufBuffer<cr>
+noremap <silent> <Leader>ft :FufTaggedFile<cr>
+noremap <silent> <Leader>fj :FufJumpList<cr>
+noremap <silent> <Leader>fn :FufLine<cr>
+
+"nnoremap <silent> <C-]> :FufBufferTagWithCursorWord!<CR>
+"vnoremap <silent> <C-]> :FufBufferTagAllWithSelectedText!<CR>
+
+"nnoremap <silent> <C-]> :FufBufferTagAllWithCursorWord!<CR>
+"vnoremap <silent> <C-]> :FufBufferTagAllWithSelectedText!<CR>
+
+" Tlist setting
+let Tlist_Show_One_File=1
+
+noremap <silent> <F11> :TlistToggle<cr>
+inoremap <silent> <F11> :TlistToggle<cr>
+noremap <silent> ,tl	:TlistToggle<cr>
+
+" xptemplate setting
+let g:xptemplate_brace_complete=''
+let g:xptemplate_strict=0
+
