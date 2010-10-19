@@ -86,7 +86,7 @@ function! MinScmStatus()
 	endif
 endfunction
 
-" set status line 
+" set status line
 set stl=%<%f\ %(\ [%M%R%H%W%Y,%{&ff}]%)\ %{MinScmStatus()}%=[L:%l\ C:%c]\ %L[%2p%%]\ Buf:\ #%02n\ [%3b][0x%02B]
 
 " F9  - Run external make command
@@ -108,7 +108,7 @@ nmap <silent> <Leader>rr :1,$retab<cr>
 nmap <silent> <Leader>cd :lcd %:h<cr>
 nmap <silent> <Leader>md :!mkdir -p %:p:h<cr>
 
-" execute contents of register " 
+" execute contents of register "
 nmap <silent> <Leader>rc :@"<cr>
 
 " allow command line editing like emacs
@@ -178,7 +178,7 @@ if has("gui_running")
 	else
 		set antialias
 		set guifont=Nimbus\ Mono\ L\ 10
-	endif      
+	endif
 	if exists("sjb_size_lines")
 		exec 'set lines=' . sjb_size_lines
 	endif
@@ -247,4 +247,7 @@ noremap <silent> ,tl	:TlistToggle<cr>
 " xptemplate setting
 let g:xptemplate_brace_complete=''
 let g:xptemplate_strict=0
+
+" trailing-whitespace setting
+noremap <silent> ,tw :FixWhitespace<cr>
 
