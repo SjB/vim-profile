@@ -1,3 +1,10 @@
+" fix ubuntu filetype bug
+filetype off
+
+" pathogen.vim
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 " Enable filetype detection.
 filetype plugin indent on
 
@@ -10,10 +17,6 @@ let mapleader = ','
 " Set spell language
 "setlocal spell spelllang=en_ca
 set dictionary=/usr/share/dict/words
-
-" pathogen.vim
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
 " default tabs setting
 set tabstop=4
