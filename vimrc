@@ -11,12 +11,6 @@ let mapleader = ','
 "setlocal spell spelllang=en_ca
 set dictionary=/usr/share/dict/words
 
-" enable vala filetype detection
-augroup vala
-	au!
-	au BufRead,BufNewFile *.{vala,gs,vapi}  setfiletype vala
-augroup END
-
 " pathogen.vim
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
