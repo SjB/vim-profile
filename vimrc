@@ -12,8 +12,8 @@ let mapleader = ','
 set dictionary=/usr/share/dict/words
 
 " pathogen.vim
-call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " default tabs setting
 set tabstop=4
