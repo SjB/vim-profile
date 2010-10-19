@@ -9,6 +9,7 @@ let mapleader = ','
 
 " Set spell language
 "setlocal spell spelllang=en_ca
+set dictionary=/usr/share/dict/words
 
 " enable vala filetype detection
 augroup vala
