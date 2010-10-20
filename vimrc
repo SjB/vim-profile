@@ -28,7 +28,7 @@ set textwidth=120
 "set backspace=eol,indent,start
 set autoindent
 set cink+=*;
-set cpoptions+=$
+set cpoptions+=$d
 set fillchars=""
 set hidden
 set history=100
