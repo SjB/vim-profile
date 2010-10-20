@@ -234,6 +234,9 @@ call tcomment#DefineType('xslt',             '<!-- %s -->'      )
 call tcomment#DefineType('xslt_inline',      g:tcommentInlineXML)
 call tcomment#DefineType('xslt_block',       g:tcommentBlockXML )
 call tcomment#DefineType('yaml',             '# %s'             )
+call tcomment#DefineType('vala',             '// %s '           )
+call tcomment#DefineType('vala_inline',      g:tcommentInlineC  )
+call tcomment#DefineType('vala_block',       g:tcommentBlockC   )
 
 
 function! s:DefaultValue(option)
