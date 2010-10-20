@@ -206,6 +206,7 @@ noremap <silent> <Leader>I :Intellisense<cr>
 " NERD_tree setting
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=2
 
 " map F12 to Toggle NERD Tree view
 noremap <silent> <F12> :NERDTreeToggle<cr>
