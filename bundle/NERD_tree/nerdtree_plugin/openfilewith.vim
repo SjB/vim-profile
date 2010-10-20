@@ -1,7 +1,7 @@
 " ============================================================================
 " File:        openfilewith.vim
 " Description: plugin for NERD Tree that will open the selected file 
-"              using gnome-open
+"              using xdg-open
 " Maintainer:  SjB <steve.beaulac at gmail dot com>
 " Last Change: 2010 Oct 20
 " License:     This program is free software. It comes without any warranty,
@@ -23,7 +23,7 @@ call NERDTreeAddKeyMap({
 
 function! NERDTreeOpenWith()
     let treenode = g:NERDTreeFileNode.GetSelected()
-	let cmd = 'gnome-open'
+	let cmd = 'xdg-open'
 
     if cmd != ''
         exec ':silent !' . cmd . ' ' . treenode.path.str({'escape': 1})
