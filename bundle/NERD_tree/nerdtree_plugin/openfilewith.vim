@@ -23,7 +23,13 @@ call NERDTreeAddKeyMap({
 
 function! NERDTreeOpenWith()
     let treenode = g:NERDTreeFileNode.GetSelected()
-	let cmd = 'xdg-open'
+	if has("win32")
+		let cmd = 'open'
+	elseif has("mac")
+		let cmd = 'open'
+	else
+		let cmd = 'xdg-open'
+	endif
 
     if cmd != ''
         exec ':silent !' . cmd . ' ' . treenode.path.str({'escape': 1})
