@@ -229,29 +229,42 @@ let g:OmniCpp_MayCompleteScope=1
 let g:OmniCpp_SelectFirstItem=0
 
 " vim-fuzzyfinder setting
-noremap <silent> <Leader>ff :FufFile<cr>
-noremap <silent> <Leader>fb :FufBuffer<cr>
-noremap <silent> <Leader>ft :FufTaggedFile<cr>
-noremap <silent> <Leader>fj :FufJumpList<cr>
-noremap <silent> <Leader>fn :FufLine<cr>
-
-"nnoremap <silent> <C-]> :FufBufferTagWithCursorWord!<CR>
-"vnoremap <silent> <C-]> :FufBufferTagAllWithSelectedText!<CR>
-
-"nnoremap <silent> <C-]> :FufBufferTagAllWithCursorWord!<CR>
-"vnoremap <silent> <C-]> :FufBufferTagAllWithSelectedText!<CR>
+nnoremap <silent> <Leader>ff :FufFile<cr>
+nnoremap <silent> <Leader>fF :FufFile!<cr>
+nnoremap <silent> <Leader>fb :FufBuffer<cr>
+nnoremap <silent> <Leader>fB :FufBuffer!<cr>
+nnoremap <silent> <Leader>ft :FufTag<cr>
+nnoremap <silent> <Leader>fT :FufTag!<cr>
+nnoremap <silent> <Leader>fo :FufJumpList<cr>
+nnoremap <silent> <Leader>fg :FufLine<cr>
+nnoremap <silent> <Leader>fh	:FufHelp<cr>
+nnoremap <silent> <Leader>fc	:FufQuickfix<cr>
+nnoremap <silent> <Leader>f:	:FufMruCmd<cr>
+nnoremap <silent> <Leader>fu :FufBookmarkFile<cr>
+nnoremap <silent> <Leader>fua :FufBookmarkFileAdd<cr>
+nnoremap <silent> <Leader>f<C-]> :FufTagWithCursorWord!<CR>
+nnoremap <silent> <Leader>f,     :FufBufferTag<CR>
+nnoremap <silent> <Leader>f<     :FufBufferTag!<CR>
+vnoremap <silent> <Leader>f,     :FufBufferTagWithSelectedText!<CR>
+vnoremap <silent> <Leader>f<     :FufBufferTagWithSelectedText<CR>
+nnoremap <silent> <Leader>f}     :FufBufferTagWithCursorWord!<CR>
+nnoremap <silent> <Leader>f.     :FufBufferTagAll<CR>
+nnoremap <silent> <Leader>f>     :FufBufferTagAll!<CR>
+vnoremap <silent> <Leader>f.     :FufBufferTagAllWithSelectedText!<CR>
+vnoremap <silent> <Leader>f>     :FufBufferTagAllWithSelectedText<CR>
+nnoremap <silent> <Leader>f]     :FufBufferTagAllWithCursorWord!<CR>
+nnoremap <silent> <Leader>fe     :FufTaggedFile<CR>
+nnoremap <silent> <Leader>fE     :FufTaggedFile!<CR>
 
 " Tlist setting
 let Tlist_Show_One_File=1
 
-noremap <silent> <F11> :TlistToggle<cr>
-inoremap <silent> <F11> :TlistToggle<cr>
-noremap <silent> ,tl	:TlistToggle<cr>
+nnoremap <silent> <Leader>tl	:TlistToggle<cr>
 
 " xptemplate setting
 let g:xptemplate_brace_complete=''
 let g:xptemplate_strict=0
 
 " trailing-whitespace setting
-noremap <silent> ,tw :FixWhitespace<cr>
+noremap <silent> <Leader>tw :FixWhitespace<cr>
 
