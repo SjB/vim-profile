@@ -128,10 +128,10 @@ cnoremap <ESC><C-F>	<S-Right>
 cnoremap <ESC><C-H>	<C-W>
 
 " simplified buffer flipping
-noremap <C-H> :wincmd h<cr>
-noremap <C-L> :wincmd l<cr>
-noremap <C-J> :wincmd j<cr>
-noremap <C-K> :wincmd k<cr>
+noremap <silent> <C-H> :wincmd h<cr>
+noremap <silent> <C-L> :wincmd l<cr>
+noremap <silent> <C-J> :wincmd j<cr>
+noremap <silent> <C-K> :wincmd k<cr>
 
 " re-assign all windows keys
 noremap <silent> <Leader>h :wincmd h<cr>
