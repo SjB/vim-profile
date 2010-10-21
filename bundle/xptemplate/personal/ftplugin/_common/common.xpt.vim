@@ -1,4 +1,4 @@
-XPTemplate priority=all
+XPTemplate priority=all-
 
 let s:f = g:XPTfuncs()
 
@@ -9,6 +9,7 @@ endfunction "}}}
 XPTvar $SParg 	''
 
 XPT ncacopy
+`$CS^
 `$CS^ `file()^
 `$CS^  
 `$CS^ Author:
@@ -31,6 +32,7 @@ XPT ncacopy
 `$CS^
 
 XPT sjbcopy
+`$CS^
 `$CS^ `file()^
 `$CS^  
 `$CS^ Author:
