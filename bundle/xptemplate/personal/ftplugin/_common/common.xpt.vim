@@ -6,37 +6,42 @@ fun! s:f.year(...) "{{{
 	return strftime('%Y')
 endfunction "}}}
 
-XPTvar $SParg 	''
+XPTinclude
+	\ _common/personal
 
 XPT ncacopy
 `$CS^
 `$CS^ `file()^
-`$CS^  
+`$CS^
 `$CS^ Author:
 `$CS^       `$author^ `$email^
-`$CS^ 
+`$CS^
 `$CS^ Copyright (c) `year()^ The National Centre for Audiology
-`$CS^ 
+`$CS^
 `$CS^ Licesed under The National Centre for Audiology, Version 1.0
-`$CS^ (the "License"); you may not use this file except in compliance 
+`$CS^ (the "License"); you may not use this file except in compliance
 `$CS^ with the License.  You may obtain a copy of teh License by contacting
-`$CS^ 
+`$CS^
 `$CS^ The National Centre for Audiology
 `$CS^ http://www.uwo.ca/nca
-`$CS^ 
+`$CS^
 `$CS^ Unless required by applicable law or agreed to in writting
 `$CS^ software distributed under the License is distributed on an "AS IS"
 `$CS^ BASIS WITHOUT WARRANTIEDS OR CONDITIONS OF ANY KIND. either express
-`$CS^ or implied.  See the License for the specific language governing 
+`$CS^ or implied.  See the License for the specific language governing
 `$CS^ permissions and limitations under the licenses.
 `$CS^
+`cursor^
 
 XPT sjbcopy
 `$CS^
 `$CS^ `file()^
-`$CS^  
+`$CS^
 `$CS^ Author:
 `$CS^       `$author^ `$email^
-`$CS^ 
+`$CS^
 `$CS^ Copyright (c) `year()^ `$author^
-`$CS^ 
+`$CS^
+`cursor^
+
+
