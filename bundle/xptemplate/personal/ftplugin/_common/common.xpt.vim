@@ -1,13 +1,10 @@
-XPTemplate priority=personal
+XPTemplate priority=all
 
 let s:f = g:XPTfuncs()
 
 fun! s:f.year(...) "{{{
 	return strftime('%Y')
 endfunction "}}}
-
-XPTvar $author	Steve Beaulac (SjB)
-XPTvar $email	<steve@sagacity.ca>
 
 XPTvar $SParg 	''
 
