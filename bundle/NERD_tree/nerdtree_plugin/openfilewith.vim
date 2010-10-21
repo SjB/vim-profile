@@ -17,9 +17,9 @@ endif
 let g:loaded_nerdtree_openfilewith_menuitem = 1
 
 call NERDTreeAddKeyMap({
-	\ 'key': 'gO',
+	\ 'key': '.',
 	\ 'callback': 'NERDTreeOpenWith',
-	\ 'quickhelpText': 'Open file with command' })
+	\ 'quickhelpText': 'Open file with external application' })
 
 function! NERDTreeOpenWith()
     let treenode = g:NERDTreeFileNode.GetSelected()
