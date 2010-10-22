@@ -68,8 +68,8 @@ set diffopt+=iwhite
 
 " Set vim search path
 set path=/usr/include/**
-set path=/usr/local/include/**
-set path=~/Projects/libs/**
+set path+=/usr/local/include/**
+set path+=~/Projects/libs/**
 
 " reset the path when entering a buffer
 autocmd BufEnter * set path+=**
