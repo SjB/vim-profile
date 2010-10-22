@@ -257,7 +257,7 @@ nnoremap <silent> <Leader>fe     :FufTaggedFile<CR>
 nnoremap <silent> <Leader>fE     :FufTaggedFile!<CR>
 
 " Tlist setting
-let Tlist_Show_One_File=1
+" let Tlist_Show_One_File=1
 
 nnoremap <silent> <Leader>tl	:TlistToggle<cr>
 
