@@ -41,7 +41,7 @@ set matchtime=2
 set mousehide
 set nobackup
 set number
-set ruler
+" set ruler
 set scrolloff=4
 set showfulltag
 set showmatch
