@@ -92,6 +92,9 @@ endfunction
 " set status line
 set stl=%<%f\ %(\ [%M%R%H%W%Y,%{&ff}]%)\ %{MinScmStatus()}%=[L:%l\ C:%c]\ %L[%2p%%]\ Buf:\ #%02n\ [%3b][0x%02B]
 
+" make helpgrep easier to access
+cnoreabbrev H helpgrep
+
 " F9  - Run external make command
 noremap <silent> <f9> :echo "Running waf..."<cr>:sil! ./waf<cr>:cw<cr>:redraw!<cr>:echo "waf complete."<cr>
 
@@ -267,4 +270,26 @@ let g:xptemplate_strict=0
 
 " trailing-whitespace setting
 noremap <silent> <Leader>tw :FixWhitespace<cr>
+
+" Fugitive abbreviation
+cnoreabbrev git 	Git
+
+cnoreabbrev fge 	Gedit
+cnoreabbrev fgpe 	Gpedit
+cnoreabbrev fgr 	Gread
+cnoreabbrev fgw 	Gwrite
+
+cnoreabbrev fgd 	Gdiff
+
+cnoreabbrev fgmv 	Gmove
+cnoreabbrev fgrm 	Gremove
+cnoreabbrev fgb		Gblame
+
+cnoreabbrev fgst	GStatus
+cnoreabbrev fgci 	Gcommit
+cnoreabbrev fgf		Ggrep
+cnoreabbrev fgl		Glog
+
+cnoreabbrev fgs 	Gsplit
+cnoreabbrev fgvs 	Gvsplit
 
