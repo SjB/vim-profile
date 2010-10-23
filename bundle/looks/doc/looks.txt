@@ -1,0 +1,71 @@
+*looks.txt*  Manage various looks of vim
+
+Author:  Shrikant Sharat <shrikantsharat.k@gmail.com>         *looks-author*
+License: Same terms as Vim itself (see |license|)
+
+This plugin is only available if 'compatible' is not set.
+
+INTRODUCTION                                    *looks*
+
+This plugin provides a way of managing various looks of vim (works much better
+with gvim) which you can switch between with a single command or (optionally)
+a map.
+
+DEFINING LOOKS                                  *looks-define*
+
+Looks are defined in dictionary set to a global variable called g:looks. It
+looks something like this (should be inside your vimrc or sourced otherwise)
+>
+    let g:looks = {}
+    let g:looks.dark = {
+        \ '_map': "d",
+        \ ':colorscheme': "lucius",
+        \ '&guifont': "Inconsolata\\ Medium\\ 15",
+        \ '&cursorline': 1
+        \ }
+    let g:looks.light = { ":colorscheme": "tango" }
+<
+
+The above defines two looks, namely "dark" and "lite". You can load a look
+with the following command
+>
+    :Look <look-name>
+<
+Where <look-name> is either "dark" or "lite" or any other look as you might
+have defined.
+
+The first character in the keys in each look dictionary describes what kind of
+an option the key denotes. Currently 3 kinds of options are supported:
+
+    & - vim options. Run as "let key=value".
+    : - vim commands. As if run on the command line.
+    _ - options for looks plugin. Currently only "_map" is available.
+
+You can define as many looks as you want. As you can see, each look is nothing
+but a simple |Dictionary| whose keys are nothing but vim
+options/commands/settings. Not all vim options are looked for, if you want an
+option to be supported by looks, please contact me or add it yourself by
+looking at the source of looks.vim.
+
+Note that boolean options like "cursorline" and "cursorcolumn" should be set
+to 1 or 0 meaning, to turn on or off respectively.
+
+Also note that all keys inside a look are optional. You can give an empty
+dictionary for a look.
+
+If a look has a "_map" key inside it, then that look can be loaded using the
+normal mode command "<Leader>od" where "d" is the value of the "_map" key and
+"o" is the value of "g:looks_map_prefix" (which defaults to "o"). You can set
+g:looks_map_prefix to anything in your vimrc, even an empty string :).
+
+CHANGE LOG                                          *looks-changelog*
+
+0.3: Can now handle (presumably) all vim commands and options. Changed look
+dictionary format in an incompatible way to allow setting of any option.
+Thanks Salman Halim.
+
+0.2: Added support for _map to have mappings to load individual looks.
+
+0.1: Initial plugin.
+
+ vim:tw=78:et:ft=help:norl:
