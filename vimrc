@@ -130,6 +130,12 @@ cnoremap <ESC>f		<S-Right>
 cnoremap <ESC><C-F>	<S-Right>
 cnoremap <ESC><C-H>	<C-W>
 
+" buffer key mapping
+noremap <silent> <C-Tab> :bnext<cr>
+noremap <silent> <C-S-Tab> :bprevious<cr>
+noremap <silent> <Leader>ls :ls<cr>
+noremap <Leader>b	:b<Space>
+
 " simplified buffer flipping
 noremap <silent> <C-H> :wincmd h<cr>
 noremap <silent> <C-L> :wincmd l<cr>
@@ -142,12 +148,12 @@ noremap <silent> <Leader>j :wincmd j<cr>
 noremap <silent> <Leader>k :wincmd k<cr>
 noremap <silent> <Leader>l :wincmd l<cr>
 
-noremap <silent> <Leader>sb :wincmd p<cr>
+noremap <silent> <Leader>sp :wincmd p<cr>
 noremap <silent> <Leader>s= :wincmd =<cr>
-noremap <silent> <Leader>sh :resize +10<cr>
-noremap <silent> <Leader>sh- :resize -10<cr>
-noremap <silent> <Leader>sv :vertical resize +10<cr>
-noremap <silent> <Leader>sv- :vertical resize -10<cr>
+noremap <silent> <Leader>sh 	:resize +10'<cr>
+noremap <silent> <Leader>sh- 	:resize -10'<cr>
+noremap <silent> <Leader>sv 	:vertical resize +10<cr>
+noremap <silent> <Leader>sv- 	:vertical resize -10<cr>
 
 " close windows
 noremap <silent> <Leader>cj :wincmd j<cr>:close<cr>
@@ -164,13 +170,13 @@ noremap <silent> <Leader>mh :wincmd H
 noremap <silent> <Leader>mj :wincmd J
 
 noremap <silent> <Leader>bd :bd<cr>
-nmap <silent> <Leader>ev :e $HOME/.vim/vimrc<cr>
-nmap <silent> <Leader>sv :so $HOME/.vim/vimrc<cr>
+noremap <silent> <Leader>ev :e $HOME/.vim/vimrc<cr>
+noremap <silent> <Leader>sov :so $HOME/.vim/vimrc<cr>
 
-nmap <silent> ^ :setl hls<cr>:let @/="<C-r><C-w>"<cr>
-nmap <silent> <Leader>gs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set nohls<cr>
-nmap <silent> <Leader>gw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
-nmap <silent> <Leader>gW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
+noremap <silent> ^ :setl hls<cr>:let @/="<C-r><C-w>"<cr>
+noremap <silent> <Leader>gs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set nohls<cr>
+noremap <silent> <Leader>gw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
+noremap <silent> <Leader>gW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
 
 "configure window size and colors
 if has("gui_running")
@@ -207,7 +213,7 @@ noremap <Leader>fpm :FuzzyPrototypeFinderFunction<cr>
 noremap <silent> <Leader>I :Intellisense<cr>
 
 " NERD_tree setting
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
 
@@ -270,6 +276,8 @@ let g:xptemplate_strict=0
 
 " trailing-whitespace setting
 noremap <silent> <Leader>tw :FixWhitespace<cr>
+noremap <silent> <Leader>tws :highlight link ExtraWhitespace Search<cr>
+noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
 
 " Fugitive abbreviation
 cnoreabbrev git 	Git
