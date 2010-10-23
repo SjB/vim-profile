@@ -73,7 +73,10 @@ set path+=/usr/local/include/**
 set path+=~/Projects/libs/**
 
 " reset the path when entering a buffer
-autocmd BufEnter * set path+=**
+"autocmd BufEnter * set path+=**
+noremap <Leader>we :e <C-R>=expand("%:p:h")."/"<cr>
+noremap <Leader>ws :sp <C-R>=expand("%:p:h")."/"<cr>
+noremap <Leader>wvs :vsp <C-R>=expand("%:p:h")."/"<cr>
 
 " window specific setting
 if has("win32")
