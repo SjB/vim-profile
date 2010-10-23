@@ -130,6 +130,12 @@ cnoremap <ESC>f		<S-Right>
 cnoremap <ESC><C-F>	<S-Right>
 cnoremap <ESC><C-H>	<C-W>
 
+" buffer key mapping
+noremap <silent> <C-Tab> :bnext<cr>
+noremap <silent> <C-S-Tab> :bprevious<cr>
+noremap <silent> <Leader>ls :ls<cr>
+noremap <silent> <Leader>b	:b<Space>
+
 " simplified buffer flipping
 noremap <silent> <C-H> :wincmd h<cr>
 noremap <silent> <C-L> :wincmd l<cr>
@@ -142,7 +148,7 @@ noremap <silent> <Leader>j :wincmd j<cr>
 noremap <silent> <Leader>k :wincmd k<cr>
 noremap <silent> <Leader>l :wincmd l<cr>
 
-noremap <silent> <Leader>sb :wincmd p<cr>
+noremap <silent> <Leader>sp :wincmd p<cr>
 noremap <silent> <Leader>s= :wincmd =<cr>
 noremap <silent> <Leader>sh 	:resize +10'<cr>
 noremap <silent> <Leader>sh- 	:resize -10'<cr>
@@ -207,7 +213,7 @@ noremap <Leader>fpm :FuzzyPrototypeFinderFunction<cr>
 noremap <silent> <Leader>I :Intellisense<cr>
 
 " NERD_tree setting
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 let NERDTreeShowBookmarks=1
 let NERDTreeChDirMode=2
 
