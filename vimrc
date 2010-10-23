@@ -134,7 +134,7 @@ cnoremap <ESC><C-H>	<C-W>
 noremap <silent> <C-Tab> :bnext<cr>
 noremap <silent> <C-S-Tab> :bprevious<cr>
 noremap <silent> <Leader>ls :ls<cr>
-noremap <silent> <Leader>b	:b<Space>
+noremap <Leader>b	:b<Space>
 
 " simplified buffer flipping
 noremap <silent> <C-H> :wincmd h<cr>
@@ -276,6 +276,8 @@ let g:xptemplate_strict=0
 
 " trailing-whitespace setting
 noremap <silent> <Leader>tw :FixWhitespace<cr>
+noremap <silent> <Leader>tws :highlight link ExtraWhitespace Search<cr>
+noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
 
 " Fugitive abbreviation
 cnoreabbrev git 	Git
