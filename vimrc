@@ -161,7 +161,7 @@ noremap <silent> <Leader>ck :wincmd k<cr>:close<cr>
 noremap <silent> <Leader>ch :wincmd h<cr>:close<cr>
 noremap <silent> <Leader>cl :wincmd l<cr>:close<cr>
 noremap <silent> <Leader>cc :close<cr>
-noremap <silent> <Leader>co :wincmd o<cr>
+noremap <silent> <Leader>co :only<cr>
 
 " windows placeme<Leader>t
 noremap <silent> <Leader>ml :wincmd L
@@ -177,6 +177,9 @@ noremap <silent> ^ :setl hls<cr>:let @/="<C-r><C-w>"<cr>
 noremap <silent> <Leader>gs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set nohls<cr>
 noremap <silent> <Leader>gw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
 noremap <silent> <Leader>gW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
+
+vnoremap <silent> <Leader>< <gv
+vnoremap <silent> <Leader>> >gv
 
 "configure window size and colors
 if has("gui_running")
@@ -203,6 +206,9 @@ endif
 
 " bundle settings
 " ===============
+
+noremap <Leader>= :call Preserve("normal gg=G")<cr>
+"noremap <Leader>$ :call Perserve("%s/\\s\\+$//e")<cr>
 
 " FuzzyPrototypefinder plugin setting
 noremap <Leader>fpc :FuzzyPrototypeFinderClass<cr>
