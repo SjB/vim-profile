@@ -182,7 +182,7 @@ noremap <silent> <Leader>bd :bd<cr>
 noremap <silent> <Leader>ev :e $HOME/.vim/vimrc<cr>
 noremap <silent> <Leader>sov :so $HOME/.vim/vimrc<cr>
 
-noremap <silent> ^ :setl hls<cr>:let @/="<C-r><C-w>"<cr>
+noremap <silent> <Leader>^ :setl hls<cr>:let @/="<C-r><C-w>"<cr>
 noremap <silent> <Leader>gs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set nohls<cr>
 noremap <silent> <Leader>gw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
 noremap <silent> <Leader>gW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
@@ -316,3 +316,7 @@ cnoreabbrev fgl		Glog
 cnoreabbrev fgs 	Gsplit
 cnoreabbrev fgvs 	Gvsplit
 
+" devhelp 
+let g:devhelpWordLength=4
+let g:devhelpAssistant=1
+let g:devhelpSearch=1
