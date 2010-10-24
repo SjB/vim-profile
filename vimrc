@@ -51,7 +51,7 @@ set smartcase
 set smartindent
 set showcmd
 set synmaxcol=2048
-set timeoutlen=750
+set timeoutlen=500
 "set virtualedit=all
 set wildmenu
 set wrapscan
@@ -73,7 +73,8 @@ set path+=/usr/local/include/**
 set path+=~/Projects/libs/**
 
 " reset the path when entering a buffer
-"autocmd BufEnter * set path+=**
+autocmd BufEnter * set path+=**
+
 noremap <Leader>we :e <C-R>=expand("%:p:h")."/"<cr>
 noremap <Leader>ws :sp <C-R>=expand("%:p:h")."/"<cr>
 noremap <Leader>wvs :vsp <C-R>=expand("%:p:h")."/"<cr>
@@ -120,6 +121,10 @@ nmap <silent> <Leader>md :!mkdir -p %:p:h<cr>
 
 " execute contents of register "
 nmap <silent> <Leader>rc :@"<cr>
+
+" saving and resoring session
+map <S-F5> :execute "source ".input("Load session: ", "~/.vim/session/", "file")<cr>
+map <F5> :execute "mksession! ".input("Save session: ", "~/.vim/session/", "file")\| :echo "Session saved."<CR>
 
 " allow command line editing like emacs
 cnoremap <C-A>		<Home>
@@ -182,12 +187,12 @@ noremap <silent> <Leader>gs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set n
 noremap <silent> <Leader>gw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
 noremap <silent> <Leader>gW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
 
-vnoremap <silent> <Leader>< <gv
-vnoremap <silent> <Leader>> >gv
+vnoremap <silent> <S-Tab>	<gv
+vnoremap <silent> <Tab>		>gv
 
 "configure window size and colors
 if has("gui_running")
-	set guioptions=aegirLtc
+	set guioptions=aegitc
  	if has("win32")
 		set guifont=ProgCleanCo:h8:cOEM
 	elseif has("mac")
