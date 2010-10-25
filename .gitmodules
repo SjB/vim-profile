@@ -19,3 +19,6 @@
 [submodule "bundle/pythoncomplete"]
 	path = bundle/pythoncomplete
 	url = http://github.com/vim-scripts/pythoncomplete.git
+[submodule "bundle/python_match"]
+	path = bundle/python_match
+	url = http://github.com/vim-scripts/python_match.vim.git
