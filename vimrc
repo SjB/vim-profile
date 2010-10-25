@@ -320,3 +320,21 @@ cnoreabbrev fgvs 	Gvsplit
 let g:devhelpWordLength=4
 let g:devhelpAssistant=1
 let g:devhelpSearch=1
+
+" looks
+let g:looks = {}
+let g:looks.dark = {
+	\ '_map': 'd',
+	\ ':colorscheme': "dusk",
+	\ '&cursorline': 1
+	\ }
+let g:looks.tango = {
+	\ '_map': 't',
+	\ ':colorscheme': "tango2",
+	\ '&cursorline': 1
+	\ }
+let g:looks.light = {
+	\ '_map': 'l',
+	\ ':colorscheme': 'automn2',
+	\ '&cursorline': 1
+	\ }
