@@ -16,3 +16,6 @@
 [submodule "bundle/omnicppcomplete"]
 	path = bundle/omnicppcomplete
 	url = http://github.com/MasterKey/OmniCppComplete.git
+[submodule "bundle/pythoncomplete"]
+	path = bundle/pythoncomplete
+	url = http://github.com/vim-scripts/pythoncomplete.git
