@@ -7,3 +7,6 @@
 [submodule "bundle/argtextobj"]
 	path = bundle/argtextobj
 	url = http://github.com/vim-scripts/argtextobj.vim.git
+[submodule "bundle/looks"]
+	path = bundle/looks
+	url = http://github.com/vim-scripts/looks.git
