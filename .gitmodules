@@ -10,3 +10,6 @@
 [submodule "bundle/looks"]
 	path = bundle/looks
 	url = http://github.com/vim-scripts/looks.git
+[submodule "bundle/NERD_tree"]
+	path = bundle/NERD_tree
+	url = git@github.com:SjB/nerdtree.git
