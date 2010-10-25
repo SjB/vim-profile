@@ -335,6 +335,6 @@ let g:looks.tango = {
 	\ }
 let g:looks.light = {
 	\ '_map': 'l',
-	\ ':colorscheme': 'automn2',
+	\ ':colorscheme': 'autumn2',
 	\ '&cursorline': 1
 	\ }
