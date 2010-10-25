@@ -31,3 +31,42 @@
 [submodule "bundle/SearchComplete"]
 	path = bundle/SearchComplete
 	url = http://github.com/vim-scripts/SearchComplete.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = http://github.com/tpope/vim-surround.git
+[submodule "bundle/TaskList"]
+	path = bundle/TaskList
+	url = http://github.com/vim-scripts/TaskList.vim.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = http://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/trailing-whitespace"]
+	path = bundle/trailing-whitespace
+	url = git@github.com:SjB/vim-trailing-whitespace.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = http://github.com/tpope/vim-fugitive.git
+[submodule "bundle/FuzzyFinder"]
+	path = bundle/FuzzyFinder
+	url = http://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/L9"]
+	path = bundle/L9
+	url = http://github.com/vim-scripts/L9.git
+[submodule "bundle/markdown"]
+	path = bundle/markdown
+	url = http://github.com/tpope/vim-markdown.git
+[submodule "bundle/repeat"]
+	path = bundle/repeat
+	url = http://github.com/tpope/vim-repeat.git
+[submodule "bundle/scmfrontend"]
+	path = bundle/scmfrontend
+	url = http://github.com/vim-scripts/ScmFrontEnd-former-name--MinSCM.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git@github.com:SjB/taglist.vim.git
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = http://github.com/sukima/xmledit.git
+[submodule "bundle/xptemplate"]
+	path = bundle/xptemplate
+	url = git@github.com:SjB/xptemplate.git
