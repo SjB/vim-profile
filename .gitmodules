@@ -13,3 +13,6 @@
 [submodule "bundle/NERD_tree"]
 	path = bundle/NERD_tree
 	url = git@github.com:SjB/nerdtree.git
+[submodule "bundle/omnicppcomplete"]
+	path = bundle/omnicppcomplete
+	url = http://github.com/MasterKey/OmniCppComplete.git
