@@ -1,0 +1,3 @@
+[submodule "bundle/emodeline"]
+	path = bundle/emodeline
+	url = http://github.com/vim-scripts/emodeline.git
