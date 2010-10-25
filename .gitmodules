@@ -27,4 +27,4 @@
 	url = http://github.com/vim-scripts/pep8--Driessen.git
 [submodule "bundle/refactor"]
 	path = bundle/refactor
-	url = http://github.com/vim-scripts/refactor.git
+	url = git@github.com:SjB/refactor.git
