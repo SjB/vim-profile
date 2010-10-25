@@ -22,3 +22,6 @@
 [submodule "bundle/python_match"]
 	path = bundle/python_match
 	url = http://github.com/vim-scripts/python_match.vim.git
+[submodule "bundle/pep8--Driessen"]
+	path = bundle/pep8--Driessen
+	url = http://github.com/vim-scripts/pep8--Driessen.git
