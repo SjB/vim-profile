@@ -187,8 +187,8 @@ noremap <silent> <Leader>gs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set n
 noremap <silent> <Leader>gw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
 noremap <silent> <Leader>gW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
 
-vnoremap <silent> <S-Tab>	<gv
-vnoremap <silent> <Tab>		>gv
+vnoremap <silent> [v	>gv
+vnoremap <silent> ]v	<gv
 
 "configure window size and colors
 if has("gui_running")
