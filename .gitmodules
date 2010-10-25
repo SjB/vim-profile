@@ -1,3 +1,6 @@
 [submodule "bundle/emodeline"]
 	path = bundle/emodeline
 	url = http://github.com/vim-scripts/emodeline.git
+[submodule "bundle/textobj-user"]
+	path = bundle/textobj-user
+	url = http://github.com/kana/vim-textobj-user.git
