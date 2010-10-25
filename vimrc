@@ -325,16 +325,17 @@ let g:devhelpSearch=1
 let g:looks = {}
 let g:looks.dark = {
 	\ '_map': 'd',
-	\ ':colorscheme': "dusk",
-	\ '&cursorline': 1
+	\ ':colorscheme': "dusk"
 	\ }
+
 let g:looks.tango = {
 	\ '_map': 't',
 	\ ':colorscheme': "tango2",
 	\ '&cursorline': 1
 	\ }
+
 let g:looks.light = {
 	\ '_map': 'l',
-	\ ':colorscheme': 'autumn2',
+	\ ':colorscheme': 'eclipse',
 	\ '&cursorline': 1
 	\ }
