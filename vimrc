@@ -295,8 +295,6 @@ noremap <silent> <Leader>tws :highlight link ExtraWhitespace Search<cr>
 noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
 
 " Fugitive abbreviation
-cnoreabbrev git 	Git
-
 cnoreabbrev fge 	Gedit
 cnoreabbrev fgpe 	Gpedit
 cnoreabbrev fgr 	Gread
