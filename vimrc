@@ -316,7 +316,7 @@ cnoreabbrev fgvs 	Gvsplit
 
 " devhelp 
 let g:devhelpWordLength=4
-let g:devhelpAssistant=1
+let g:devhelpAssistant=0
 let g:devhelpSearch=1
 
 " looks
