@@ -323,6 +323,11 @@ let g:devhelpSearch=1
 let g:looks = {}
 let g:looks.dark = {
 	\ '_map': 'd',
+	\ ':colorscheme': "norwaytoday"
+	\ }
+
+let g:looks.normal= {
+	\ '_map': 'n',
 	\ ':colorscheme': "dusk"
 	\ }
 
