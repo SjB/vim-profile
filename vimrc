@@ -39,7 +39,6 @@ set ignorecase
 set laststatus=2
 set lazyredraw
 set matchtime=2
-set mousehide
 set nobackup
 set number
 " set ruler
