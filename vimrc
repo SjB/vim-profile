@@ -338,6 +338,5 @@ let g:looks.tango = {
 
 let g:looks.light = {
 	\ '_map': 'l',
-	\ ':colorscheme': 'eclipse',
-	\ '&cursorline': 1
+	\ ':colorscheme': 'eclipse'
 	\ }
