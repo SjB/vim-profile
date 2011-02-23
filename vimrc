@@ -39,7 +39,6 @@ set ignorecase
 set laststatus=2
 set lazyredraw
 set matchtime=2
-set mousehide
 set nobackup
 set number
 " set ruler
@@ -339,6 +338,5 @@ let g:looks.tango = {
 
 let g:looks.light = {
 	\ '_map': 'l',
-	\ ':colorscheme': 'eclipse',
-	\ '&cursorline': 1
+	\ ':colorscheme': 'eclipse'
 	\ }
