@@ -4,3 +4,5 @@ setlocal shiftwidth=4
 setlocal textwidth=80
 setlocal expandtab
 setlocal nosmartindent
+
+set omnifunc=pythoncomplete#Complete
