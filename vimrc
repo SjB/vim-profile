@@ -157,7 +157,7 @@ noremap <silent> <Leader>k :wincmd k<cr>
 noremap <silent> <Leader>l :wincmd l<cr>
 
 noremap <silent> <Leader>sp :wincmd p<cr>
-noremap <silent> <Leader>s= :wincmd =<cr>
+noremap <silent> <Leader>se :wincmd =<cr>
 noremap <silent> <Leader>sh 	:resize +10'<cr>
 noremap <silent> <Leader>sh- 	:resize -10'<cr>
 noremap <silent> <Leader>sv 	:vertical resize +10<cr>
@@ -293,26 +293,6 @@ noremap <silent> <Leader>tw :FixWhitespace<cr>
 noremap <silent> <Leader>tws :highlight link ExtraWhitespace Search<cr>
 noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
 
-" Fugitive abbreviation
-cnoreabbrev fge 	Gedit
-cnoreabbrev fgpe 	Gpedit
-cnoreabbrev fgr 	Gread
-cnoreabbrev fgw 	Gwrite
-
-cnoreabbrev fgd 	Gdiff
-
-cnoreabbrev fgmv 	Gmove
-cnoreabbrev fgrm 	Gremove
-cnoreabbrev fgb		Gblame
-
-cnoreabbrev fgst	GStatus
-cnoreabbrev fgci 	Gcommit
-cnoreabbrev fgf		Ggrep
-cnoreabbrev fgl		Glog
-
-cnoreabbrev fgs 	Gsplit
-cnoreabbrev fgvs 	Gvsplit
-
 " devhelp 
 let g:devhelpWordLength=4
 let g:devhelpAssistant=0
@@ -339,4 +319,9 @@ let g:looks.tango = {
 let g:looks.light = {
 	\ '_map': 'l',
 	\ ':colorscheme': 'eclipse'
+	\ }
+
+let g:looks.solorize = {
+	\ '_map': 's',
+	\ ':colorscheme': 'solarized'
 	\ }
