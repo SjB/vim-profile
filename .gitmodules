@@ -79,3 +79,6 @@
 [submodule "bundle/vim-buffersaurus"]
 	path = bundle/vim-buffersaurus
 	url = https://github.com/jeetsukumaran/vim-buffersaurus.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
