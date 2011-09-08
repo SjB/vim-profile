@@ -76,9 +76,21 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/bufkill"]
+	path = bundle/bufkill
+	url = git://github.com/vim-scripts/bufkill.vim.git
+[submodule "bundle/localvimrc"]
+	path = bundle/localvimrc
+	url = git://github.com/vim-scripts/localvimrc.git
+[submodule "bundle/vimoutliner"]
+	path = bundle/vimoutliner
+	url = git://github.com/vimoutliner/vimoutliner.git
 [submodule "bundle/vim-buffersaurus"]
 	path = bundle/vim-buffersaurus
 	url = https://github.com/jeetsukumaran/vim-buffersaurus.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/go"]
+	path = bundle/go
+	url = git://github.com/anzaika/go.vim.git
