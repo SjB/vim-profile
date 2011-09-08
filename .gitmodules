@@ -85,3 +85,9 @@
 [submodule "bundle/vimoutliner"]
 	path = bundle/vimoutliner
 	url = git://github.com/vimoutliner/vimoutliner.git
+[submodule "bundle/vim-buffersaurus"]
+	path = bundle/vim-buffersaurus
+	url = https://github.com/jeetsukumaran/vim-buffersaurus.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
