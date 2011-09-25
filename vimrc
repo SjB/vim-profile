@@ -195,7 +195,6 @@ if has("gui_running")
  	if has("win32")
 		set guifont=ProgCleanCo:h8:cOEM
 	elseif has("mac")
-		set nomacatsui
 		set antialias
 		set guifont=Monaco:h12
 	else
