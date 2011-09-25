@@ -64,9 +64,6 @@
 [submodule "bundle/xmledit"]
 	path = bundle/xmledit
 	url = http://github.com/sukima/xmledit.git
-[submodule "bundle/xptemplate"]
-	path = bundle/xptemplate
-	url = git@github.com:SjB/xptemplate.git
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = http://github.com/tpope/vim-unimpaired.git
