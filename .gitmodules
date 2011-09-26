@@ -91,3 +91,6 @@
 [submodule "bundle/go"]
 	path = bundle/go
 	url = git://github.com/anzaika/go.vim.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = git://github.com/vim-scripts/matchit.zip.git
