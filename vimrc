@@ -325,3 +325,7 @@ let g:looks.solorize = {
 	\ '_map': 's',
 	\ ':colorscheme': 'solarized'
 	\ }
+
+let g:snips_author = 'Steve Beaulac <sjb@beaulac.me>'
+let g:localvimrc_ask = 0
+
