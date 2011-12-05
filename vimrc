@@ -6,7 +6,9 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 " Enable filetype detection.
-filetype plugin indent on
+set filetype=on
+filetype plugin on
+filetype indent on
 
 " Make sure syntax in on
 syntax on
@@ -22,7 +24,7 @@ set dictionary=/usr/share/dict/words
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4 
-set textwidth=120
+set textwidth=79
 
 " vim setting
 "set ch=2 	" Make command line two lines high
