@@ -29,7 +29,7 @@ set textwidth=79
 " vim setting
 "set ch=2 	" Make command line two lines high
 "set backspace=eol,indent,start
-set background=dark
+"set background=light
 set autoindent
 set cink+=*;
 set cpoptions+=$d
@@ -325,6 +325,7 @@ let g:looks.light = {
 
 let g:looks.solorize = {
 	\ '_map': 's',
+	\ ':set': 'background=light',
 	\ ':colorscheme': 'solarized'
 	\ }
 
