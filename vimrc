@@ -328,6 +328,10 @@ let g:looks.solorize = {
 	\ ':set': 'background=light',
 	\ ':colorscheme': 'solarized'
 	\ }
+let g:looks.pigraph = {
+	\ '_map': 'p',
+	\ ':colorscheme': 'pigraph'
+	\ }
 
 let g:snips_author = 'Steve Beaulac <sjb@beaulac.me>'
 let g:localvimrc_ask = 0

@@ -97,3 +97,6 @@
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = git://github.com/pangloss/vim-javascript.git
+[submodule "bundle/vim-pigraph"]
+	path = bundle/vim-pigraph
+	url = git://github.com/fmeyer/vim-pigraph.git
