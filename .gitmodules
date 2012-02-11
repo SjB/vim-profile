@@ -103,3 +103,6 @@
 [submodule "bundle/vim-irblack"]
 	path = bundle/vim-irblack
 	url = git://github.com/wgibbs/vim-irblack.git
+[submodule "bundle/Hemisu"]
+	path = bundle/Hemisu
+	url = https://github.com/noahfrederick/Hemisu.git

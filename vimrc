@@ -335,6 +335,10 @@ let g:looks.pigraph = {
 	\ '_map': 'p',
 	\ ':colorscheme': 'pigraph'
 	\ }
+let g:looks.hemisu = {
+	\ '_map': 'h',
+	\ ':colorscheme': 'hemisu'
+	\ }
 
 let g:snips_author = 'Steve Beaulac <sjb@beaulac.me>'
 let g:localvimrc_ask = 0
