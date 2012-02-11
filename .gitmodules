@@ -100,3 +100,6 @@
 [submodule "bundle/vim-pigraph"]
 	path = bundle/vim-pigraph
 	url = git://github.com/fmeyer/vim-pigraph.git
+[submodule "bundle/vim-irblack"]
+	path = bundle/vim-irblack
+	url = git://github.com/wgibbs/vim-irblack.git

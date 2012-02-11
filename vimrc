@@ -66,6 +66,8 @@ set complete=.,w,b,t,i,kspell
 " These commands open folds
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 
+
+
 " Set diff mode to ingnore white space
 set diffopt+=iwhite
 
@@ -304,7 +306,8 @@ let g:devhelpSearch=1
 let g:looks = {}
 let g:looks.dark = {
 	\ '_map': 'd',
-	\ ':colorscheme': "norwaytoday"
+	\ ':set': 'background=dark',
+	\ ':colorscheme': "ir_black"
 	\ }
 
 let g:looks.normal= {
