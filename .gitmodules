@@ -85,9 +85,6 @@
 [submodule "bundle/vim-buffersaurus"]
 	path = bundle/vim-buffersaurus
 	url = https://github.com/jeetsukumaran/vim-buffersaurus.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/go"]
 	path = bundle/go
 	url = git://github.com/anzaika/go.vim.git
@@ -106,3 +103,6 @@
 [submodule "bundle/Hemisu"]
 	path = bundle/Hemisu
 	url = https://github.com/noahfrederick/Hemisu.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips
