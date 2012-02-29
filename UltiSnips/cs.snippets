@@ -1,0 +1,79 @@
+extends c 
+
+snippet imt "import NUnit.Framework;"  b
+import NUnit.Framework; 
+$0
+endsnippet
+
+snippet ab "abstract" b
+abstract 
+endsnippet
+
+snippet pclass "public class"
+public class ${1:`!p
+snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }{
+	$0
+}
+
+snippet class "class" b
+class ${1:`!p
+snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }{
+	$0
+}
+endsnippet
+
+snippet im "import"  b
+import 
+endsnippet
+
+snippet in "interface" b
+interface ${1:`!p snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }{
+	$0
+}
+endsnippet
+
+snippet "header nca" "Page Header" b
+//
+// `!p snip.rv = snip.fn`
+//
+// Author:
+//		${1:`!v g:snips_author`}
+//
+// Copyright `!v &enc[:2] == "utf" ? "©" : "(c)"` `!v strftime("%Y")` ${2:The National Centre for Audiology}
+//
+// Licesed under The National Centre for Audiology, Version 1.0
+// (the "License"); you may not use this file except in compliance
+// with the License.  You may obtain a copy of teh License by contacting
+//
+// $2
+// ${3:http://www.uwo.ca/nca}
+//
+// Unless required by applicable law or agreed to in writting
+// software distributed under the License is distributed on an "AS IS"
+// BASIS WITHOUT WARRANTIEDS OR CONDITIONS OF ANY KIND. either express
+// or implied.  See the License for the specific language governing
+// permissions and limitations under the licenses.
+$0
+endsnippet
+
+snippet nunit "Basic Nunit template"
+using NUnit.Framework;
+using System;
+
+namespace ${1:UnitTest}
+{
+	[TestFixture]
+	public class ${2:Test}
+	{
+		$0
+	}
+}
+endsnippet
+
+snippet nfunc "Function for Nunit"
+[${1:Test}]
+public void ${2:TestFunction}()
+{
+	$0
+}
+endsnippet
