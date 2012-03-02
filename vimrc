@@ -305,36 +305,27 @@ let g:devhelpSearch=1
 " looks
 let g:looks = {}
 let g:looks.dark = {
-	\ '_map': 'd',
+	\ '_map': 'n',
 	\ ':set': 'background=dark',
 	\ ':colorscheme': "ir_black"
 	\ }
 
-let g:looks.normal= {
-	\ '_map': 'n',
-	\ ':colorscheme': "dusk"
-	\ }
-
-let g:looks.tango = {
-	\ '_map': 't',
-	\ ':colorscheme': "tango2",
-	\ '&cursorline': 1
-	\ }
-
-let g:looks.light = {
-	\ '_map': 'l',
-	\ ':colorscheme': 'eclipse'
-	\ }
-
-let g:looks.solorize = {
-	\ '_map': 's',
-	\ ':set': 'background=light',
+let g:looks.morning = {
+	\ '_map' : 'm',
+	\ ':set' : 'background=light',
 	\ ':colorscheme': 'solarized'
 	\ }
+
+let g:looks.normal= {
+	\ '_map': 'd',
+	\ ':colorscheme': "default"
+	\ }
+
 let g:looks.pigraph = {
 	\ '_map': 'p',
 	\ ':colorscheme': 'pigraph'
 	\ }
+
 let g:looks.hemisu = {
 	\ '_map': 'h',
 	\ ':colorscheme': 'hemisu'
