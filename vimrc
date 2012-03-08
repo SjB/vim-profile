@@ -313,7 +313,16 @@ let g:looks.dark = {
 let g:looks.morning = {
 	\ '_map' : 'm',
 	\ ':set' : 'background=light',
-	\ ':colorscheme': 'solarized'
+	\ }
+
+let g:looks.dark = {
+	\ '_map': 'i',
+	\ ':colorscheme': "ir_black"
+	\ }
+
+let g:looks.solarized = {
+	\ '_map' : 's',
+	\ ':colorscheme' : "solarized"
 	\ }
 
 let g:looks.normal= {
