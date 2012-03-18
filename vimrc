@@ -304,7 +304,7 @@ let g:devhelpSearch=1
 
 " looks
 let g:looks = {}
-let g:looks.dark = {
+let g:looks.night= {
 	\ '_map': 'n',
 	\ ':set': 'background=dark',
 	\ ':colorscheme': "ir_black"
