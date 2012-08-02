@@ -241,6 +241,14 @@ inoremap <silent> <F12> :NERDTreeToggle<cr>
 
 noremap <silent> <Leader>nt :NERDTreeToggle<cr>
 
+" TagsList setting
+" map F12 to Toggle NERD Tree view
+noremap <silent> <F11> :TlistToggle<cr>
+inoremap <silent> <F11> :TlistToggle<cr>
+
+noremap <silent> <Leader>nl :TlistToggle<cr>
+
+
 " omnicppcomplete setting
 "set completeopt=menuone
 let g:OmniCpp_GlobalScopeSearch=1
