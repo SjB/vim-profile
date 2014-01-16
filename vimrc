@@ -1,9 +1,9 @@
 " fix ubuntu filetype bug
+set nocompatible
 filetype off
 
-" pathogen.vim
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set rtp+=bundle/vundle/
+call vundle#rc()
 
 " Enable filetype detection.
 set filetype=on
