@@ -5,6 +5,60 @@ filetype off
 set rtp+=bundle/vundle/
 call vundle#rc()
 
+"Vundle manage vim plugins
+" Github repos
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/snipmate-snippets'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-flatfoot'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-ragtag'
+Bundle 'godlygeek/csapprox'
+Bundle 'godlygeek/tabular'
+Bundle 'SjB/refactor'
+Bundle 'noahfrederick/vim-hemisu'
+Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'kien/ctrlp.vim'
+Bundle 'anzaika/go.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'gregsexton/MatchTag'
+Bundle 'yazug/vim-taglist-plus'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'jeetsukumaran/vim-buffersaurus'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'wesgibbs/vim-irblack'
+Bundle 'pangloss/vim-javascript'
+Bundle 'fmeyer/vim-pigraph'
+Bundle 'vimoutliner/vimoutliner'
+Bundle 'majutsushi/tagbar'
+
+" vim-script repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'bufkill.vim'
+Bundle 'localvimrc'
+Bundle 'matchit.zip'
+Bundle 'pythoncomplete'
+Bundle 'python_match.vim'
+Bundle 'a.vim'
+Bundle 'bufexplorer.zip'
+Bundle 'delimitMate.vim'
+Bundle 'IndexedSearch'
+Bundle 'argtextobj.vim'
+Bundle 'looks'
+Bundle 'YankRing.vim'
+
+" non-GitHub repos
+Bundle 'git://git.wincent.com/command-t.git'
+
 " Enable filetype detection.
 set filetype=on
 filetype plugin on
