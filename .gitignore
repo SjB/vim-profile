@@ -2,3 +2,5 @@
 tags
 tags-ja
 .*.swp
+bundle/*
+!bundle/vundle
