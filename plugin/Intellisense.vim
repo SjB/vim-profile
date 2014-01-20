@@ -10,7 +10,7 @@ function s:AddTags(dir)
 	endif
 
 	if exists('*system')		
-		let cmd_output = system("ctags -R -a --c++-kinds=+p --langmap=C#:.vala.cs --fields=+iaS --extra=+q " . escape(dir, s:escape_chars))
+		let cmd_output = system("ctags -R --c++-kinds=+p --langmap=C#:.vala.cs --fields=+iaS --extra=+q " . escape(dir, s:escape_chars))
 		return 1
 	endif
 endfunction
