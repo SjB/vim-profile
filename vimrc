@@ -471,10 +471,10 @@ noremap <silent> <Leader>cc :close<cr>
 noremap <silent> <Leader>co :only<cr>
 
 " windows placeme<Leader>t
-noremap <silent> <Leader>ml :wincmd L
-noremap <silent> <Leader>mk :wincmd K
-noremap <silent> <Leader>mh :wincmd H
-noremap <silent> <Leader>mj :wincmd J
+noremap <silent> <Leader>ml :wincmd L<cr>
+noremap <silent> <Leader>mk :wincmd K<cr>
+noremap <silent> <Leader>mh :wincmd H<cr>
+noremap <silent> <Leader>mj :wincmd J<cr>
 
 noremap <silent> <Leader>bd :bd<cr>
 noremap <silent> <Leader>ev :e $HOME/.vim/vimrc<cr>
