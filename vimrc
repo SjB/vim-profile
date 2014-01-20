@@ -2,6 +2,10 @@
 set nocompatible
 filetype off
 
+let g:ctrlp_map = '<c-space>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'ra'
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
