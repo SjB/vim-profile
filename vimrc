@@ -2,9 +2,55 @@
 set nocompatible
 filetype off
 
+" Change mapleader key
+let mapleader = ','
+
+" CtrlP setting
 let g:ctrlp_map = '<c-space>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+
+" NERD_tree setting
+let NERDTreeQuitOnOpen=0
+let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=2
+
+let g:localvimrc_ask = 0
+
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
+" devhelp 
+let g:devhelpWordLength=4
+let g:devhelpAssistant=0
+let g:devhelpSearch=1
+
+if !has("gui")
+	let g:CSApprox_loaded = 1
+endif
+
+"configure window size and colors
+if has("gui_running")
+	set guioptions=aegitc
+ 	if has("win32")
+		set guifont=ProgCleanCo:h8:cOEM
+	elseif has("mac")
+		set antialias
+		set guifont=Monaco:h12
+	else
+		set antialias
+		set guifont=Nimbus\ Mono\ L\ 10
+	endif
+	if exists("sjb_size_lines")
+		exec 'set lines=' . sjb_size_lines
+	endif
+
+	if exists("sjb_size_columns")
+		exec 'set columns=' . sjb_size_columns
+	endif
+endif
+:nohls
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -77,9 +123,6 @@ syntax on
 
 runtime ftplugin/man.vim
 
-" Change mapleader key
-let mapleader = ','
-
 " Set spell language
 "setlocal spell spelllang=en_ca
 set dictionary=/usr/share/dict/words
@@ -137,7 +180,6 @@ set diffopt+=iwhite
 set path=/usr/include/**
 set path+=/usr/local/include/**
 set path+=~/Projects/lib/**
-
 
 noremap <Leader>we :e <C-R>=expand("%:p:h")."/"<cr>
 noremap <Leader>ws :sp <C-R>=expand("%:p:h")."/"<cr>
@@ -446,28 +488,6 @@ noremap <silent> <Leader>gW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<
 vnoremap <silent> [v	>gv
 vnoremap <silent> ]v	<gv
 
-"configure window size and colors
-if has("gui_running")
-	set guioptions=aegitc
- 	if has("win32")
-		set guifont=ProgCleanCo:h8:cOEM
-	elseif has("mac")
-		set antialias
-		set guifont=Monaco:h12
-	else
-		set antialias
-		set guifont=Nimbus\ Mono\ L\ 10
-	endif
-	if exists("sjb_size_lines")
-		exec 'set lines=' . sjb_size_lines
-	endif
-
-	if exists("sjb_size_columns")
-		exec 'set columns=' . sjb_size_columns
-	endif
-endif
-:nohls
-
 " bundle settings
 " ===============
 
@@ -481,11 +501,6 @@ noremap <Leader>fpm :FuzzyPrototypeFinderFunction<cr>
 
 " Intellizense
 noremap <silent> <Leader>I :Intellisense<cr>
-
-" NERD_tree setting
-let NERDTreeQuitOnOpen=0
-let NERDTreeShowBookmarks=1
-let NERDTreeChDirMode=2
 
 " map F12 to Toggle NERD Tree view
 noremap <silent> <F12> :NERDTreeToggle<cr>
@@ -547,19 +562,10 @@ nnoremap <silent> <Leader>fE     :FufTaggedFile!<CR>
 
 nnoremap <silent> <Leader>tl	:TlistToggle<cr>
 
-" xptemplate setting
-let g:xptemplate_brace_complete=''
-let g:xptemplate_strict=0
-
 " trailing-whitespace setting
 noremap <silent> <Leader>tw :FixWhitespace<cr>
 noremap <silent> <Leader>tws :highlight link ExtraWhitespace Search<cr>
 noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
-
-" devhelp 
-let g:devhelpWordLength=4
-let g:devhelpAssistant=0
-let g:devhelpSearch=1
 
 " looks <leader>o
 let g:looks = {}
@@ -598,10 +604,4 @@ let g:looks.hemisu = {
 	\ '_map': 'h',
 	\ ':colorscheme': 'hemisu'
 	\ }
-
-let g:localvimrc_ask = 0
-
-if !has("gui")
-	let g:CSApprox_loaded = 1
-endif
 
