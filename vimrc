@@ -9,6 +9,8 @@ let g:ctrlp_working_path_mode = 'ra'
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
+
 "Vundle manage vim plugins
 " Github repos
 Bundle 'scrooloose/nerdtree'
