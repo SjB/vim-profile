@@ -565,11 +565,15 @@ let g:devhelpSearch=1
 let g:looks = {}
 let g:looks.dark = {
 	\ '_map': 'd',
-	\ ':set': 'background=dark',
-	\ ':colorscheme': "ir_black"
+	\ ':set': 'background=dark'
 	\ }
 
-let g:looks.normal= {
+let g:looks.light = {
+	\ '_map': 'l',
+	\ ':set': 'background=light'
+	\ }
+
+let g:looks.dusk= {
 	\ '_map': 'n',
 	\ ':colorscheme': "dusk"
 	\ }
@@ -580,20 +584,16 @@ let g:looks.tango = {
 	\ '&cursorline': 1
 	\ }
 
-let g:looks.light = {
-	\ '_map': 'l',
-	\ ':colorscheme': 'eclipse'
-	\ }
-
 let g:looks.solorize = {
 	\ '_map': 's',
-	\ ':set': 'background=light',
 	\ ':colorscheme': 'solarized'
 	\ }
+
 let g:looks.pigraph = {
 	\ '_map': 'p',
 	\ ':colorscheme': 'pigraph'
 	\ }
+
 let g:looks.hemisu = {
 	\ '_map': 'h',
 	\ ':colorscheme': 'hemisu'
@@ -604,3 +604,4 @@ let g:localvimrc_ask = 0
 if !has("gui")
 	let g:CSApprox_loaded = 1
 endif
+
