@@ -65,7 +65,7 @@ Bundle 'looks'
 Bundle 'YankRing.vim'
 
 " non-GitHub repos
-Bundle 'git://git.wincent.com/command-t.git'
+" Bundle 'git://git.wincent.com/command-t.git' "Requires Ruby
 
 " Enable filetype detection.
 set filetype=on
