@@ -92,7 +92,7 @@ Bundle 'wesgibbs/vim-irblack'
 Bundle 'pangloss/vim-javascript'
 Bundle 'fmeyer/vim-pigraph'
 Bundle 'vimoutliner/vimoutliner'
-Bundle 'majutsushi/tagbar'
+"Bundle 'majutsushi/tagbar'
 
 " vim-script repos
 Bundle 'L9'
