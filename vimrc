@@ -399,7 +399,7 @@ cnoremap <ESC><C-H>	<C-W>
 noremap <silent> <C-Tab> :bnext<cr>
 noremap <silent> <C-S-Tab> :bprevious<cr>
 noremap <silent> <Leader>ls :ls<cr>
-noremap <Leader>b	:b<Space>
+noremap <Leader>bj	:b<Space>
 
 " simplified buffer flipping
 noremap <silent> <C-H> :wincmd h<cr>
