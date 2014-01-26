@@ -559,6 +559,9 @@ nnoremap <silent> <Leader>f]     :FufBufferTagAllWithCursorWord!<CR>
 nnoremap <silent> <Leader>fe     :FufTaggedFile<CR>
 nnoremap <silent> <Leader>fE     :FufTaggedFile!<CR>
 
+" CtrlP keybinding
+nnoremap <silent> <Leader>ct	:CtrlPBufTagAll<cr>
+
 " Tlist setting
 " let Tlist_Show_One_File=1
 
