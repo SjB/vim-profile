@@ -92,6 +92,8 @@ Bundle 'wesgibbs/vim-irblack'
 Bundle 'pangloss/vim-javascript'
 Bundle 'fmeyer/vim-pigraph'
 Bundle 'vimoutliner/vimoutliner'
+"Bundle 'nosami/Omnisharp'
+Bundle 'Valloric/YouCompleteMe'
 "Bundle 'majutsushi/tagbar'
 
 " vim-script repos
