@@ -560,7 +560,8 @@ nnoremap <silent> <Leader>fe     :FufTaggedFile<CR>
 nnoremap <silent> <Leader>fE     :FufTaggedFile!<CR>
 
 " CtrlP keybinding
-nnoremap <silent> <Leader>ct	:CtrlPBufTagAll<cr>
+nnoremap <silent> <Leader>ct	:CtrlPTag<cr>
+nnoremap <silent> <Leader>cb	:CtrlPBuffer<cr>
 
 " Tlist setting
 " let Tlist_Show_One_File=1
