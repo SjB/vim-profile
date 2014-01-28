@@ -1,6 +1,8 @@
 " bundle settings
 " ===============
 
+autocmd FileType c,cpp,cs,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif 
+
 " Solorized {
         let g:solarized_termcolors=256
         let g:solarized_termtrans=1
@@ -50,11 +52,23 @@ noremap <Leader>= :call Preserve("normal gg=G")<cr>
     autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 " }
 
-" Use honza's snippets.
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+" neosnippet {
+    " Use honza's snippets.
+    let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+    " Enable neosnippet snipmate compatibility mode
+    let g:neosnippet#enable_snipmate_compatibility = 1
+    let g:neosnippet#disable_runtime_snippets = { '_' : 1, }
 
-" Enable neosnippet snipmate compatibility mode
-let g:neosnippet#enable_snipmate_compatibility = 1
+
+    imap <C-k>  <Plug>(neosnippet_expand_or_jump)
+    smap <C-k>  <Plug>(neosnippet_expand_or_jump)
+    xmap <C-k>  <Plug>(neosnippet_expand_target)
+
+    " For snippet_complete marker.
+    if has('conceal')
+        set conceallevel=2 concealcursor=i
+    endif
+"}
 
 " sneak {
     let g:sneak#steak = 1
@@ -63,6 +77,9 @@ let g:neosnippet#enable_snipmate_compatibility = 1
     xmap f <Plug>VSneakForward
     xmap F <Plug>VSneakBackward
 "}
+
+" vim-autoclose
+let g:autoclose_vim_commentmode = 1
 
 " Intellizense
 noremap <silent> <Leader>I :Intellisense<cr>

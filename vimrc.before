@@ -99,25 +99,4 @@ if !has("gui")
     let g:CSApprox_hook_post = ['hi clear SignColumn']
 endif
 
-autocmd FileType c,cpp,cs,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif 
 
-if !exists('g:spf13_leader')
-	let mapleader = ','
-else
-	let mapleader=g:spf13_leader
-endif
-if !exists('g:spf13_localleader')
-	let maplocalleader = '_'
-else
-	let maplocalleader=g:spf13_localleader
-endif
-
-" Most prefer to toggle search highlighting rather than clear the current
-" search results. To clear search highlighting rather than toggle it on
-" and off, add the following to your .vimrc.before.local file:
-"   let g:spf13_clear_search_highlight = 1
-if exists('g:spf13_clear_search_highlight')
-	nmap <silent> <leader>/ :nohlsearch<CR>
-else
-	nmap <silent> <leader>/ :set invhlsearch<CR>
-endif

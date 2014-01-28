@@ -1,3 +1,25 @@
+if !exists('g:spf13_leader')
+	let mapleader = ','
+else
+	let mapleader=g:spf13_leader
+endif
+
+if !exists('g:spf13_localleader')
+	let maplocalleader = '_'
+else
+	let maplocalleader=g:spf13_localleader
+endif
+
+" Most prefer to toggle search highlighting rather than clear the current
+" search results. To clear search highlighting rather than toggle it on
+" and off, add the following to your .vimrc.before.local file:
+"   let g:spf13_clear_search_highlight = 1
+if exists('g:spf13_clear_search_highlight')
+	nmap <silent> <leader>/ :nohlsearch<CR>
+else
+	nmap <silent> <leader>/ :set invhlsearch<CR>
+endif
+
 " http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
 " Restore cursor to file position in previous editing session
 " To disable this, add the following to your .vimrc.before.local file:
