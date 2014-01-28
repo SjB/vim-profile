@@ -1,0 +1,103 @@
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'L9'
+
+"Vundle manage vim plugins
+" Github repos
+Bundle 'tpope/vim-repeat'
+Bundle 'mbbill/undotree'
+Bundle 'tpope/vim-surround'
+Bundle 'justinmk/vim-sneak'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'spf13/vim-autoclose'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Shougo/context_filetype.vim'
+Bundle 'osyo-manga/vim-over'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
+
+Bundle 'gregsexton/MatchTag'
+
+"Bundle 'spf13/snipmate-snippets'
+
+Bundle 'honza/vim-snippets'
+Bundle 'Shougo/neocomplcache.vim'
+Bundle 'Shougo/neosnippet'
+"Bundle 'msanders/snipmate.vim'
+
+Bundle 'godlygeek/csapprox'
+
+Bundle 'bronson/vim-trailing-whitespace'
+"Bundle 'bling/vim-bufferline'
+
+Bundle 'godlygeek/tabular'
+Bundle 'jeetsukumaran/vim-buffersaurus'
+Bundle 'majutsushi/tagbar'
+Bundle 'mhinz/vim-signify'
+Bundle 'nathanaelkane/vim-indent-guides'
+
+Bundle 'anzaika/go.vim'
+Bundle 'Blackrush/vim-gocode'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-git'
+
+Bundle 'spf13/vim-colors'
+Bundle 'fmeyer/vim-pigraph'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'noahfrederick/vim-hemisu'
+Bundle 'wesgibbs/vim-irblack'
+
+"Bundle 'nosami/Omnisharp''
+Bundle 'quentindecock/vim-cucumber-align-pipes'
+"Bundle 'scrooloose/snipmate-snippets'
+Bundle 'scrooloose/syntastic'
+"Bundle 'SirVer/ultisnips'
+Bundle 'SjB/refactor'
+Bundle 'SjB/devhelp.vim'
+Bundle 'SjB/gtk-vim-syntax'
+Bundle 'spf13/vim-preview'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-flatfoot'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-cucumber'
+"Bundle 'Valloric/YouCompleteMe'
+Bundle 'vimoutliner/vimoutliner'
+"Bundle 'yazug/vim-taglist-plus'
+
+
+" vim-script repos
+""Bundle 'FuzzyFinder'
+Bundle 'bufkill.vim'
+Bundle 'localvimrc'
+Bundle 'matchit.zip'
+Bundle 'pythoncomplete'
+Bundle 'python_match.vim'
+Bundle 'a.vim'
+"Bundle 'bufexplorer.zip'
+Bundle 'delimitMate.vim'
+Bundle 'IndexedSearch'
+Bundle 'argtextobj.vim'
+Bundle 'looks'
+""Bundle 'YankRing.vim'
+Bundle 'Puppet-Syntax-Highlighting'
+
+" non-GitHub repos
+" Bundle 'git://git.wincent.com/command-t.git' "Requires Ruby
+
+

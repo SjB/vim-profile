@@ -1,0 +1,123 @@
+" Change mapleader key
+let mapleader = ','
+
+" looks <leader>o {
+    let g:looks = {}
+    let g:looks.dark = {
+                \ '_map': 'd',
+                \ ':set': 'background=dark'
+                \ }
+
+    let g:looks.light = {
+                \ '_map': 'l',
+                \ ':set': 'background=light'
+                \ }
+
+    let g:looks.dusk= {
+                \ '_map': 'n',
+                \ ':colorscheme': "dusk"
+                \ }
+
+    let g:looks.tango = {
+                \ '_map': 't',
+                \ ':colorscheme': "tango2",
+                \ '&cursorline': 1
+                \ }
+
+    let g:looks.solorize = {
+                \ '_map': 's',
+                \ ':colorscheme': 'solarized'
+                \ }
+
+    let g:looks.pigraph = {
+                \ '_map': 'p',
+                \ ':colorscheme': 'pigraph'
+                \ }
+
+    let g:looks.hemisu = {
+                \ '_map': 'h',
+                \ ':colorscheme': 'hemisu'
+                \ }
+" }
+
+" omnicppcomplete setting {
+    "set completeopt=menuone
+    let g:OmniCpp_GlobalScopeSearch=1
+    let g:OmniCpp_NamespaceSearch=1
+    let g:OmniCpp_DisplayMode=0
+    let g:OmniCpp_ShowScopeInAbbr=1
+    let g:OmniCpp_ShowPrototypeInAbbr=1
+    let g:OmniCpp_ShowAccess=1
+    let g:OmniCpp_DefaultNamespaces=["std"]
+    let g:OmniCpp_MayCompleteDot=1
+    let g:OmniCpp_MayCompleteArrow=1
+    let g:OmniCpp_MayCompleteScope=1
+    let g:OmniCpp_SelectFirstItem=0
+" }
+
+" UndoTree {
+    nnoremap <Leader>u :UndotreeToggle<CR>
+    " If undotree is opened, it is likely one wants to interact with it.
+    let g:undotree_SetFocusWhenToggle=1
+" }
+
+" indent_guides {
+    let g:indent_guides_start_level = 2
+    let g:indent_guides_guide_size = 1
+    let g:indent_guides_enable_on_vim_startup = 1
+" }
+
+" CtrlP setting {
+    let g:ctrlp_map = '<c-space>'
+    let g:ctrlp_cmd = 'CtrlPMixed'
+    let g:ctrlp_working_path_mode = 'ra'
+    let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+                              \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+
+" }
+
+" NERD_tree setting {
+    let NERDTreeQuitOnOpen=0
+    let NERDTreeShowBookmarks=1
+    let NERDTreeChDirMode=2
+" }
+
+let g:NERDShutUp=1
+let b:match_ignorecase = 1
+
+let g:localvimrc_ask = 0
+
+"let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
+" devhelp 
+let g:devhelpWordLength=4
+let g:devhelpAssistant=0
+let g:devhelpSearch=1
+
+if !has("gui")
+    let g:CSApprox_loaded = 1
+    let g:CSApprox_hook_post = ['hi clear SignColumn']
+endif
+
+autocmd FileType c,cpp,cs,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif 
+
+if !exists('g:spf13_leader')
+	let mapleader = ','
+else
+	let mapleader=g:spf13_leader
+endif
+if !exists('g:spf13_localleader')
+	let maplocalleader = '_'
+else
+	let maplocalleader=g:spf13_localleader
+endif
+
+" Most prefer to toggle search highlighting rather than clear the current
+" search results. To clear search highlighting rather than toggle it on
+" and off, add the following to your .vimrc.before.local file:
+"   let g:spf13_clear_search_highlight = 1
+if exists('g:spf13_clear_search_highlight')
+	nmap <silent> <leader>/ :nohlsearch<CR>
+else
+	nmap <silent> <leader>/ :set invhlsearch<CR>
+endif

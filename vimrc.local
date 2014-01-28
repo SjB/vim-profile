@@ -1,0 +1,147 @@
+" bundle settings
+" ===============
+
+" Solorized {
+        let g:solarized_termcolors=256
+        let g:solarized_termtrans=1
+        let g:solarized_contrast="normal"
+        let g:solarized_visibility="normal"
+        color solarized             " Load a colorscheme
+" }
+
+
+noremap <Leader>= :call Preserve("normal gg=G")<cr>
+"noremap <Leader>$ :call Perserve("%s/\\s\\+$//e")<cr>
+
+
+" Fugitive {
+    nnoremap <silent> <leader>gs :Gstatus<CR>
+    nnoremap <silent> <leader>gd :Gdiff<CR>
+    nnoremap <silent> <leader>gc :Gcommit<CR>
+    nnoremap <silent> <leader>gb :Gblame<CR>
+    nnoremap <silent> <leader>gl :Glog<CR>
+    nnoremap <silent> <leader>gp :Git push<CR>
+    nnoremap <silent> <leader>gr :Gread<CR>
+    nnoremap <silent> <leader>gw :Gwrite<CR>
+    nnoremap <silent> <leader>ge :Gedit<CR>
+    " Mnemonic _i_nteractive
+    nnoremap <silent> <leader>gi :Git add -p %<CR>
+    nnoremap <silent> <leader>gg :SignifyToggle<CR>
+"}
+
+" neocomplcache {
+    let g:acp_enableAtStartup = 0
+    let g:neocomplcache_enable_at_startup = 1
+    let g:neocomplcache_enable_camel_case_completion = 1
+    let g:neocomplcache_enable_smart_case = 1
+    let g:neocomplcache_enable_underbar_completion = 1
+    let g:neocomplcache_enable_auto_delimiter = 1
+    let g:neocomplcache_max_list = 15
+    let g:neocomplcache_force_overwrite_completefunc = 1
+
+
+    " Enable omni completion.
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+    autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+    autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+" }
+
+" Use honza's snippets.
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+
+" Enable neosnippet snipmate compatibility mode
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" sneak {
+    let g:sneak#steak = 1
+    nmap f <Plug>SneakForward
+    nmap F <Plug>SneakBackward
+    xmap f <Plug>VSneakForward
+    xmap F <Plug>VSneakBackward
+"}
+
+" Intellizense
+noremap <silent> <Leader>I :Intellisense<cr>
+
+" map F12 to Toggle NERD Tree view
+noremap <silent> <F12> :NERDTreeToggle<cr>
+inoremap <silent> <F12> :NERDTreeToggle<cr>
+
+noremap <silent> <Leader>nt :NERDTreeToggle<cr>
+
+" explorer mappings
+"nnoremap <F11> :BufExplorer<cr>
+"nnoremap <F10> :TagbarToggle<cr>
+
+" vim-fuzzyfinder setting
+"nnoremap <silent> <Leader>ff :FufFile<cr>
+"nnoremap <silent> <Leader>fF :FufFile!<cr>
+"nnoremap <silent> <Leader>fb :FufBuffer<cr>
+"nnoremap <silent> <Leader>fB :FufBuffer!<cr>
+"nnoremap <silent> <Leader>ft :FufTag<cr>
+"nnoremap <silent> <Leader>fT :FufTag!<cr>
+"nnoremap <silent> <Leader>fo :FufJumpList<cr>
+"nnoremap <silent> <Leader>fg :FufLine<cr>
+"nnoremap <silent> <Leader>fh	:FufHelp<cr>
+"nnoremap <silent> <Leader>fc	:FufQuickfix<cr>
+"nnoremap <silent> <Leader>f:	:FufMruCmd<cr>
+"nnoremap <silent> <Leader>fu :FufBookmarkFile<cr>
+"nnoremap <silent> <Leader>fua :FufBookmarkFileAdd<cr>
+"nnoremap <silent> <Leader>f<C-]> :FufTagWithCursorWord!<CR>
+"nnoremap <silent> <Leader>f,     :FufBufferTag<CR>
+"nnoremap <silent> <Leader>f<     :FufBufferTag!<CR>
+"vnoremap <silent> <Leader>f,     :FufBufferTagWithSelectedText!<CR>
+"vnoremap <silent> <Leader>f<     :FufBufferTagWithSelectedText<CR>
+"nnoremap <silent> <Leader>f}     :FufBufferTagWithCursorWord!<CR>
+"nnoremap <silent> <Leader>f.     :FufBufferTagAll<CR>
+"nnoremap <silent> <Leader>f>     :FufBufferTagAll!<CR>
+"vnoremap <silent> <Leader>f.     :FufBufferTagAllWithSelectedText!<CR>
+"vnoremap <silent> <Leader>f>     :FufBufferTagAllWithSelectedText<CR>
+"nnoremap <silent> <Leader>f]     :FufBufferTagAllWithCursorWord!<CR>
+"nnoremap <silent> <Leader>fe     :FufTaggedFile<CR>
+"nnoremap <silent> <Leader>fE     :FufTaggedFile!<CR>
+
+" FuzzyPrototypefinder plugin setting
+"noremap <Leader>fpc :FuzzyPrototypeFinderClass<cr>
+"noremap <Leader>fpg :FuzzyPrototypeFinderGlobal<cr>
+"noremap <Leader>fpm :FuzzyPrototypeFinderFunction<cr>
+
+
+" CtrlP keybinding
+nnoremap <silent> <Leader>ct	:CtrlPTag<cr>
+nnoremap <silent> <Leader>cb	:CtrlPBuffer<cr>
+
+" Tlist setting
+" let Tlist_Show_One_File=1
+
+nnoremap <silent> <Leader>tl	:TlistToggle<cr>
+
+" trailing-whitespace setting
+noremap <silent> <Leader>tw :FixWhitespace<cr>
+noremap <silent> <Leader>tws :highlight link ExtraWhitespace Search<cr>
+noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
+
+" vim-airline {
+        " Set configuration options for the statusline plugin vim-airline.
+        " Use the powerline theme and optionally enable powerline symbols.
+        " To use the symbols , , , , , , and .in the statusline
+        " segments add the following to your .vimrc.before.local file:
+        "   let g:airline_powerline_fonts=1
+        " If the previous symbols do not render for you then install a
+        " powerline enabled font.
+
+        " See `:echo g:airline_theme_map` for some more choices
+        " Default in terminal vim is 'dark'
+        if !exists('g:airline_theme')
+            let g:airline_theme = 'solarized'
+        endif
+        if !exists('g:airline_powerline_fonts')
+            " Use the default set of separators with a few customizations
+            let g:airline_left_sep='›'  " Slightly fancier than '>'
+            let g:airline_right_sep='‹' " Slightly fancier than '<'
+        endif
+" }
