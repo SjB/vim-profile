@@ -151,6 +151,7 @@ noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
         " If the previous symbols do not render for you then install a
         " powerline enabled font.
 
+        let g:airline#extensions#tabline#enabled = 1
         " See `:echo g:airline_theme_map` for some more choices
         " Default in terminal vim is 'dark'
         if !exists('g:airline_theme')
