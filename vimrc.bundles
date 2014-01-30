@@ -57,7 +57,7 @@ Bundle 'godlygeek/csapprox'
 
 Bundle 'scrooloose/syntastic'
 Bundle 'mhinz/vim-signify'
-Bundle 'godlygeek/tabular'
+"Bundle 'godlygeek/tabular'
 
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'SjB/refactor'
