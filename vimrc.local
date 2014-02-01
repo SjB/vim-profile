@@ -1,7 +1,7 @@
 " bundle settings
 " ===============
 
-autocmd FileType c,cpp,cs,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif 
+"autocmd FileType c,cpp,cs,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif 
 
 " Solorized {
         let g:solarized_termcolors=256
