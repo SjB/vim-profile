@@ -94,8 +94,21 @@ Bundle 'tpope/vim-endwise'
 "Bundle 'vimoutliner/vimoutliner'
 "Bundle 'yazug/vim-taglist-plus'
 
-Bundle "tpope/vim-ragtag"
-Bundle "sukima/xmledit"
+" html plugins
+Bundle 'tpope/vim-ragtag'
+Bundle 'mattn/emmet-vim'
+Bundle 'docunext/closetag.vim'
+
+"Node plugins
+Bundle 'moll/vim-node'
+Bundle 'hallettj/jslint.vim'
+Bundle 'walm/jshint.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'wavded/vim-stylus'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'jamescarr/snipmate-nodejs'
+Bundle 'ahayman/vim-nodejs-complete'
 
 " vim-script repos
 "Bundle 'FuzzyFinder'
