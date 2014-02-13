@@ -94,6 +94,8 @@ Bundle 'tpope/vim-endwise'
 "Bundle 'vimoutliner/vimoutliner'
 "Bundle 'yazug/vim-taglist-plus'
 
+Bundle "tpope/vim-ragtag"
+Bundle "sukima/xmledit"
 
 " vim-script repos
 "Bundle 'FuzzyFinder'
