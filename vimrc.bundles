@@ -17,7 +17,7 @@ Bundle 'Shougo/neocomplcache.vim'
 "Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'Shougo/neosnippet'
-"Bundle 'Shougo/neosnippet-snippets'
+Bundle 'Shougo/neosnippet-snippets'
 Bundle 'honza/vim-snippets'
 "Bundle 'msanders/snipmate.vim'
 "Bundle 'spf13/snipmate-snippets'
