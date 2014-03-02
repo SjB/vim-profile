@@ -21,3 +21,53 @@ options head
     // permissions and limitations under the licenses.
     //
     ${0}
+
+snippet assembly
+options head
+    [assembly: Assembly${1:Product} ("${2}")]
+    ${0}
+
+snippet new_AssemblyInfo
+options head
+    using System.Reflection;
+
+    [assembly: AssemblyProduct ("${1}")]
+    [assembly: AssemblyTitle ("${2}")]
+    [assembly: AssemblyDescription ("${3}")]
+    [assembly: AssemblyVersion ("${4}")]
+    [assembly: AssemblyCopyright ("${5}")]
+    ${0}
+
+snippet namespace
+    namespace ${1}
+    {
+        ${0}
+    }
+
+snippet main
+    [STAThread]
+    public static void Main(string[] args)
+    {
+	    ${0}
+    }
+
+snippet maini
+    [STAThread]
+    public static int Main(string[] args)
+    {
+	    ${0}
+        return 0;
+    }
+
+snippet class
+    public class ${1} 
+    {
+        ${0}
+    }
+
+snippet scw
+    System.Console.Write(${1});
+
+snippet scwl
+    System.Console.WriteLine(${1});
+
