@@ -59,6 +59,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'mhinz/vim-signify'
 "Bundle 'godlygeek/tabular'
 
+Bundle 'OrangeT/vim-csharp'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'SjB/refactor'
 Bundle 'SjB/devhelp.vim'
