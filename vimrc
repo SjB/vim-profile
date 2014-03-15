@@ -1,3 +1,6 @@
+filetype off
+filetype plugin indent off
+
 silent function! OSX()
 return has('macunix')
 endfunction
