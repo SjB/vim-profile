@@ -164,3 +164,9 @@ noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
             let g:airline_right_sep='‹' " Slightly fancier than '<'
         endif
 " }
+"
+
+" UndoTree {
+nnoremap <Leader>u :UndotreeToggle<CR>
+"}
+"
