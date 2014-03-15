@@ -11,6 +11,10 @@
         color solarized             " Load a colorscheme
 " }
 
+" Ctrlp {
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>b :CtrlPMixed<cr>
+" }
 
 noremap <Leader>= :call Preserve("normal gg=G")<cr>
 "noremap <Leader>$ :call Perserve("%s/\\s\\+$//e")<cr>
