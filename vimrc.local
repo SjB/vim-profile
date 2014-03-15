@@ -170,3 +170,5 @@ noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
 nnoremap <Leader>u :UndotreeToggle<CR>
 "}
 "
+
+set tags=tags,~/.tags/common.tags
