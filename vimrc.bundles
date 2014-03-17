@@ -55,7 +55,7 @@ Bundle 'gregsexton/MatchTag'
 
 Bundle 'godlygeek/csapprox'
 
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 Bundle 'mhinz/vim-signify'
 "Bundle 'godlygeek/tabular'
 
@@ -102,8 +102,8 @@ Bundle 'docunext/closetag.vim'
 
 "Node plugins
 Bundle 'moll/vim-node'
-Bundle 'hallettj/jslint.vim'
-Bundle 'walm/jshint.vim'
+"Bundle 'hallettj/jslint.vim'
+"Bundle 'walm/jshint.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'wavded/vim-stylus'
