@@ -2,6 +2,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'L9'
@@ -12,10 +13,9 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
 
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'Shougo/context_filetype.vim'
 Bundle 'Shougo/neocomplcache.vim'
-"Bundle 'Valloric/YouCompleteMe'
-
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
 Bundle 'honza/vim-snippets'
@@ -45,7 +45,7 @@ Bundle 'justinmk/vim-sneak'
 Bundle 'mbbill/undotree'
 Bundle 'Lokaltog/vim-easymotion'
 
-Bundle 'spf13/vim-autoclose'
+"Bundle 'spf13/vim-autoclose'
 "Bundle 'osyo-manga/vim-over'
 
 Bundle 'mattn/webapi-vim'
@@ -60,7 +60,9 @@ Bundle 'mhinz/vim-signify'
 "Bundle 'godlygeek/tabular'
 
 Bundle 'OrangeT/vim-csharp'
+
 Bundle 'terryma/vim-multiple-cursors'
+
 Bundle 'SjB/refactor'
 Bundle 'SjB/devhelp.vim'
 
@@ -96,7 +98,7 @@ Bundle 'tpope/vim-endwise'
 "Bundle 'yazug/vim-taglist-plus'
 
 " html plugins
-Bundle 'tpope/vim-ragtag'
+"Bundle 'tpope/vim-ragtag'
 Bundle 'mattn/emmet-vim'
 Bundle 'docunext/closetag.vim'
 
@@ -117,7 +119,7 @@ Bundle 'bufkill.vim'
 Bundle 'matchit.zip'
 "Bundle 'a.vim'
 Bundle 'bufexplorer.zip'
-Bundle 'IndexedSearch'
+"Bundle 'IndexedSearch'
 Bundle 'argtextobj.vim'
 "Bundle 'YankRing.vim'
 "Bundle 'Puppet-Syntax-Highlighting'
@@ -125,5 +127,4 @@ Bundle 'argtextobj.vim'
 " non-GitHub repos
 " Bundle 'spf13/vim-preview' "Requires Ruby
 " Bundle 'git://git.wincent.com/command-t.git' "Requires Ruby
-
 
