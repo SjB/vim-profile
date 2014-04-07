@@ -100,7 +100,9 @@ noremap <silent> <Leader>nt :NERDTreeToggle<cr>
 
 " explorer mappings
 nnoremap <silent> <Leader>tb	:BufExplorer<cr>
-nnoremap <silent> <Leader>tt	:TagbarToggle<cr>
+
+noremap <silent> <c-F12> :TagbarToggle<cr>
+inoremap <silent> <c-F12> :TagbarToggle<cr>
 
 " vim-fuzzyfinder setting
 "nnoremap <silent> <Leader>ff :FufFile<cr>
