@@ -59,7 +59,8 @@ Bundle 'godlygeek/csapprox'
 Bundle 'mhinz/vim-signify'
 "Bundle 'godlygeek/tabular'
 
-Bundle 'OrangeT/vim-csharp'
+"Bundle 'OrangeT/vim-csharp'
+Bundle 'SjB/vim-csharp'
 
 Bundle 'terryma/vim-multiple-cursors'
 
