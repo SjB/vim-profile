@@ -69,7 +69,6 @@ Bundle 'SjB/devhelp.vim'
 
 Bundle 'looks'
 
-Bundle 'anzaika/go.vim'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
