@@ -120,7 +120,7 @@ Bundle 'jamescarr/snipmate-nodejs'
 Bundle 'ahayman/vim-nodejs-complete'
 
 " vim-script repos
-"Bundle 'FuzzyFinder'
+Bundle 'FuzzyFinder'
 Bundle 'bufkill.vim'
 Bundle 'matchit.zip'
 "Bundle 'a.vim'
