@@ -97,11 +97,19 @@ inoremap <silent> <F12> :NERDTreeToggle<cr>
 
 noremap <silent> <Leader>nt :NERDTreeToggle<cr>
 
-" explorer mappings
-nnoremap <silent> <Leader>tb	:BufExplorer<cr>
+" bufexplorer {
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerSplitBelow=0
 
+noremap <silent> <F11> :BufExplorerHorizontalSplit<cr>
+inoremap <silent> <F11> :BufExplorerHorizontalSplit<cr>
+nnoremap <silent> <Leader>be	:TagbarToggle<cr>
+" }
+
+" Tagbar mappings
 noremap <silent> <c-F12> :TagbarToggle<cr>
 inoremap <silent> <c-F12> :TagbarToggle<cr>
+nnoremap <silent> <Leader>tb	:TagbarToggle<cr>
 
 " vim-fuzzyfinder setting
 "nnoremap <silent> <Leader>ff :FufFile<cr>
