@@ -74,18 +74,24 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-git'
 Bundle 'SjB/gtk-vim-syntax'
 
-Bundle 'spf13/vim-colors'
+" Colorscheme
 Bundle 'fmeyer/vim-pigraph'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'noahfrederick/vim-hemisu'
 Bundle 'wesgibbs/vim-irblack'
+Bundle 'sickill/vim-monokai'
+Bundle 'tomasr/molokai'
+Bundle 'morhetz/gruvbox'
+Bundle 'vim-script/BusyBee'
+Bundle 'vim-script/peaksea'
+Bundle 'vim-script/summerfruit256.vim'
 
 "Bundle 'bling/vim-bufferline'
 "Bundle 'jeetsukumaran/vim-buffersaurus'
 "Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'quentindecock/vim-cucumber-align-pipes'
-
+"
 "Bundle 'nosami/Omnisharp''
 
 
