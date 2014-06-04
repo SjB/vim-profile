@@ -147,8 +147,7 @@ nnoremap <silent> <Leader>tb	:TagbarToggle<cr>
 
 " Tlist setting
 " let Tlist_Show_One_File=1
-
-nnoremap <silent> <Leader>tl	:TlistToggle<cr>
+" nnoremap <silent> <Leader>tl	:TlistToggle<cr>
 
 " trailing-whitespace setting
 noremap <silent> <Leader>tw :FixWhitespace<cr>
