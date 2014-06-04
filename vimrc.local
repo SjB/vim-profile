@@ -12,8 +12,7 @@
 " }
 
 " Ctrlp {
-nnoremap <leader>. :CtrlPTag<cr>
-nnoremap <leader>b :CtrlPMixed<cr>
+nnoremap <leader>. :CtrlPMixed<cr>
 
 let g:ctrlp_regexp = 1
 let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
