@@ -103,7 +103,7 @@ let g:bufExplorerSplitBelow=0
 
 noremap <silent> <F11> :BufExplorerHorizontalSplit<cr>
 inoremap <silent> <F11> :BufExplorerHorizontalSplit<cr>
-nnoremap <silent> <Leader>be	:TagbarToggle<cr>
+nnoremap <silent> <Leader>be	:BufExplorerHorizontalSplit<cr>
 " }
 
 " Tagbar mappings
