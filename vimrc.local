@@ -183,3 +183,8 @@ nnoremap <Leader>u :UndotreeToggle<CR>
 "
 
 set tags=tags,~/.tags/common.tags
+
+set background=dark
+colorscheme molokai
+let g:airline_theme="molokai"
+
