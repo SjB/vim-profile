@@ -1,11 +1,21 @@
-snippet hicon 
-	__version__ = '${1:version}'
-	__license__ = 'Icon E-Business Solution'
-	__author__ = ('${2:`g:snips_author`}')
-	${3}
-
-snippet hnca
+snippet copy_nca
+options head
 	__version__ = '${1:version}'
 	__license__ = 'The National Centre for Audiology'
 	__author__ = ('${2:`g:snips_author`}')
 	${3}
+
+snippet copy_sagacity
+options head
+	__version__ = '${1:version}'
+	__license__ = 'Sagacity Solutions Inc.'
+	__author__ = ('${2:`g:snips_author`}')
+	${3}
+
+snippet pybang
+abbr    #!/usr/bin/env python
+options head
+    #!/usr/bin/env python
+    # encoding: utf-8
+    # Copyright (c) ('${2:`g:snips_author`}')
+    ${3}
