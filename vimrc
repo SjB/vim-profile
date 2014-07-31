@@ -244,7 +244,7 @@ if has('statusline')
     set statusline+=%{StatuslineLongLineWarning()}
 
     set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
+"    set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
 
     "display a warning if &paste is set
@@ -568,12 +568,12 @@ else
     "set term=builtin_ansi       " Make arrow and other keys work
 endif
 
-if has("autocmd") && exists("+omnifunc")
-    autocmd Filetype *
-                \if &omnifunc == "" |
-                \setlocal omnifunc=syntaxcomplete#Complete |
-                \endif
-endif
+"if has("autocmd") && exists("+omnifunc")
+"    autocmd Filetype *
+"                \if &omnifunc == "" |
+"                \setlocal omnifunc=syntaxcomplete#Complete |
+"                \endif
+"endif
 
 hi Pmenu  guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
 hi PmenuSbar  guifg=#8A95A7 guibg=#F8F8F8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
