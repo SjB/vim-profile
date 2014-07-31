@@ -69,8 +69,9 @@ Bundle 'SjB/devhelp.vim'
 
 Bundle 'looks'
 
-Bundle 'Blackrush/vim-gocode'
-Bundle 'AndrewRadev/go-oracle.vim'
+"Bundle 'Blackrush/vim-gocode'
+"Bundle 'AndrewRadev/go-oracle.vim'
+Bundle 'fatih/vim-go'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-git'
 Bundle 'SjB/gtk-vim-syntax'
