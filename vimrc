@@ -116,7 +116,7 @@ set scrolloff=3                 " Minimum lines to keep above and below cursor
 set foldenable                  " Auto fold code
 "set list
 "set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
-
+set formatoptions-=t
 
 " default tabs setting
 set tabstop=4
