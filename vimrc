@@ -548,7 +548,7 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
 " GVIM- (here instead of .gvimrc)
 if has('gui_running')
-    set guioptions=aegitc
+    set guioptions=aegitcf
     set guioptions-=T           " Remove the toolbar
     set lines=40                " 40 lines of text instead of 24
     set antialias
