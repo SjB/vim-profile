@@ -82,7 +82,7 @@ let g:go_snippet_engine="neosnippet"
 " CtrlP setting {
 "    let g:ctrlp_map = '<c-p>'
 "    let g:ctrlp_cmd = 'CtrlPMixed'
-    let g:ctrlp_working_path_mode = 'ra'
+    let g:ctrlp_working_path_mode = 'rwa'
     let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'mixed']
 
 " }
