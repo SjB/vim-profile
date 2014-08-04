@@ -1,138 +1,138 @@
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'L9'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'L9'
 
 "Vundle manage vim plugins
 " Github repos
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'kien/ctrlp.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/ctrlp.vim'
 
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'Shougo/context_filetype.vim'
-"Bundle 'Shougo/neocomplcache.vim'
-"Bundle 'Shougo/neosnippet'
-"Bundle 'Shougo/neosnippet-snippets'
-"Bundle 'msanders/snipmate.vim'
-"Bundle 'spf13/snipmate-snippets'
-"Bundle 'scrooloose/snipmate-snippets'
-Bundle 'SirVer/ultisnips'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/context_filetype.vim'
+Plugin 'Shougo/neocomplcache.vim'
+"Plugin 'Shougo/neosnippet'
+"Plugin 'Shougo/neosnippet-snippets'
+"Plugin 'msanders/snipmate.vim'
+"Plugin 'spf13/snipmate-snippets'
+"Plugin 'scrooloose/snipmate-snippets'
+Plugin 'SirVer/ultisnips'
 
-Bundle 'honza/vim-snippets'
+Plugin 'honza/vim-snippets'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-"Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+"Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'majutsushi/tagbar'
 
-"Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
-Bundle 'bling/vim-airline'
-Bundle 'bronson/vim-trailing-whitespace'
+"Plugin 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
+Plugin 'bling/vim-airline'
+Plugin 'bronson/vim-trailing-whitespace'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tomtom/tcomment_vim'
 
-Bundle 'localvimrc'
+Plugin 'localvimrc'
 
-Bundle 'pythoncomplete'
-Bundle 'python_match.vim'
+Plugin 'pythoncomplete'
+Plugin 'python_match.vim'
 
-Bundle 'justinmk/vim-sneak'
-Bundle 'mbbill/undotree'
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'justinmk/vim-sneak'
+Plugin 'mbbill/undotree'
+Plugin 'Lokaltog/vim-easymotion'
 
-"Bundle 'spf13/vim-autoclose'
-"Bundle 'osyo-manga/vim-over'
+"Plugin 'spf13/vim-autoclose'
+"Plugin 'osyo-manga/vim-over'
 
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
 
-Bundle 'gregsexton/MatchTag'
+Plugin 'gregsexton/MatchTag'
 
-Bundle 'godlygeek/csapprox'
+Plugin 'godlygeek/csapprox'
 
-"Bundle 'scrooloose/syntastic'
-Bundle 'mhinz/vim-signify'
-"Bundle 'godlygeek/tabular'
+"Plugin 'scrooloose/syntastic'
+Plugin 'mhinz/vim-signify'
+"Plugin 'godlygeek/tabular'
 
-"Bundle 'OrangeT/vim-csharp'
-Bundle 'SjB/vim-csharp'
+"Plugin 'OrangeT/vim-csharp'
+Plugin 'SjB/vim-csharp'
 
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 
-Bundle 'SjB/refactor'
-Bundle 'SjB/devhelp.vim'
+Plugin 'SjB/refactor'
+Plugin 'SjB/devhelp.vim'
 
-Bundle 'looks'
+Plugin 'looks'
 
-"Bundle 'Blackrush/vim-gocode'
-"Bundle 'AndrewRadev/go-oracle.vim'
-Bundle 'fatih/vim-go'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-git'
-Bundle 'SjB/gtk-vim-syntax'
+"Plugin 'Blackrush/vim-gocode'
+"Plugin 'AndrewRadev/go-oracle.vim'
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-git'
+Plugin 'SjB/gtk-vim-syntax'
 
 " Colorscheme
-Bundle 'fmeyer/vim-pigraph'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'noahfrederick/vim-hemisu'
-Bundle 'wesgibbs/vim-irblack'
-Bundle 'sickill/vim-monokai'
-Bundle 'tomasr/molokai'
-Bundle 'morhetz/gruvbox'
-Bundle 'BusyBee'
-Bundle 'peaksea'
-Bundle 'summerfruit256.vim'
+Plugin 'fmeyer/vim-pigraph'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'noahfrederick/vim-hemisu'
+Plugin 'wesgibbs/vim-irblack'
+Plugin 'sickill/vim-monokai'
+Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
+Plugin 'BusyBee'
+Plugin 'peaksea'
+Plugin 'summerfruit256.vim'
 
-"Bundle 'bling/vim-bufferline'
-"Bundle 'jeetsukumaran/vim-buffersaurus'
-"Bundle 'nathanaelkane/vim-indent-guides'
-"Bundle 'quentindecock/vim-cucumber-align-pipes'
+"Plugin 'bling/vim-bufferline'
+"Plugin 'jeetsukumaran/vim-buffersaurus'
+"Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'quentindecock/vim-cucumber-align-pipes'
 "
-"Bundle 'nosami/Omnisharp''
+"Plugin 'nosami/Omnisharp''
 
 
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-endwise'
-"Bundle 'Raimondi/delimitMate'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-endwise'
+"Plugin 'Raimondi/delimitMate'
 
-"Bundle 'vimoutliner/vimoutliner'
-"Bundle 'yazug/vim-taglist-plus'
+"Plugin 'vimoutliner/vimoutliner'
+"Plugin 'yazug/vim-taglist-plus'
 
 " html plugins
-"Bundle 'tpope/vim-ragtag'
-Bundle 'mattn/emmet-vim'
-Bundle 'docunext/closetag.vim'
+"Plugin 'tpope/vim-ragtag'
+Plugin 'mattn/emmet-vim'
+Plugin 'docunext/closetag.vim'
 
 "Node plugins
-Bundle 'moll/vim-node'
-"Bundle 'hallettj/jslint.vim'
-"Bundle 'walm/jshint.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'wavded/vim-stylus'
-Bundle 'mustache/vim-mustache-handlebars'
-"Bundle 'jamescarr/snipmate-nodejs'
-Bundle 'ahayman/vim-nodejs-complete'
+Plugin 'moll/vim-node'
+"Plugin 'hallettj/jslint.vim'
+"Plugin 'walm/jshint.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'wavded/vim-stylus'
+Plugin 'mustache/vim-mustache-handlebars'
+"Plugin 'jamescarr/snipmate-nodejs'
+Plugin 'ahayman/vim-nodejs-complete'
 
 " vim-script repos
-Bundle 'FuzzyFinder'
-Bundle 'bufkill.vim'
-Bundle 'matchit.zip'
-"Bundle 'a.vim'
-Bundle 'bufexplorer.zip'
-"Bundle 'IndexedSearch'
-Bundle 'argtextobj.vim'
-"Bundle 'YankRing.vim'
-"Bundle 'Puppet-Syntax-Highlighting'
+Plugin 'FuzzyFinder'
+Plugin 'bufkill.vim'
+Plugin 'matchit.zip'
+"Plugin 'a.vim'
+Plugin 'bufexplorer.zip'
+"Plugin 'IndexedSearch'
+Plugin 'argtextobj.vim'
+"Plugin 'YankRing.vim'
+"Plugin 'Puppet-Syntax-Highlighting'
 
 " non-GitHub repos
-" Bundle 'spf13/vim-preview' "Requires Ruby
-" Bundle 'git://git.wincent.com/command-t.git' "Requires Ruby
+" Plugin 'spf13/vim-preview' "Requires Ruby
+" Plugin 'git://git.wincent.com/command-t.git' "Requires Ruby
 
