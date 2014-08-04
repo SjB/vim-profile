@@ -4,9 +4,10 @@ let mapleader = ','
 " Some helpers to edit mode
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=escape(expand('%:h'), ' ').'/'<cr>
-map <leader>e :e %%
-map <leader>s :sp %%
-map <leader>vs :vsp %%
+map <Leader>e :e %%
+map <Leader>s :sp %%
+map <Leader>vs :vsp %%
+map <Leader>lv :e .lvimrc<cr>
 
 noremap <Leader>eb :sp  ~/.vim/vimrc.bindings"<cr><cr>
 nmap <Leader>sb :source ~/.vimrc<cr>
@@ -16,17 +17,28 @@ map <Leader>dj :e ~/Dropbox/Notes/debugging-journals.txt<cr>
 map <Leader>nca :e ~/Dropbox/Notes/nca-journals.txt<cr>
 map <Leader>sg :e ~/Dropbox/Notes/sagacity-journals.txt<cr>
 
+map <Leader>0 :e#<cr>
+map <Leader>1 :1b<cr>
+map <Leader>2 :2b<cr>
+map <Leader>3 :3b<cr>
+map <Leader>4 :4b<cr>
+map <Leader>5 :5b<cr>
+map <Leader>6 :6b<cr>
+map <Leader>7 :7b<cr>
+map <Leader>8 :8b<cr>
+map <Leader>9 :9b<cr>
+
 map <C-h> :nohl<cr>
 imap <C-l> :<Space>
 " Note that remapping C-s requires flow control to be disabled
 " (e.g. in .bashrc or .zshrc)
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
-map <C-x><C-n> :cn<CR>
-map <C-x><C-p> :cp<CR>
+map <C-c><C-n> :cn<CR>
+map <C-c><C-p> :cp<CR>
 map ; :
 
-" Vundle 
+" Vundle
 nmap <Leader>bi :source ~/.vimrc<cr>:PluginInstall<cr>
 
 map <Leader>cp ggVG"*y
@@ -70,11 +82,6 @@ cnoremap <C-E>      <End>
 cnoremap <C-F>      <Right>
 cnoremap <C-N>      <End>
 cnoremap <C-P>      <Up>
-cnoremap <ESC>b     <S-Left>
-cnoremap <ESC><C-B> <S-Left>
-cnoremap <ESC>      <S-Right>
-cnoremap <ESC><C-F> <S-Right>
-cnoremap <ESC><C-H> <C-W>
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
@@ -84,7 +91,6 @@ imap <c-a> <c-o>^
 noremap <silent> <C-Tab> :bnext<cr>
 noremap <silent> <C-S-Tab> :bprevious<cr>
 noremap <silent> <Leader>ls :ls<cr>
-noremap <Leader>b	:b<Space>
 
 " simplified buffer flipping
 noremap <silent> <C-H> :wincmd h<cr>
@@ -125,12 +131,9 @@ noremap <silent> <Leader>mj :wincmd J<cr>
 noremap <silent> <Leader>bd :bd<cr>
 
 noremap <silent> <Leader>^ :setl hls<cr>:let @/="<C-r><C-w>"<cr>
-noremap <silent> <Leader>grs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set nohls<cr>
-noremap <silent> <Leader>grw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
-noremap <silent> <Leader>grW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
-
-vnoremap <silent> [v	>gv
-vnoremap <silent> ]v	<gv
+noremap <silent> <Leader>vgs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set nohls<cr>
+noremap <silent> <Leader>vgw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
+noremap <silent> <Leader>vgW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
 
 " make Y consistent with C and D
 nnoremap Y y$
@@ -165,10 +168,12 @@ vnoremap . :normal .<CR>
 
 " Fix home and end keybindings for screen, particularly on mac
 " - for some reason this fixes the arrow keys too. huh.
-map [F $
-imap [F $
-map [H g0
-imap [H g0
+if OSX()
+    map [F $
+    imap [F $
+    map [H g0
+    imap [H g0
+endif
 
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
@@ -176,10 +181,6 @@ cmap w!! w !sudo tee % >/dev/null
 " Map <Leader>fa to display all lines with keyword under cursor
 " and ask which one to jump to
 nmap <Leader>fa [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
-
-" Easier horizontal scrolling
-map zl zL
-map zh zH
 
 " FIXME: Revert this f70be548
 " fullscreen mode for GVIM and Terminal, need 'wmctrl' in you PATH
@@ -217,11 +218,11 @@ noremap <silent> <Leader>nt :NERDTreeToggle<cr>
 " Tagbar mappings
 noremap <silent> <c-F12> :TagbarToggle<cr>
 inoremap <silent> <c-F12> :TagbarToggle<cr>
-nnoremap <silent> <Leader>tb	:TagbarToggle<cr>
+nnoremap <silent> <Leader>tb    :TagbarToggle<cr>
 
 noremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
 inoremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
-nnoremap <silent> <Leader>be	:BufExplorerHorizontalSplit<cr>
+nnoremap <silent> <Leader>be    :BufExplorerHorizontalSplit<cr>
 
 " vim-fuzzyfinder setting
 nnoremap <silent> <Leader>ff :FufFile<cr>
@@ -232,9 +233,9 @@ nnoremap <silent> <Leader>ft :FufTag<cr>
 nnoremap <silent> <Leader>fT :FufTag!<cr>
 nnoremap <silent> <Leader>fo :FufJumpList<cr>
 nnoremap <silent> <Leader>fg :FufLine<cr>
-nnoremap <silent> <Leader>fh	:FufHelp<cr>
-nnoremap <silent> <Leader>fc	:FufQuickfix<cr>
-nnoremap <silent> <Leader>f:	:FufMruCmd<cr>
+nnoremap <silent> <Leader>fh    :FufHelp<cr>
+nnoremap <silent> <Leader>fc    :FufQuickfix<cr>
+nnoremap <silent> <Leader>f:    :FufMruCmd<cr>
 nnoremap <silent> <Leader>fu :FufBookmarkFile<cr>
 nnoremap <silent> <Leader>fua :FufBookmarkFileAdd<cr>
 nnoremap <silent> <Leader>f<C-]> :FufTagWithCursorWord!<CR>
