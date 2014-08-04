@@ -1,0 +1,273 @@
+" Change mapleader key
+let mapleader = ','
+
+" Some helpers to edit mode
+" http://vimcasts.org/e/14
+cnoremap %% <C-R>=escape(expand('%:h'), ' ').'/'<cr>
+map <leader>e :e %%
+map <leader>s :sp %%
+map <leader>vs :vsp %%
+
+noremap <Leader>eb :sp  ~/.vim/vimrc.bindings"<cr><cr>
+nmap <Leader>sb :source ~/.vimrc<cr>
+
+map <Leader>cj :e ~/Dropbox/Notes/coding-journals.txt<cr>
+map <Leader>dj :e ~/Dropbox/Notes/debugging-journals.txt<cr>
+map <Leader>nca :e ~/Dropbox/Notes/nca-journals.txt<cr>
+map <Leader>sg :e ~/Dropbox/Notes/sagacity-journals.txt<cr>
+
+map <C-h> :nohl<cr>
+imap <C-l> :<Space>
+" Note that remapping C-s requires flow control to be disabled
+" (e.g. in .bashrc or .zshrc)
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
+map <C-x><C-n> :cn<CR>
+map <C-x><C-p> :cp<CR>
+map ; :
+
+" Vundle 
+nmap <Leader>bi :source ~/.vimrc<cr>:PluginInstall<cr>
+
+map <Leader>cp ggVG"*y
+map <Leader>p :set paste<cr>o<esc>"*]p:set nopaste<cr>
+
+map <Leader>sn :UltiSnipsEdit<cr>
+
+" Breaking lines with \[enter] without having to go to insert mode (myself).
+nmap <leader><cr> i<cr><Esc>
+
+" F9  - Run external make command
+noremap <silent> <f9> :echo "Running waf..."<cr>:sil! ./waf<cr>:cw<cr>:redraw!<cr>:echo "waf complete."<cr>
+
+" Toggle paste mode
+nmap <silent> <Leader>ip :set invpaste<cr>:set paste?<cr>
+
+" Turn off that stupid highlight search
+nmap <silent> <Leader>n :set invhls<cr>:set hls?<cr>
+
+" Set text wrapping toggles
+nmap <silent> <Leader>w :set invwrap<cr>:set wrap?<cr>
+
+" Set up retabbing on a source file
+nmap <silent> <Leader>rr :1,$retab<cr>
+
+" cd to the directory containing the file in the buffer
+nmap <silent> <Leader>cd :lcd %:h<cr>
+nmap <silent> <Leader>md :!mkdir -p %:p:h<cr>
+
+" execute contents of register "
+nmap <silent> <Leader>rc :@"<cr>
+
+" saving and resoring session
+map <S-F5> :execute "source ".input("Load session: ", "~/.vim/session/", "file")<cr>
+map <F5> :execute "mksession! ".input("Save session: ", "~/.vim/session/", "file")\| :echo "Session saved."<CR>
+
+" allow command line editing like emacs
+cnoremap <C-A>      <Home>
+cnoremap <C-B>      <Left>
+cnoremap <C-E>      <End>
+cnoremap <C-F>      <Right>
+cnoremap <C-N>      <End>
+cnoremap <C-P>      <Up>
+cnoremap <ESC>b     <S-Left>
+cnoremap <ESC><C-B> <S-Left>
+cnoremap <ESC>      <S-Right>
+cnoremap <ESC><C-F> <S-Right>
+cnoremap <ESC><C-H> <C-W>
+
+" Emacs-like beginning and end of line.
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
+
+" buffer key mapping
+noremap <silent> <C-Tab> :bnext<cr>
+noremap <silent> <C-S-Tab> :bprevious<cr>
+noremap <silent> <Leader>ls :ls<cr>
+noremap <Leader>b	:b<Space>
+
+" simplified buffer flipping
+noremap <silent> <C-H> :wincmd h<cr>
+noremap <silent> <C-L> :wincmd l<cr>
+noremap <silent> <C-J> :wincmd j<cr>
+noremap <silent> <C-K> :wincmd k<cr>
+
+" re-assign all windows keys
+noremap <silent> <Leader>h :wincmd h<cr>
+noremap <silent> <Leader>j :wincmd j<cr>
+noremap <silent> <Leader>k :wincmd k<cr>
+noremap <silent> <Leader>l :wincmd l<cr>
+
+map <Leader>= <C-w>=
+map <Leader>w <C-w>w
+
+noremap <silent> <Leader>sp     :wincmd p<cr>
+noremap <silent> <Leader>se     :wincmd =<cr>
+noremap <silent> <Leader>sh     :resize +10'<cr>
+noremap <silent> <Leader>sh-    :resize -10'<cr>
+noremap <silent> <Leader>sv     :vertical resize +10<cr>
+noremap <silent> <Leader>sv-    :vertical resize -10<cr>
+
+" close windows
+noremap <silent> <Leader>cj :wincmd j<cr>:close<cr>
+noremap <silent> <Leader>ck :wincmd k<cr>:close<cr>
+noremap <silent> <Leader>ch :wincmd h<cr>:close<cr>
+noremap <silent> <Leader>cl :wincmd l<cr>:close<cr>
+noremap <silent> <Leader>cx :close<cr>
+noremap <silent> <Leader>co :only<cr>
+
+" windows placeme<Leader>t
+noremap <silent> <Leader>ml :wincmd L<cr>
+noremap <silent> <Leader>mk :wincmd K<cr>
+noremap <silent> <Leader>mh :wincmd H<cr>
+noremap <silent> <Leader>mj :wincmd J<cr>
+
+noremap <silent> <Leader>bd :bd<cr>
+
+noremap <silent> <Leader>^ :setl hls<cr>:let @/="<C-r><C-w>"<cr>
+noremap <silent> <Leader>grs :vimgrep /<C-r>// %<cr>:ccl<cr>:cwin<cr><C-W>J:set nohls<cr>
+noremap <silent> <Leader>grw :vimgrep /<C-r><C-w>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
+noremap <silent> <Leader>grW :vimgrep /<C-r><C-a>/ %<cr>:ccl<cr><C-W>J:set nohls<cr>
+
+vnoremap <silent> [v	>gv
+vnoremap <silent> ]v	<gv
+
+" make Y consistent with C and D
+nnoremap Y y$
+
+" Code folding options
+nmap <leader>f0 :set foldlevel=0<CR>
+nmap <leader>f1 :set foldlevel=1<CR>
+nmap <leader>f2 :set foldlevel=2<CR>
+nmap <leader>f3 :set foldlevel=3<CR>
+nmap <leader>f4 :set foldlevel=4<CR>
+nmap <leader>f5 :set foldlevel=5<CR>
+nmap <leader>f6 :set foldlevel=6<CR>
+nmap <leader>f7 :set foldlevel=7<CR>
+nmap <leader>f8 :set foldlevel=8<CR>
+nmap <leader>f9 :set foldlevel=9<CR>
+
+" Find merge conflict markers
+map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+
+" Shortcuts
+" Change Working Directory to that of the current file
+cmap cwd lcd %:p:h
+cmap cd. lcd %:p:h
+
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+
+" Allow using the repeat operator with a visual selection (!)
+" http://stackoverflow.com/a/8064607/127816
+vnoremap . :normal .<CR>
+
+" Fix home and end keybindings for screen, particularly on mac
+" - for some reason this fixes the arrow keys too. huh.
+map [F $
+imap [F $
+map [H g0
+imap [H g0
+
+" For when you forget to sudo.. Really Write the file.
+cmap w!! w !sudo tee % >/dev/null
+
+" Map <Leader>fa to display all lines with keyword under cursor
+" and ask which one to jump to
+nmap <Leader>fa [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+
+" Easier horizontal scrolling
+map zl zL
+map zh zH
+
+" FIXME: Revert this f70be548
+" fullscreen mode for GVIM and Terminal, need 'wmctrl' in you PATH
+map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
+
+nnoremap <leader>. :CtrlPMixed<cr>
+
+" re-indent the buffer
+noremap <Leader>= :call Preserve("normal gg=G")<cr>
+
+" Fugitive {
+    nnoremap <silent> <leader>gs :Gstatus<CR>
+    nnoremap <silent> <leader>gd :Gdiff<CR>
+    nnoremap <silent> <leader>gc :Gcommit<CR>
+    nnoremap <silent> <leader>gb :Gblame<CR>
+    nnoremap <silent> <leader>gl :Glog<CR>
+    nnoremap <silent> <leader>gp :Git push<CR>
+    nnoremap <silent> <leader>gr :Gread<CR>
+    nnoremap <silent> <leader>gw :Gwrite<CR>
+    nnoremap <silent> <leader>ge :Gedit<CR>
+    nnoremap <silent> <leader>gf :Git fetch origin<CR>
+    " Mnemonic _i_nteractive
+    nnoremap <silent> <leader>gi :Git add -p %<CR>
+    nnoremap <silent> <leader>gg :SignifyToggle<CR>
+"}
+
+" Intellizense
+noremap <silent> <Leader>I :Intellisense<cr>
+
+" map F12 to Toggle NERD Tree view
+noremap <silent> <F12> :NERDTreeToggle<cr>
+inoremap <silent> <F12> :NERDTreeToggle<cr>
+noremap <silent> <Leader>nt :NERDTreeToggle<cr>
+
+" Tagbar mappings
+noremap <silent> <c-F12> :TagbarToggle<cr>
+inoremap <silent> <c-F12> :TagbarToggle<cr>
+nnoremap <silent> <Leader>tb	:TagbarToggle<cr>
+
+noremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
+inoremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
+nnoremap <silent> <Leader>be	:BufExplorerHorizontalSplit<cr>
+
+" vim-fuzzyfinder setting
+nnoremap <silent> <Leader>ff :FufFile<cr>
+nnoremap <silent> <Leader>fF :FufFile!<cr>
+nnoremap <silent> <Leader>fb :FufBuffer<cr>
+nnoremap <silent> <Leader>fB :FufBuffer!<cr>
+nnoremap <silent> <Leader>ft :FufTag<cr>
+nnoremap <silent> <Leader>fT :FufTag!<cr>
+nnoremap <silent> <Leader>fo :FufJumpList<cr>
+nnoremap <silent> <Leader>fg :FufLine<cr>
+nnoremap <silent> <Leader>fh	:FufHelp<cr>
+nnoremap <silent> <Leader>fc	:FufQuickfix<cr>
+nnoremap <silent> <Leader>f:	:FufMruCmd<cr>
+nnoremap <silent> <Leader>fu :FufBookmarkFile<cr>
+nnoremap <silent> <Leader>fua :FufBookmarkFileAdd<cr>
+nnoremap <silent> <Leader>f<C-]> :FufTagWithCursorWord!<CR>
+nnoremap <silent> <Leader>f,     :FufBufferTag<CR>
+nnoremap <silent> <Leader>f<     :FufBufferTag!<CR>
+vnoremap <silent> <Leader>f,     :FufBufferTagWithSelectedText!<CR>
+vnoremap <silent> <Leader>f<     :FufBufferTagWithSelectedText<CR>
+nnoremap <silent> <Leader>f}     :FufBufferTagWithCursorWord!<CR>
+nnoremap <silent> <Leader>f.     :FufBufferTagAll<CR>
+nnoremap <silent> <Leader>f>     :FufBufferTagAll!<CR>
+vnoremap <silent> <Leader>f.     :FufBufferTagAllWithSelectedText!<CR>
+vnoremap <silent> <Leader>f>     :FufBufferTagAllWithSelectedText<CR>
+nnoremap <silent> <Leader>f]     :FufBufferTagAllWithCursorWord!<CR>
+nnoremap <silent> <Leader>fe     :FufTaggedFile<CR>
+nnoremap <silent> <Leader>fE     :FufTaggedFile!<CR>
+
+" FuzzyPrototypefinder plugin setting
+noremap <Leader>fpc :FuzzyPrototypeFinderClass<cr>
+noremap <Leader>fpg :FuzzyPrototypeFinderGlobal<cr>
+noremap <Leader>fpm :FuzzyPrototypeFinderFunction<cr>
+
+" trailing-whitespace setting
+nmap <Leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
+noremap <silent> <Leader>tw :FixWhitespace<cr>
+noremap <silent> <Leader>tws :highlight link ExtraWhitespace Search<cr>
+noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
+
+" UndoTree {
+    nnoremap <Leader>u :UndotreeToggle<CR>
+"}
+
+augroup myfiletypes
+
+    autocmd FileType go map <Leader>im :GoImport
+    autocmd FileType go map <Leader>fmt :GoFmt<cr>
+augroup END
