@@ -98,8 +98,10 @@ let b:match_ignorecase = 1
 
 let g:localvimrc_ask = 0
 
-"let g:UltiSnipsSnippetDirectories=["UltiSnips"]
-
+" Ultisnips {
+    let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+" }
+"
 " devhelp 
 let g:devhelpWordLength=4
 let g:devhelpAssistant=0
