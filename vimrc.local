@@ -64,6 +64,9 @@ let g:bufExplorerSplitBelow=0
         " powerline enabled font.
 
         let g:airline#extensions#tabline#enabled = 1
+        let g:airline#extensions#tabline#buffer_nr_show = 1
+        let g:airline#extensions#tmuxline#enabled = 1
+
         " See `:echo g:airline_theme_map` for some more choices
         " Default in terminal vim is 'dark'
         if !exists('g:airline_theme')
