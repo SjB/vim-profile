@@ -11,32 +11,39 @@ endfunction
     let g:looks = {}
     let g:looks.dark = {
                 \ '_map': 'd',
-                \ ':set': 'background=dark'
-                \ }
-
-    let g:looks.light = {
-                \ '_map': 'l',
-                \ ':set': 'background=light'
-                \ }
-
-    let g:looks.dusk= {
-                \ '_map': 'n',
-                \ ':colorscheme': 'dusk',
+                \ ':set': 'background=dark',
                 \ ':AirlineTheme': 'dark'
                 \ }
-
-    let g:looks.solorize = {
+    let g:looks.light = {
+                \ '_map': 'l',
+                \ ':set': 'background=light',
+                \ ':AirlineTheme': 'light'
+                \ }
+    let g:looks.molokai = {
+                \ '_map': 'm',
+                \ ':colorscheme': 'molokai',
+                \ ':AirlineTheme': 'molokai'
+                \ }
+    let g:looks.gruvbox = {
+                \ '_map': 't',
+                \ ':colorscheme': 'gruvbox',
+                \ ':AirlineTheme': 'wombat'
+                \ }
+    let g:looks.solarize = {
                 \ '_map': 's',
                 \ ':colorscheme': 'solarized',
                 \ ':AirlineTheme': 'solarized'
                 \ }
-
     let g:looks.pigraph = {
                 \ '_map': 'p',
                 \ ':colorscheme': 'pigraph',
                 \ ':AirlineTheme': 'dark'
                 \ }
-
+    let g:looks.bubblegum = {
+                \ '_map': 'b',
+                \ ':colorscheme': 'bubblegum',
+                \ ':AirlineTheme': 'bubblegum'
+                \ }
     let g:looks.hemisu = {
                 \ '_map': 'h',
                 \ ':colorscheme': 'hemisu',
