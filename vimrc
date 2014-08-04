@@ -34,10 +34,6 @@ if filereadable(expand("~/.vim/vimrc.bundles"))
     source ~/.vim/vimrc.bundles
 endif
 
-if filereadable(expand("~/.vim/vimrc.spf13"))
-    source ~/.vim/vimrc.spf13
-endif
-
 filetype plugin indent on
 syntax on
 set mouse=a
