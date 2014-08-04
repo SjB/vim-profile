@@ -12,10 +12,10 @@
 " }
 
 " Ctrlp {
-nnoremap <leader>. :CtrlPMixed<cr>
+    nnoremap <leader>. :CtrlPMixed<cr>
 
-let g:ctrlp_regexp = 1
-let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
+    let g:ctrlp_regexp = 1
+    let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
 " }
 
 noremap <Leader>= :call Preserve("normal gg=G")<cr>
