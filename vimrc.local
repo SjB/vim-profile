@@ -80,7 +80,7 @@ let g:bufExplorerSplitBelow=0
 " }
 
 set background=dark
-colorscheme hemisu
+colorscheme jellybeans
 let g:airline_theme="dark"
 if has("gui_running")
     if has("gui_gtk2")
