@@ -121,6 +121,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 "Plugin 'jamescarr/snipmate-nodejs'
 Plugin 'ahayman/vim-nodejs-complete'
 
+Plugin 'arecarn/frisk.vim'
+
 " vim-script repos
 Plugin 'FuzzyFinder'
 Plugin 'bufkill.vim'
