@@ -51,6 +51,8 @@ endfunction
                 \ }
 " }
 
+let g:sneak#streak = 1
+
 set omnifunc=syntaxcomplete#Complete
 
 " omnicppcomplete setting {
