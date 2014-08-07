@@ -3,81 +3,112 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 
+"Vundle manage vim plugins
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'L9'
 
-"Vundle manage vim plugins
-" Github repos
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-endwise'
 
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+
 Plugin 'Shougo/context_filetype.vim'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'Shougo/vimproc'
-"Plugin 'Shougo/neosnippet'
-"Plugin 'Shougo/neosnippet-snippets'
-"Plugin 'msanders/snipmate.vim'
-"Plugin 'spf13/snipmate-snippets'
-"Plugin 'scrooloose/snipmate-snippets'
-Plugin 'SirVer/ultisnips'
 
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
-Plugin 'scrooloose/nerdtree'
-"Plugin 'scrooloose/nerdcommenter'
-"Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'majutsushi/tagbar'
 
-"Plugin 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
 Plugin 'bling/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
 
-Plugin 'tpope/vim-fugitive'
 Plugin 'tomtom/tcomment_vim'
-
-Plugin 'localvimrc'
-
-Plugin 'pythoncomplete'
-Plugin 'python_match.vim'
 
 Plugin 'justinmk/vim-sneak'
 Plugin 'mbbill/undotree'
 Plugin 'Lokaltog/vim-easymotion'
 
-"Plugin 'spf13/vim-autoclose'
-"Plugin 'osyo-manga/vim-over'
-
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 
 Plugin 'gregsexton/MatchTag'
-
 Plugin 'godlygeek/csapprox'
-
-"Plugin 'scrooloose/syntastic'
 Plugin 'mhinz/vim-signify'
-"Plugin 'godlygeek/tabular'
-
-"Plugin 'OrangeT/vim-csharp'
-Plugin 'SjB/vim-csharp'
-
 Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'SjB/refactor'
 Plugin 'SjB/devhelp.vim'
+Plugin 'SjB/gtk-vim-syntax'
+Plugin 'SjB/vim-csharp'
 
-Plugin 'looks'
+Plugin 'localvimrc'
+Plugin 'arecarn/frisk.vim'
+
+
+" vim-script repos
+Plugin 'FuzzyFinder'
+Plugin 'bufkill.vim'
+Plugin 'matchit.zip'
+Plugin 'argtextobj.vim'
+Plugin 'bufexplorer.zip'
 
 "Plugin 'Blackrush/vim-gocode'
 "Plugin 'AndrewRadev/go-oracle.vim'
-Plugin 'fatih/vim-go'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-git'
-Plugin 'SjB/gtk-vim-syntax'
+"Plugin 'bling/vim-bufferline'
+"Plugin 'jeetsukumaran/vim-buffersaurus'
+"Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'quentindecock/vim-cucumber-align-pipes'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Shougo/neosnippet'
+"Plugin 'Shougo/neosnippet-snippets'
+"Plugin 'msanders/snipmate.vim'
+"Plugin 'spf13/snipmate-snippets'
+"Plugin 'scrooloose/snipmate-snippets'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'nosami/Omnisharp''
+"Plugin 'Raimondi/delimitMate'
+"Plugin 'vimoutliner/vimoutliner'
+"Plugin 'yazug/vim-taglist-plus'
+"Plugin 'godlygeek/tabular'
+"Plugin 'OrangeT/vim-csharp'
+"Plugin 'scrooloose/syntastic'
 
+" html plugins
+"Plugin 'tpope/vim-ragtag'
+Plugin 'mattn/emmet-vim'
+Plugin 'docunext/closetag.vim'
+
+"Markdown plugins 
+Plugin 'tpope/vim-markdown'
+
+"Golang plugins
+Plugin 'fatih/vim-go'
+
+"Python plugins
+Plugin 'pythoncomplete'
+Plugin 'python_match.vim'
+
+"Node plugins
+Plugin 'moll/vim-node'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'wavded/vim-stylus'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'ahayman/vim-nodejs-complete'
+"Plugin 'hallettj/jslint.vim'
+"Plugin 'walm/jshint.vim'
+"Plugin 'jamescarr/snipmate-nodejs'
+
+Plugin 'looks'
 " Colorscheme
 Plugin 'fmeyer/vim-pigraph'
 Plugin 'flazz/vim-colorschemes'
@@ -91,51 +122,4 @@ Plugin 'BusyBee'
 Plugin 'peaksea'
 Plugin 'summerfruit256.vim'
 
-"Plugin 'bling/vim-bufferline'
-"Plugin 'jeetsukumaran/vim-buffersaurus'
-"Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'quentindecock/vim-cucumber-align-pipes'
-"
-"Plugin 'nosami/Omnisharp''
-
-
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-endwise'
-"Plugin 'Raimondi/delimitMate'
-
-"Plugin 'vimoutliner/vimoutliner'
-"Plugin 'yazug/vim-taglist-plus'
-
-" html plugins
-"Plugin 'tpope/vim-ragtag'
-Plugin 'mattn/emmet-vim'
-Plugin 'docunext/closetag.vim'
-
-"Node plugins
-Plugin 'moll/vim-node'
-"Plugin 'hallettj/jslint.vim'
-"Plugin 'walm/jshint.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'wavded/vim-stylus'
-Plugin 'mustache/vim-mustache-handlebars'
-"Plugin 'jamescarr/snipmate-nodejs'
-Plugin 'ahayman/vim-nodejs-complete'
-
-Plugin 'arecarn/frisk.vim'
-
-" vim-script repos
-Plugin 'FuzzyFinder'
-Plugin 'bufkill.vim'
-Plugin 'matchit.zip'
-"Plugin 'a.vim'
-Plugin 'bufexplorer.zip'
-"Plugin 'IndexedSearch'
-Plugin 'argtextobj.vim'
-"Plugin 'YankRing.vim'
-"Plugin 'Puppet-Syntax-Highlighting'
-
-" non-GitHub repos
-" Plugin 'spf13/vim-preview' "Requires Ruby
-" Plugin 'git://git.wincent.com/command-t.git' "Requires Ruby
 
