@@ -121,7 +121,7 @@ let b:match_ignorecase = 1
 let g:localvimrc_ask = 0
 
 " Ultisnips {
-    let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+    let g:UltiSnipsSnippetDirectories=["UltiSnips", "bundle/vim-snippets/UltiSnips/"]
 " }
 "
 " devhelp 
