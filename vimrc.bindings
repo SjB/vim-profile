@@ -271,8 +271,7 @@ noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
 
 map <C-c><C-d> :Frisk -ddgoog<space>
 
-map     /   <Plug>(easymotion-sn)
-omap    /   <Plug>(easymotion-tn)
+map     <C-\>   <Plug>(easymotion-sn)
 
 " 1-character _inclusive_ Sneak (for enhanced 'f')
 nmap f <Plug>Sneak_f
