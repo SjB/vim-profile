@@ -4,19 +4,18 @@ let mapleader = ','
 " Some helpers to edit mode
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=escape(expand('%:h'), ' ').'/'<cr>
-map <Leader>e :e %%
-map <Leader>s :sp %%
-map <Leader>vs :vsp %%
-map <Leader>lv :e .lvimrc<cr>
+map <Leader>e   :e %%
+map <Leader>sp  :sp %%
+map <Leader>vsp :vsp %%
+map <Leader>lv  :e .lvimrc<cr>
+map <Leader>sb  :source ~/.vimrc<cr>
 
-noremap <Leader>eb :sp  ~/.vim/vimrc.bindings"<cr><cr>
-nmap <Leader>sb :source ~/.vimrc<cr>
-
-map <Leader>vc :sp ~/Dropbox/Notes/vim-cheatsheet.txt<cr>
-map <Leader>cj :e ~/Dropbox/Notes/coding-journals.txt<cr>
-map <Leader>dj :e ~/Dropbox/Notes/debugging-journals.txt<cr>
-map <Leader>nca :e ~/Dropbox/Notes/nca-journals.txt<cr>
-map <Leader>sg :e ~/Dropbox/Notes/sagacity-journals.txt<cr>
+map <Leader>eb :e ~/.vim/vimrc.bindings"<cr><cr>
+map <Leader>ev :e ~/Dropbox/Notes/vim-cheatsheet.txt<cr>
+map <Leader>ec :e ~/Dropbox/Notes/coding-journals.txt<cr>
+map <Leader>ed :e ~/Dropbox/Notes/debugging-journals.txt<cr>
+map <Leader>en :e ~/Dropbox/Notes/nca-journals.txt<cr>
+map <Leader>es :e ~/Dropbox/Notes/sagacity-journals.txt<cr>
 
 map <Leader>0 :e#<cr>
 map <Leader>1 :1b<cr>
@@ -29,8 +28,7 @@ map <Leader>7 :7b<cr>
 map <Leader>8 :8b<cr>
 map <Leader>9 :9b<cr>
 
-map <C-h> :nohl<cr>
-imap <C-l> :<Space>
+imap <C-c> <esc>:<Space>
 " Note that remapping C-s requires flow control to be disabled
 " (e.g. in .bashrc or .zshrc)
 map <C-s> <esc>:w<CR>
@@ -38,6 +36,8 @@ imap <C-s> <esc>:w<CR>
 map <C-c><C-n> :cn<CR>
 map <C-c><C-p> :cp<CR>
 map ; :
+
+map <Leader>s :set spell!<cr>
 
 " xnoremap <f1> "zy:!firefox "http://www.google.com/search?q=<c-r>=substitute(@z,' ','%20','g')<cr>"<return>gv
 
