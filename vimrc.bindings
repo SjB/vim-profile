@@ -209,6 +209,10 @@ noremap <Leader>= :call Preserve("normal gg=G")<cr>
     nnoremap <silent> <leader>gi :Git add -p %<CR>
 "}
 
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
 " Intellizense
 noremap <silent> <Leader>I :Intellisense<cr>
 

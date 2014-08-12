@@ -70,26 +70,7 @@ set omnifunc=syntaxcomplete#Complete
     let g:OmniCpp_MayCompleteScope=1
     let g:OmniCpp_SelectFirstItem=0
 " }
-
-" neocomplet {
-    let g:acp_enableAtStartup = 0
-    let g:neocomplcache_enable_at_startup = 1
-    let g:neocomplcache_enable_camel_case_completion = 1
-    let g:neocomplcache_enable_smart_case = 1
-    let g:neocomplcache_enable_underbar_completion = 1
-    let g:neocomplcache_enable_auto_delimiter = 1
-    "let g:neocomplcache_max_list = 15
-    let g:neocomplcache_force_overwrite_completefunc = 1
-	" AutoComplPop like behavior.
-	let g:neocomplcache_enable_auto_select = 1
-
-	" <C-h>, <BS>: close popup and delete backword char.
-	inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-	inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-	inoremap <expr><C-y>  neocomplcache#close_popup()
-	inoremap <expr><C-e>  neocomplcache#cancel_popup()
-"}
-
+"
 " UndoTree {
     " If undotree is opened, it is likely one wants to interact with it.
     let g:undotree_SetFocusWhenToggle=1
