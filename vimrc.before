@@ -127,10 +127,11 @@ let g:localvimrc_ask = 0
     let g:UltiSnipsJumpForwardTrigger="<tab>"
 " }
 "
-" devhelp 
-let g:devhelpWordLength=4
-let g:devhelpAssistant=0
-let g:devhelpSearch=1
+" devhelp {
+    let g:devhelpWordLength=4
+    let g:devhelpAssistant=0
+    let g:devhelpSearch=1
+" }
 
 if !has("gui")
     let g:CSApprox_loaded = 1
