@@ -122,6 +122,9 @@ let g:localvimrc_ask = 0
 
 " Ultisnips {
     let g:UltiSnipsSnippetDirectories=["UltiSnips", "bundle/vim-snippets/UltiSnips/"]
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
 " }
 "
 " devhelp 
