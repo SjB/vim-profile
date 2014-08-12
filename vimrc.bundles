@@ -87,6 +87,9 @@ Plugin 'bufexplorer.zip'
 Plugin 'mattn/emmet-vim'
 Plugin 'docunext/closetag.vim'
 
+"qml plugin
+Plugin 'peterhoeg/vim-qml'
+
 "Markdown plugins 
 Plugin 'tpope/vim-markdown'
 
