@@ -47,7 +47,7 @@ nmap <Leader>bi :source ~/.vimrc<cr>:PluginInstall<cr>
 map <Leader>cp ggVG"*y
 map <Leader>p :set paste<cr>o<esc>"*]p:set nopaste<cr>
 
-map <Leader>sn :UltiSnipsEdit<cr>
+map <Leader>use :UltiSnipsEdit<cr>
 
 " Breaking lines with \[enter] without having to go to insert mode (myself).
 nmap <leader><cr> i<cr><Esc>
