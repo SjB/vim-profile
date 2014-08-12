@@ -51,7 +51,7 @@ Plugin 'SjB/vim-csharp'
 
 Plugin 'localvimrc'
 Plugin 'arecarn/frisk.vim'
-
+Plugin 'tommcdo/vim-exchange'
 
 " vim-script repos
 Plugin 'FuzzyFinder'
