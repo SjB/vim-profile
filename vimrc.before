@@ -39,11 +39,6 @@ endfunction
                 \ ':colorscheme': 'pigraph',
                 \ ':AirlineTheme': 'dark'
                 \ }
-    let g:looks.bubblegum = {
-                \ '_map': 'b',
-                \ ':colorscheme': 'bubblegum',
-                \ ':AirlineTheme': 'bubblegum'
-                \ }
     let g:looks.hemisu = {
                 \ '_map': 'h',
                 \ ':colorscheme': 'hemisu',

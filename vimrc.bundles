@@ -113,15 +113,15 @@ Plugin 'ahayman/vim-nodejs-complete'
 Plugin 'looks'
 " Colorscheme
 Plugin 'fmeyer/vim-pigraph'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'noahfrederick/vim-hemisu'
 Plugin 'wesgibbs/vim-irblack'
 Plugin 'sickill/vim-monokai'
-Plugin 'tomasr/molokai'
+Plugin 'fatih/molokai'
 Plugin 'morhetz/gruvbox'
 Plugin 'BusyBee'
 Plugin 'peaksea'
 Plugin 'summerfruit256.vim'
+"Plugin 'flazz/vim-colorschemes'
 
 
