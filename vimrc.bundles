@@ -13,6 +13,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-dispatch'
 "Plugin 'tpope/vim-endwise'
 
 Plugin 'kien/ctrlp.vim'
