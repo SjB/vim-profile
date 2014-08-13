@@ -304,3 +304,4 @@ augroup myfiletypes
     autocmd FileType go map <Leader>fmt :GoFmt<cr>
     autocmd FileType go map <C-c><C-s> :Frisk -gowalker<space>
 augroup END
+
