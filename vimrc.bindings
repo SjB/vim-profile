@@ -62,7 +62,7 @@ nmap <silent> <Leader>ip :set invpaste<cr>:set paste?<cr>
 nmap <silent> <Leader>n :set invhls<cr>:set hls?<cr>
 
 " Set text wrapping toggles
-nmap <silent> <Leader>w :set invwrap<cr>:set wrap?<cr>
+nmap <silent> <Leader>iw :set invwrap<cr>:set wrap?<cr>
 
 " Set up retabbing on a source file
 nmap <silent> <Leader>rr :1,$retab<cr>
@@ -107,9 +107,6 @@ noremap <silent> <Leader>j :wincmd j<cr>
 noremap <silent> <Leader>k :wincmd k<cr>
 noremap <silent> <Leader>l :wincmd l<cr>
 
-map <Leader>= <C-w>=
-map <Leader>w <C-w>w
-
 noremap <silent> <Leader>sp     :wincmd p<cr>
 noremap <silent> <Leader>se     :wincmd =<cr>
 noremap <silent> <Leader>sh     :resize +10'<cr>
@@ -125,7 +122,7 @@ noremap <silent> <Leader>cl :wincmd l<cr>:close<cr>
 noremap <silent> <Leader>cx :close<cr>
 noremap <silent> <Leader>co :only<cr>
 
-" windows placeme<Leader>t
+" windows placeme<Leader>
 noremap <silent> <Leader>ml :wincmd L<cr>
 noremap <silent> <Leader>mk :wincmd K<cr>
 noremap <silent> <Leader>mh :wincmd H<cr>
@@ -219,16 +216,13 @@ noremap <silent> <Leader>I :Intellisense<cr>
 " map F12 to Toggle NERD Tree view
 noremap <silent> <F12> :NERDTreeToggle<cr>
 inoremap <silent> <F12> :NERDTreeToggle<cr>
-noremap <silent> <Leader>nt :NERDTreeToggle<cr>
 
 " Tagbar mappings
 noremap <silent> <c-F12> :TagbarToggle<cr>
 inoremap <silent> <c-F12> :TagbarToggle<cr>
-nnoremap <silent> <Leader>tb    :TagbarToggle<cr>
 
 noremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
 inoremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
-nnoremap <silent> <Leader>be    :BufExplorerHorizontalSplit<cr>
 
 " vim-fuzzyfinder setting
 nnoremap <silent> <Leader>ff :FufFile<cr>
@@ -265,9 +259,9 @@ noremap <Leader>fpm :FuzzyPrototypeFinderFunction<cr>
 
 " trailing-whitespace setting
 nmap <Leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
-noremap <silent> <Leader>tw :FixWhitespace<cr>
-noremap <silent> <Leader>tws :highlight link ExtraWhitespace Search<cr>
-noremap <silent> <Leader>twh :highlight link ExtraWhitespace None<cr>
+noremap <silent> <Leader>w :FixWhitespace<cr>
+noremap <silent> <Leader>ws :highlight link ExtraWhitespace Search<cr>
+noremap <silent> <Leader>wh :highlight link ExtraWhitespace None<cr>
 
 " UndoTree {
     nnoremap <Leader>u :UndotreeToggle<CR>
@@ -300,8 +294,17 @@ omap T <Plug>Sneak_T
 
 augroup myfiletypes
 
-    autocmd FileType go map <Leader>im :GoImport
-    autocmd FileType go map <Leader>fmt :GoFmt<cr>
     autocmd FileType go map <C-c><C-s> :Frisk -gowalker<space>
+    
+    au FileType go nmap <Leader>ti <Plug>(go-info)
+    au FileType go nmap <Leader>td <Plug>(go-doc)
+    au FileType go nmap <Leader>tdv <Plug>(go-doc-vertical)
+    au FileType go nmap <Leader>tdb <Plug>(go-doc-browser)
+    au FileType go nmap <Leader>tds <Plug>(go-def-split)
+    au FileType go nmap <Leader>tdvs <Plug>(go-def-vertical)
+
+    au FileType go nmap <leader>tr <Plug>(go-run)
+    au FileType go nmap <leader>tb <Plug>(go-build)
+    au FileType go nmap <leader>tt <Plug>(go-test)
 augroup END
 
