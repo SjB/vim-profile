@@ -77,14 +77,6 @@ set omnifunc=syntaxcomplete#Complete
     let g:indent_guides_enable_on_vim_startup = 0
 " }
 
-" CtrlP setting {
-"    let g:ctrlp_map = '<c-p>'
-"    let g:ctrlp_cmd = 'CtrlPMixed'
-    let g:ctrlp_working_path_mode = 'rwa'
-    let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'mixed']
-
-" }
-
 " NERD_tree setting {
     let NERDTreeQuitOnOpen=0
     let NERDTreeShowBookmarks=1
