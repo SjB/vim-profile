@@ -83,9 +83,9 @@ let g:bufExplorerSplitBelow=0
 " }
 
 set background=dark
-colorscheme hemisu
 let g:airline_theme="dark"
 if has("gui_running")
+    colorscheme hemisu
     if has("gui_gtk2")
        set guifont=Ubuntu\ Mono\ 12 
    elseif has("gui_macvim")
@@ -93,6 +93,8 @@ if has("gui_running")
    elseif has("gui_win32")
        set guifont=Consolas:h11:cANSI
    endif
+else
+    colorscheme solarized
 endif
 
 let g:tagbar_type_go = {
