@@ -20,7 +20,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'jalcine/cmake.vim'
+"Plugin 'jalcine/cmake.vim'
 
 Plugin 'Shougo/context_filetype.vim'
 
