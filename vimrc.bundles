@@ -54,6 +54,7 @@ Plugin 'SjB/vim-csharp'
 Plugin 'localvimrc'
 Plugin 'arecarn/frisk.vim'
 Plugin 'tommcdo/vim-exchange'
+Plugin 'dahu/grope'
 
 " vim-script repos
 Plugin 'FuzzyFinder'
