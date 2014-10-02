@@ -198,8 +198,6 @@ noremap <Leader>= :call Preserve("normal gg=G")<cr>
     nnoremap <silent> <leader>gb :Gblame<CR>
     nnoremap <silent> <leader>gl :Glog<CR>
     nnoremap <silent> <leader>gp :Git push<CR>
-    nnoremap <silent> <leader>gr :Gread<CR>
-    nnoremap <silent> <leader>gw :Gwrite<CR>
     nnoremap <silent> <leader>ge :Gedit<CR>
     nnoremap <silent> <leader>gf :Git fetch origin<CR>
     " Mnemonic _i_nteractive
