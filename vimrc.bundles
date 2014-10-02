@@ -61,6 +61,7 @@ Plugin 'bufkill.vim'
 Plugin 'matchit.zip'
 Plugin 'argtextobj.vim'
 Plugin 'bufexplorer.zip'
+Plugin 'Align'
 
 "Plugin 'Blackrush/vim-gocode'
 "Plugin 'AndrewRadev/go-oracle.vim'
