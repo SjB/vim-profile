@@ -89,7 +89,7 @@ let b:match_ignorecase = 1
 let g:localvimrc_ask = 0
 
 " Ultisnips {
-    let g:UltiSnipsSnippetDirectories=["UltiSnips", "bundle/vim-snippets/UltiSnips/"]
+    let g:UltiSnipsSnippetDirectories=["UltiSnips", "bundle/vim-snippets/UltiSnips/", "bundle/angular-vim-snippets/UltiSnips"]
 
     " make YCM compatible with UltiSnips (using supertab)
     let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
