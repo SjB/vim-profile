@@ -83,7 +83,7 @@ Plugin 'Align'
 "Plugin 'yazug/vim-taglist-plus'
 "Plugin 'godlygeek/tabular'
 "Plugin 'OrangeT/vim-csharp'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " html plugins
 "Plugin 'tpope/vim-ragtag'
