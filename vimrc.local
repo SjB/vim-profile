@@ -25,6 +25,7 @@ endif
     let g:ctrlp_working_path_mode = 'rwa'
     let g:ctrlp_open_new_file = 'h'
     let g:ctrlp_open_multiple_files = '2hjr'
+    let g:ctrlp_lazy_update = 0
     let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'mixed']
 
     let g:ctrlp_regexp = 0
