@@ -96,6 +96,9 @@ Plugin 'peterhoeg/vim-qml'
 "Markdown plugins 
 Plugin 'tpope/vim-markdown'
 
+"Less css plugins
+Plugin 'genoma/vim-less'
+
 "Golang plugins
 Plugin 'fatih/vim-go'
 
