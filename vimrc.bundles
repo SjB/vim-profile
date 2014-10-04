@@ -98,6 +98,7 @@ Plugin 'tpope/vim-markdown'
 
 "Less css plugins
 Plugin 'genoma/vim-less'
+Plugin 'hail2u/vim-css3-syntax'
 
 "Golang plugins
 Plugin 'fatih/vim-go'
