@@ -219,7 +219,7 @@ noremap <Leader>tn :NERDTreeToggle<cr>
 " Tagbar mappings
 noremap <silent> <c-F12> :TagbarToggle<cr>
 inoremap <silent> <c-F12> :TagbarToggle<cr>
-noremap <Leader>tt :TagbarToggle<cr>
+noremap <Leader>tg :TagbarToggle<cr>
 
 noremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
 inoremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
