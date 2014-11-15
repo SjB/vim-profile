@@ -214,13 +214,16 @@ noremap <silent> <Leader>I :Intellisense<cr>
 " map F12 to Toggle NERD Tree view
 noremap <silent> <F12> :NERDTreeToggle<cr>
 inoremap <silent> <F12> :NERDTreeToggle<cr>
+noremap <Leader>tn :NERDTreeToggle<cr>
 
 " Tagbar mappings
 noremap <silent> <c-F12> :TagbarToggle<cr>
 inoremap <silent> <c-F12> :TagbarToggle<cr>
+noremap <Leader>tt :TagbarToggle<cr>
 
 noremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
 inoremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
+noremap <Leader>tb :BufExplorerHorizontalSplit<cr>
 
 " vim-fuzzyfinder setting
 nnoremap <silent> <Leader>ff :FufFile<cr>
