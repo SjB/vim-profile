@@ -195,6 +195,7 @@ cnoreabbrev H helpgrep
 " using 256 colors (or 88 colors) if your terminal supports it,
 " but does not automatically use 256 colors by default.
 set t_Co=256
+set t_ut=
 "set t_Co=88
 
 " GVIM- (here instead of .gvimrc)
