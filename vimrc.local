@@ -20,7 +20,7 @@ au BufRead,BufNewFile *.definition set filetype=xml
     let g:solarized_termtrans=1
     let g:solarized_contrast="normal"
     let g:solarized_visibility="normal"
-    color solarized             " Load a colorscheme
+"    color solarized             " Load a colorscheme
 " }
 
 " Ctrlp {
@@ -114,7 +114,7 @@ if has("gui_running")
        set guifont=Consolas:h11:cANSI
    endif
 else
-    colorscheme solarized
+    colorscheme molokai
 endif
 
 let g:tagbar_type_go = {
