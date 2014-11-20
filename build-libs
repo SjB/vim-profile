@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ACKGREP=`which ack-grep`
+if [ -z ${ACKGREP} ]; then
+    sudo apt-get install ack-grep
+fi
+
+pushd ~/.vim/bundle/YouCompleteMe
+./install.sh --omnisharp-completer --clang-completer
+popd
+
+pushd ~/.vim/bundle/vimproc.vim
+make
+popd
