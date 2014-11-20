@@ -188,6 +188,10 @@ map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscr
 
 nnoremap <leader>. :CtrlPMixed<cr>
 
+" Unite
+nnoremap <c-p>  :Unite file file_rec buffer file_mru<cr>
+nnoremap <c-l>  :Unite line<cr>
+
 " re-indent the buffer
 noremap <Leader>= :call Preserve("normal gg=G")<cr>
 
