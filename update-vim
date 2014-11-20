@@ -1,5 +1,7 @@
 #!/bin/bash
 
+vim +PluginUpdate +qall
+
 ACKGREP=`which ack-grep`
 if [ -z ${ACKGREP} ]; then
     sudo apt-get install ack-grep
