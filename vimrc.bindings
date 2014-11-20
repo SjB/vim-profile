@@ -79,12 +79,12 @@ map <S-F5> :execute "source ".input("Load session: ", "~/.vim/session/", "file")
 map <F5> :execute "mksession! ".input("Save session: ", "~/.vim/session/", "file")\| :echo "Session saved."<CR>
 
 " allow command line editing like emacs
-cnoremap <C-A>      <Home>
-cnoremap <C-B>      <Left>
-cnoremap <C-E>      <End>
-cnoremap <C-F>      <Right>
-cnoremap <C-N>      <End>
-cnoremap <C-P>      <Up>
+"cnoremap <C-A>      <Home>
+"cnoremap <C-B>      <Left>
+"cnoremap <C-E>      <End>
+"cnoremap <C-F>      <Right>
+"cnoremap <C-N>      <End>
+"cnoremap <C-P>      <Up>
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
