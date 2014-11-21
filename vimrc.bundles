@@ -61,7 +61,6 @@ Plugin 'dahu/grope'
 Plugin 'editorconfig/editorconfig-vim'
 
 " vim-script repos
-Plugin 'FuzzyFinder'
 Plugin 'bufkill.vim'
 Plugin 'matchit.zip'
 Plugin 'argtextobj.vim'

@@ -225,39 +225,6 @@ noremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
 inoremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
 noremap <Leader>tb :BufExplorerHorizontalSplit<cr>
 
-" vim-fuzzyfinder setting
-nnoremap <silent> <Leader>ff :FufFile<cr>
-nnoremap <silent> <Leader>fF :FufFile!<cr>
-nnoremap <silent> <Leader>fb :FufBuffer<cr>
-nnoremap <silent> <Leader>fB :FufBuffer!<cr>
-nnoremap <silent> <Leader>ft :FufTag<cr>
-nnoremap <silent> <Leader>fT :FufTag!<cr>
-nnoremap <silent> <Leader>fo :FufJumpList<cr>
-nnoremap <silent> <Leader>fg :FufLine<cr>
-nnoremap <silent> <Leader>fh    :FufHelp<cr>
-nnoremap <silent> <Leader>fc    :FufQuickfix<cr>
-nnoremap <silent> <Leader>f:    :FufMruCmd<cr>
-nnoremap <silent> <Leader>fu :FufBookmarkFile<cr>
-nnoremap <silent> <Leader>fua :FufBookmarkFileAdd<cr>
-nnoremap <silent> <Leader>f<C-]> :FufTagWithCursorWord!<CR>
-nnoremap <silent> <Leader>f,     :FufBufferTag<CR>
-nnoremap <silent> <Leader>f<     :FufBufferTag!<CR>
-vnoremap <silent> <Leader>f,     :FufBufferTagWithSelectedText!<CR>
-vnoremap <silent> <Leader>f<     :FufBufferTagWithSelectedText<CR>
-nnoremap <silent> <Leader>f}     :FufBufferTagWithCursorWord!<CR>
-nnoremap <silent> <Leader>f.     :FufBufferTagAll<CR>
-nnoremap <silent> <Leader>f>     :FufBufferTagAll!<CR>
-vnoremap <silent> <Leader>f.     :FufBufferTagAllWithSelectedText!<CR>
-vnoremap <silent> <Leader>f>     :FufBufferTagAllWithSelectedText<CR>
-nnoremap <silent> <Leader>f]     :FufBufferTagAllWithCursorWord!<CR>
-nnoremap <silent> <Leader>fe     :FufTaggedFile<CR>
-nnoremap <silent> <Leader>fE     :FufTaggedFile!<CR>
-
-" FuzzyPrototypefinder plugin setting
-noremap <Leader>fpc :FuzzyPrototypeFinderClass<cr>
-noremap <Leader>fpg :FuzzyPrototypeFinderGlobal<cr>
-noremap <Leader>fpm :FuzzyPrototypeFinderFunction<cr>
-
 " trailing-whitespace setting
 nmap <Leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
 noremap <silent> <Leader>w :FixWhitespace<cr>
