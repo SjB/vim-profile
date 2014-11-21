@@ -40,6 +40,10 @@ set mouse=a
 set mousehide
 scriptencoding utf-8
 
+if &encoding ==# 'latin1' && has('gui_running')
+    set encoding=utf-8
+endif
+
 if has('clipboard')
     if LINUX()
         set clipboard=unnamedplus
@@ -57,7 +61,7 @@ endif
 set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 set virtualedit=onemore             " Allow for cursor beyond last character
-set history=1000                    " Store a ton of history (default is 20)
+set history=50                    " Store a ton of history (default is 20)
 set spell                           " Spell checking on
 set hidden                          " Allow buffer switching without saving
 
@@ -67,7 +71,6 @@ set showtabline=0
 " set it to the first line when editing a git commit message
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
-set backup                  " Backups are nice ...
 if has('persistent_undo')
     set undofile                " So is persistent undo ...
     set undolevels=1000         " Maximum number of changes that can be undone
@@ -75,7 +78,6 @@ if has('persistent_undo')
 endif
 
 set tabpagemax=15               " Only show 15 tabs
-set showmode                    " Display the current mode
 
 set cursorline                  " Highlight current line
 
@@ -86,8 +88,11 @@ highlight clear LineNr          " Current line number row will have same backgro
 if has('cmdline_info')
     set ruler                   " Show the ruler
     set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
-    set showcmd                 " Show partial commands in status line and
     " Selected characters/lines in visual mode
+endif
+
+if has("cryptv")
+    set cryptmethod=blowfish
 endif
 
 " Set spell language
@@ -96,19 +101,36 @@ set dictionary=/usr/share/dict/words
 
 set backspace=indent,eol,start  " Backspace for dummies
 set linespace=0                 " No extra spaces between rows
-set number                          " Line numbers on
-set showmatch                   " Show matching brackets/parenthesis
+
+set number                      " Line numbers on
+set numberwidth=5
+set showmode                    " Display the current mode
+set showcmd                     " Show partial commands in status line and
+set cmdheight=1
+set scrolloff=4
+set scrolljump=5                " Lines to scroll when cursor leaves screen
+set sidescrolloff=2
+set laststatus=2
+set ttyfast
+set lazyredraw
+
 set incsearch                   " Find as you type search
-set hlsearch                    " Highlight search terms
-set winminheight=0              " Windows can be 0 line high
 set ignorecase                  " Case insensitive search
 set smartcase                   " Case sensitive when uc present
+set hlsearch                    " Highlight search terms
+set gdefault                    " Substitute all matches in a line by default
+
+set cindent
+set cinoptions=l1,j1
+set showmatch                   " Show matching brackets/parenthesis
+set matchtime=3
+
 set wildmenu                    " Show list instead of just completing
-set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
+set wildignore+=*.o,*.obj,*.exe,*.bak,*.pyc,*.sass-cache,tmp,*.~
+set winminheight=0              " Windows can be 0 line high
+set wildmode=longest:full,list:full
 set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
-set scrolljump=5                " Lines to scroll when cursor leaves screen
-set scrolloff=3                 " Minimum lines to keep above and below cursor
-set foldenable                  " Auto fold code
+
 "set list
 "set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 set formatoptions-=t
@@ -117,8 +139,11 @@ set formatoptions-=t
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4 
-set nowrap
+set smarttab
 set expandtab
+set complete-=i
+
+set nowrap
 set nojoinspaces
 set splitright
 set splitbelow
@@ -129,24 +154,21 @@ set textwidth=79
 "set ch=2 	" Make command line two lines high
 "set backspace=eol,indent,start
 "set background=light
-set autoindent
 set cink+=*;
 set cpoptions+=$d
 set fillchars=""
-set lazyredraw
-set matchtime=2
-set nobackup
-" set ruler
-"set showfulltag
-"set smartindent
-set synmaxcol=2048
-set timeoutlen=500
-"set virtualedit=all
-"set wrapscan
 
-set wildignore+=*.o,*.obj,*.exe,*.bak
+set nobackup
+set nowritebackup
+set noswapfile
+set directory=/tmp
+
+set synmaxcol=2048
+set ttimeout
+set ttimeoutlen=500
 
 " These commands open folds
+set foldenable                  " Auto fold code
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 
 " Set diff mode to ingnore white space
