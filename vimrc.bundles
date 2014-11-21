@@ -119,6 +119,9 @@ Plugin 'fatih/vim-go'
 Plugin 'pythoncomplete'
 Plugin 'python_match.vim'
 
+Plugin 'Shougo/javacomplete'
+Plugin 'Shougo/vimshell.vim'
+
 "Node plugins
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
