@@ -18,8 +18,15 @@ Plugin 'tpope/vim-dispatch'
 
 "Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/unite-outline'
+Plugin 'Shougo/unite-help'
+Plugin 'Shougo/unite-build'
 Plugin 'Shougo/neomru.vim'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'tsukkee/unite-tag'
+Plugin 'osyo-manga/unite-quickfix'
+Plugin 'kmnk/vim-unite-giti'
+
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'Valloric/YouCompleteMe'
