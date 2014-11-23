@@ -28,27 +28,24 @@ au BufRead,BufNewFile *.definition set filetype=xml
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 	" The prefix key.
-	nnoremap    [unite]   <Nop>
-	nmap        m [unite]
 
-    nnoremap <silent> [unite]t  :<C-u>Unite -buffer-name=files file_rec/async:!<cr>
-    nnoremap <silent> [unite]f  :<C-u>Unite -buffer-name=files file<cr>
-    nnoremap <silent> [unite]r  :<C-u>Unite -buffer-name=mru file_mru<cr>
-    nnoremap <silent> [unite]o  :<C-u>Unite -buffer-name=outline outline<cr>
-    nnoremap <silent> [unite]y  :<C-u>Unite -buffer-name=yank history/yank<cr>
-    nnoremap <silent> [unite]b  :<C-u>Unite -buffer-name=buffer buffer<cr>
-    nnoremap <silent> [unite]a  :<C-u>Unite -buffer-name=all buffer file_mru file/async file_rec/async<CR>
-    nnoremap <silent> [unite]mk :<C-u>Unite -buffer-name=bookmark bookmark<cr>
-    nnoremap <silent> [unite]c  :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file/async file_rec/async<CR>
-    nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -buffer-name=files -prompt=%\  buffer file_mru file/async file_rec/async<CR>
-    nnoremap <silent> [unite]ma :<C-u>Unite mapping<cr>
-    nnoremap <silent> [unite]l  :<C-u>Unite line<CR>
-    nnoremap <silent> [unite]z  :<C-u>Unite -buffer-name=resume resume<CR>
-    nnoremap <silent> [unite]re  :<C-u>Unite -buffer-name=register register<CR>
-    nnoremap <silent> [unite]me :<C-u>Unite output:message<CR>
-    nnoremap <silent> [unite]s  :<C-u>Unite source<CR>
+    noremap  <silent> <Leader>q  :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file/async file_rec/async<CR>
+    noremap  <silent> <Leader>d  :<C-u>UniteWithBufferDir -buffer-name=files -prompt=%\  buffer file_mru file/async file_rec/async<CR>
+    noremap  <silent> <Leader>x  :<C-u>Unite source<CR>
+    noremap  <silent> <Leader>i  :<C-u>Unite -buffer-name=outline outline<cr>
+    noremap  <silent> <Leader>y :<C-u>Unite -buffer-name=yank history/yank<cr>
+    noremap  <silent> <Leader>n  :<C-u>Unite -buffer-name=files jump_point file_point buffer_tab file_rec:! file file/new<CR>
+    noremap  <silent> <Leader>fb :<C-u>Unite -buffer-name=buffer buffer<cr>
+    noremap  <silent> <Leader>ft :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
+    noremap  <silent> <Leader>ff :<C-u>Unite -buffer-name=files file_mru file<cr>
+    noremap  <silent> <Leader>fa :<C-u>Unite -buffer-name=all buffer file_mru file/async file_rec/async<CR>
+    noremap  <silent> <Leader>fl  :<C-u>Unite line<CR>
+    noremap  <silent> <Leader>fz  :<C-u>Unite -buffer-name=resume resume<CR>
+    noremap  <silent> <Leader>fr  :<C-u>Unite -buffer-name=register register<CR>
+    noremap  <silent> <Leader>fm :<C-u>Unite output:message<CR>
+    noremap  <silent> <Leader>fk :<C-u>Unite -buffer-name=bookmark bookmark<cr>
+    noremap  <silent> <Leader>ma :<C-u>Unite mapping<cr>
 
-    nnoremap <silent> [unite]n  :<C-u>Unite -buffer-name=files jump_point file_point buffer_tab file_rec:! file file/new<CR>
 
 	call unite#custom#profile('default', 'context', {
 	\   'start_insert': 1,
@@ -97,6 +94,7 @@ au BufRead,BufNewFile *.definition set filetype=xml
 	  nnoremap <buffer><expr> S      unite#mappings#set_current_filters(
 	          \ empty(unite#mappings#get_current_filters()) ?
 	          \ ['sorter_reverse'] : [])
+    noremap  <silent> <Leader>b :<C-u>Unite -buffer-name=buffer buffer<cr>
 
 	  imap <silent><buffer><expr> <C-o>     unite#do_action('split')
 	  imap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')

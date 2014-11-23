@@ -7,7 +7,7 @@ cnoremap %% <C-R>=escape(expand('%:h'), ' ').'/'<cr>
 map <Leader>e   :e %%
 map <Leader>sp  :sp %%
 map <Leader>vsp :vsp %%
-map <Leader>lv  :e .lvimrc<cr>
+map <Leader>el  :e .lvimrc<cr>
 map <Leader>sb  :source ~/.vimrc<cr>
 
 map <Leader>eb :e ~/.vim/vimrc.bindings"<cr><cr>
@@ -56,13 +56,13 @@ nmap <leader><cr> i<cr><Esc>
 noremap <silent> <f9> :echo "Running waf..."<cr>:sil! ./waf<cr>:cw<cr>:redraw!<cr>:echo "waf complete."<cr>
 
 " Toggle paste mode
-nmap <silent> <Leader>ip :set invpaste<cr>:set paste?<cr>
+nmap <silent> <Leader>sip :set invpaste<cr>:set paste?<cr>
 
 " Turn off that stupid highlight search
-nmap <silent> <Leader>n :set invhls<cr>:set hls?<cr>
+nmap <silent> <Leader>hls :set invhls<cr>:set hls?<cr>
 
 " Set text wrapping toggles
-nmap <silent> <Leader>iw :set invwrap<cr>:set wrap?<cr>
+nmap <silent> <Leader>siw :set invwrap<cr>:set wrap?<cr>
 
 " Set up retabbing on a source file
 nmap <silent> <Leader>rr :1,$retab<cr>
@@ -93,7 +93,6 @@ imap <c-a> <c-o>^
 " buffer key mapping
 noremap <silent> <C-Tab> :bnext<cr>
 noremap <silent> <C-S-Tab> :bprevious<cr>
-noremap <silent> <Leader>ls :ls<cr>
 
 " simplified buffer flipping
 noremap <silent> <C-H> :wincmd h<cr>
@@ -109,9 +108,9 @@ noremap <silent> <Leader>l :wincmd l<cr>
 
 noremap <silent> <Leader>sp     :wincmd p<cr>
 noremap <silent> <Leader>se     :wincmd =<cr>
-noremap <silent> <Leader>sh     :resize +10'<cr>
+noremap <silent> <Leader>sh+    :resize +10'<cr>
 noremap <silent> <Leader>sh-    :resize -10'<cr>
-noremap <silent> <Leader>sv     :vertical resize +10<cr>
+noremap <silent> <Leader>sv+    :vertical resize +10<cr>
 noremap <silent> <Leader>sv-    :vertical resize -10<cr>
 
 " close windows
