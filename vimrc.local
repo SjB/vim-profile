@@ -27,80 +27,7 @@ au BufRead,BufNewFile *.definition set filetype=xml
     let g:unite_source_history_yank_enable = 1
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
-	" The prefix key.
-
-    noremap  <silent> <Leader>q  :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file/async file_rec/async<CR>
-    noremap  <silent> <Leader>d  :<C-u>UniteWithBufferDir -buffer-name=files -prompt=%\  buffer file_mru file/async file_rec/async<CR>
-    noremap  <silent> <Leader>x  :<C-u>Unite source<CR>
-    noremap  <silent> <Leader>i  :<C-u>Unite -buffer-name=outline outline<cr>
-    noremap  <silent> <Leader>y :<C-u>Unite -buffer-name=yank history/yank<cr>
-    noremap  <silent> <Leader>n  :<C-u>Unite -buffer-name=files jump_point file_point buffer_tab file_rec:! file file/new<CR>
-    noremap  <silent> <Leader>fb :<C-u>Unite -buffer-name=buffer buffer<cr>
-    noremap  <silent> <Leader>ft :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
-    noremap  <silent> <Leader>ff :<C-u>Unite -buffer-name=files file_mru file<cr>
-    noremap  <silent> <Leader>fa :<C-u>Unite -buffer-name=all buffer file_mru file/async file_rec/async<CR>
-    noremap  <silent> <Leader>fl  :<C-u>Unite line<CR>
-    noremap  <silent> <Leader>fz  :<C-u>Unite -buffer-name=resume resume<CR>
-    noremap  <silent> <Leader>fr  :<C-u>Unite -buffer-name=register register<CR>
-    noremap  <silent> <Leader>fm :<C-u>Unite output:message<CR>
-    noremap  <silent> <Leader>fk :<C-u>Unite -buffer-name=bookmark bookmark<cr>
-    noremap  <silent> <Leader>ma :<C-u>Unite mapping<cr>
-
-
-	call unite#custom#profile('default', 'context', {
-	\   'start_insert': 1,
-    \   'no-split': 1
-	\ })
-
-	autocmd FileType unite call s:unite_my_settings()
-	function! s:unite_my_settings()"{{{
-	  " Overwrite settings.
-
-      imap <buffer> jj      <Plug>(unite_insert_leave)
-      " Enable navigation with control-j and control-k in insert mode
-      imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-      imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-
-      imap <buffer><expr> j unite#smart_map('j', '')
-      imap <buffer> <C-w>     <Plug>(unite_delete_backward_path)
-
-      imap <buffer> '     <Plug>(unite_quick_match_default_action)
-      nmap <buffer> '     <Plug>(unite_quick_match_default_action)
-
-      imap <buffer><expr> x unite#smart_map('x', "\<Plug>(unite_quick_match_choose_action)")
-      nmap <buffer> x     <Plug>(unite_quick_match_choose_action)
-
-      nmap <buffer> <C-z>     <Plug>(unite_toggle_transpose_window)
-      imap <buffer> <C-z>     <Plug>(unite_toggle_transpose_window)
-
-      imap <buffer> <C-y>     <Plug>(unite_narrowing_path)
-      nmap <buffer> <C-y>     <Plug>(unite_narrowing_path)
-
-      nmap <buffer> <C-j>     <Plug>(unite_toggle_auto_preview)
-
-      nmap <buffer> <C-r>     <Plug>(unite_narrowing_input_history)
-      imap <buffer> <C-r>     <Plug>(unite_narrowing_input_history)
-      nnoremap <silent><buffer><expr> l
-                  \ unite#smart_map('l', unite#do_action('default'))
-
-      let unite = unite#get_current_unite()
-      if unite.profile_name ==# 'search'
-          nnoremap <silent><buffer><expr> r     unite#do_action('replace')
-      else
-          nnoremap <silent><buffer><expr> r     unite#do_action('rename')
-      endif
-
-	  nnoremap <silent><buffer><expr> cd     unite#do_action('lcd')
-	  nnoremap <buffer><expr> S      unite#mappings#set_current_filters(
-	          \ empty(unite#mappings#get_current_filters()) ?
-	          \ ['sorter_reverse'] : [])
-    noremap  <silent> <Leader>b :<C-u>Unite -buffer-name=buffer buffer<cr>
-
-	  imap <silent><buffer><expr> <C-o>     unite#do_action('split')
-	  imap <silent><buffer><expr> <C-v>     unite#do_action('vsplit')
-	endfunction"}}}
-
-	if executable('jvgrep')
+    if executable('jvgrep')
 	  " For jvgrep.
 	  let g:unite_source_grep_command = 'jvgrep'
 	  let g:unite_source_grep_default_opts = '-i --exclude ''\.(git|svn|hg|bzr)'''
@@ -109,9 +36,9 @@ au BufRead,BufNewFile *.definition set filetype=xml
 
 	" For ack.
 	if executable('ack-grep')
-	  " let g:unite_source_grep_command = 'ack-grep'
-	  " let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'
-	  " let g:unite_source_grep_recursive_opt = ''
+	  let g:unite_source_grep_command = 'ack-grep'
+	  let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'
+	  let g:unite_source_grep_recursive_opt = ''
 	endif
 
 " }
