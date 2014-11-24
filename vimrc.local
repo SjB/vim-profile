@@ -25,7 +25,40 @@ au BufRead,BufNewFile *.definition set filetype=xml
 
 " unite {
     let g:unite_source_history_yank_enable = 1
+    let g:unite_enable_start_insert = 1
+    let g:unite_enable_short_source_names = 1
+    let g:unite_cursor_line_highlight = 'CursorLine'
+    "    let g:unite_update_time = 100
+    let g:unite_source_file_mru_limit = 100
+    let g:unite_source_file_mru_filename_format = ':~:.'
+    let g:unite_source_file_mru_time_format = ''
+    let g:unite_source_sesions_enable_auto_save = 1
+
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
+    call unite#filters#sorter_default#use(['sorter_rank'])
+
+    call unite#custom#profile('default', 'context', {
+    \   'no-split': 1
+	\ })
+
+    " ignore stuff when using the following filters
+    call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
+                \ 'ignore_pattern', join([
+                \ '\.git/',
+                \ 'git5/.*/review/',
+                \ 'google/obj/',
+                \ 'tmp/',
+                \ '.sass-cache',
+                \ 'node_modules/',
+                \ 'bower_components/',
+                \ 'dist/',
+                \ '.git5_specs/',
+                \ '.pyc',
+                \ ], '\|'))
+
+    " limit matches
+    call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
+                \ 'max_candidates', 10)
 
     if executable('jvgrep')
 	  " For jvgrep.
