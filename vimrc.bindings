@@ -4,18 +4,16 @@ let mapleader = ','
 " Some helpers to edit mode
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=escape(expand('%:h'), ' ').'/'<cr>
-map <Leader>e   :e %%
-map <Leader>sp  :sp %%
-map <Leader>vsp :vsp %%
-map <Leader>el  :e .lvimrc<cr>
-map <Leader>sb  :source ~/.vimrc<cr>
 
+map <Leader>ef  :e %%
+map <Leader>el  :e .lvimrc<cr>
 map <Leader>eb :e ~/.vim/vimrc.bindings"<cr><cr>
 map <Leader>ev :e ~/Dropbox/Notes/vim-cheatsheet.txt<cr>
 map <Leader>ec :e ~/Dropbox/Notes/coding-journals.txt<cr>
 map <Leader>ed :e ~/Dropbox/Notes/debugging-journals.txt<cr>
 map <Leader>en :e ~/Dropbox/Notes/nca-journals.txt<cr>
-map <Leader>es :e ~/Dropbox/Notes/sagacity-journals.txt<cr>
+map <Leader>ej :e ~/Dropbox/Notes/sagacity-journals.txt<cr>
+map <Leader>es :UltiSnipsEdit<cr>
 
 map <Leader>0 :e#<cr>
 map <Leader>1 :1b<cr>
@@ -42,12 +40,12 @@ map <Leader>s :set spell!<cr>
 " xnoremap <f1> "zy:!firefox "http://www.google.com/search?q=<c-r>=substitute(@z,' ','%20','g')<cr>"<return>gv
 
 " Vundle
-nmap <Leader>bi :source ~/.vimrc<cr>:PluginInstall<cr>
+map <Leader>sb  :source ~/.vimrc<cr>
+nmap <Leader>sp :source ~/.vimrc<cr>:PluginInstall<cr>
 
 map <Leader>cp ggVG"*y
 map <Leader>p :set paste<cr>o<esc>"*]p:set nopaste<cr>
 
-map <Leader>use :UltiSnipsEdit<cr>
 
 " Breaking lines with \[enter] without having to go to insert mode (myself).
 nmap <leader><cr> i<cr><Esc>
@@ -78,17 +76,12 @@ nmap <silent> <Leader>rc :@"<cr>
 map <S-F5> :execute "source ".input("Load session: ", "~/.vim/session/", "file")<cr>
 map <F5> :execute "mksession! ".input("Save session: ", "~/.vim/session/", "file")\| :echo "Session saved."<CR>
 
-" allow command line editing like emacs
-"cnoremap <C-A>      <Home>
-"cnoremap <C-B>      <Left>
-"cnoremap <C-E>      <End>
-"cnoremap <C-F>      <Right>
-"cnoremap <C-N>      <End>
-"cnoremap <C-P>      <Up>
-
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
+
+map <Leader>sh  :sp %%
+map <Leader>sv  :vsp %%
 
 " buffer key mapping
 noremap <silent> <C-Tab> :bnext<cr>
@@ -150,7 +143,7 @@ nmap <leader>f8 :set foldlevel=8<CR>
 nmap <leader>f9 :set foldlevel=9<CR>
 
 " Find merge conflict markers
-map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+map <leader>mc /\v^[<\|=>]{7}( .*\|$)<CR>
 
 " Shortcuts
 " Change Working Directory to that of the current file
@@ -211,49 +204,47 @@ inoremap <expr><C-l>     neocomplcache#complete_common_string()
 noremap <silent> <Leader>I :Intellisense<cr>
 
 " map F12 to Toggle NERD Tree view
-noremap <silent> <F12> :NERDTreeToggle<cr>
-inoremap <silent> <F12> :NERDTreeToggle<cr>
-noremap <Leader>tn :NERDTreeToggle<cr>
+noremap  <silent> <F12>     :NERDTreeToggle<cr>
+inoremap <silent> <F12>     :NERDTreeToggle<cr>
+noremap  <Leader>tn         :NERDTreeToggle<cr>
 
 " Tagbar mappings
-noremap <silent> <c-F12> :TagbarToggle<cr>
-inoremap <silent> <c-F12> :TagbarToggle<cr>
-noremap <Leader>tg :TagbarToggle<cr>
+noremap  <silent> <c-F12>   :TagbarToggle<cr>
+inoremap <silent> <c-F12>   :TagbarToggle<cr>
+noremap  <Leader>tg         :TagbarToggle<cr>
 
-noremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
-inoremap <silent> <F10> :BufExplorerHorizontalSplit<cr>
-noremap <Leader>tb :BufExplorerHorizontalSplit<cr>
+" toggle UndoTree
+noremap  <silent> <c-F10>   :UndotreeToggle<cr>
+inoremap <silent> <c-F10>   :UndotreeToggle<cr>
+noremap  <Leader>tu         :UndotreeToggle<cr>
 
 " trailing-whitespace setting
 nmap <Leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
-noremap <silent> <Leader>w :FixWhitespace<cr>
+noremap <silent> <Leader>wf :FixWhitespace<cr>
 noremap <silent> <Leader>ws :highlight link ExtraWhitespace Search<cr>
 noremap <silent> <Leader>wh :highlight link ExtraWhitespace None<cr>
 
-" UndoTree {
-    nnoremap <Leader>u :UndotreeToggle<CR>
-"}
 
 " Unite {
     " The prefix key.
 
-    nnoremap  <silent> <Leader>q  :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file_rec/async:!<CR>
-    nnoremap  <silent> <Leader>d  :<C-u>UniteWithBufferDir -buffer-name=files -prompt=%\  buffer file_mru file_rec/async:!<CR>
-    nnoremap  <silent> <Leader>x  :<C-u>Unite source<CR>
-    nnoremap  <silent> <Leader>i  :<C-u>Unite -buffer-name=outline outline<cr>
-    nnoremap  <silent> <Leader>y :<C-u>Unite -buffer-name=yank history/yank<cr>
-    nnoremap  <silent> <Leader>n  :<C-u>Unite -buffer-name=files jump_point file_point buffer file_rec/async:! file file/new<CR>
-    nnoremap  <silent> <Leader>/  :<C-u>Unite -buffer-name=search grep:.<cr>
-    nnoremap  <silent> <Leader>fb :<C-u>Unite -buffer-name=buffer buffer<cr>
-    nnoremap  <silent> <Leader>ft :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
-    nnoremap  <silent> <Leader>ff :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
-    nnoremap  <silent> <Leader>fa :<C-u>Unite -buffer-name=all buffer file_mru file_rec/async:!<CR>
-    nnoremap  <silent> <Leader>fl  :<C-u>Unite line<CR>
-    nnoremap  <silent> <Leader>fz  :<C-u>Unite -buffer-name=resume resume<CR>
-    nnoremap  <silent> <Leader>fr  :<C-u>Unite -buffer-name=register register<CR>
-    nnoremap  <silent> <Leader>fm :<C-u>Unite output:message<CR>
-    nnoremap  <silent> <Leader>fk :<C-u>Unite -buffer-name=bookmark bookmark<cr>
-    nnoremap  <silent> <Leader>ma :<C-u>Unite mapping<cr>
+    nnoremap  <silent> <Leader>uc   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file_rec/async:!<CR>
+    nnoremap  <silent> <Leader>ub   :<C-u>UniteWithBufferDir -buffer-name=files -prompt=%\  buffer file_mru file_rec/async:!<CR>
+    nnoremap  <silent> <Leader>ux   :<C-u>Unite source<CR>
+    nnoremap  <silent> <Leader>uo   :<C-u>Unite -buffer-name=outline outline<cr>
+    nnoremap  <silent> <Leader>uy   :<C-u>Unite -buffer-name=yank history/yank<cr>
+    nnoremap  <silent> <Leader>un   :<C-u>Unite -buffer-name=files jump_point file_point buffer file_rec/async:! file file/new<CR>
+    nnoremap  <silent> <Leader>u/   :<C-u>Unite -buffer-name=search grep:.<cr>
+    nnoremap  <silent> <Leader>ub   :<C-u>Unite -buffer-name=buffer buffer<cr>
+    nnoremap  <silent> <Leader>ut   :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
+    nnoremap  <silent> <Leader>uf   :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
+    nnoremap  <silent> <Leader>ua   :<C-u>Unite -buffer-name=all buffer file_mru file_rec/async:!<CR>
+    nnoremap  <silent> <Leader>ul   :<C-u>Unite line<CR>
+    nnoremap  <silent> <Leader>uz   :<C-u>Unite -buffer-name=resume resume<CR>
+    nnoremap  <silent> <Leader>ur   :<C-u>Unite -buffer-name=register register<CR>
+    nnoremap  <silent> <Leader>um   :<C-u>Unite output:message<CR>
+    nnoremap  <silent> <Leader>uk   :<C-u>Unite -buffer-name=bookmark bookmark<cr>
+    nnoremap  <silent> <Leader>ua   :<C-u>Unite mapping<cr>
 
 
     autocmd FileType unite call s:unite_my_settings()
@@ -308,7 +299,7 @@ noremap <silent> <Leader>wh :highlight link ExtraWhitespace None<cr>
 
 map <C-c><C-d> :Frisk -ddgoog<space>
 
-map     <C-\>   <Plug>(easymotion-sn)
+map <C-\>   <Plug>(easymotion-sn)
 
 " 1-character _inclusive_ Sneak (for enhanced 'f')
 nmap f <Plug>Sneak_f
@@ -335,15 +326,15 @@ augroup myfiletypes
 
     autocmd FileType go map <C-c><C-s> :Frisk -gowalker<space>
     
-    au FileType go nmap <Leader>ti <Plug>(go-info)
-    au FileType go nmap <Leader>td <Plug>(go-doc)
-    au FileType go nmap <Leader>tdv <Plug>(go-doc-vertical)
-    au FileType go nmap <Leader>tdb <Plug>(go-doc-browser)
-    au FileType go nmap <Leader>tds <Plug>(go-def-split)
-    au FileType go nmap <Leader>tdvs <Plug>(go-def-vertical)
+    au FileType go nmap <Leader>goi <Plug>(go-info)
+    au FileType go nmap <Leader>god <Plug>(go-doc)
+    au FileType go nmap <Leader>govd <Plug>(go-doc-vertical)
+    au FileType go nmap <Leader>gob <Plug>(go-doc-browser)
+    au FileType go nmap <Leader>gos <Plug>(go-def-split)
+    au FileType go nmap <Leader>govs <Plug>(go-def-vertical)
 
-    au FileType go nmap <leader>tr <Plug>(go-run)
-    au FileType go nmap <leader>tb <Plug>(go-build)
-    au FileType go nmap <leader>tt <Plug>(go-test)
+    au FileType go nmap <leader>gor <Plug>(go-run)
+    au FileType go nmap <leader>gob <Plug>(go-build)
+    au FileType go nmap <leader>got <Plug>(go-test)
 augroup END
 
