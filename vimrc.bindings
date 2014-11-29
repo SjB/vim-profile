@@ -228,23 +228,23 @@ noremap <silent> <Leader>wh :highlight link ExtraWhitespace None<cr>
 " Unite {
     " The prefix key.
 
-    nnoremap  <silent> <Leader>uc   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file_rec/async:!<CR>
-    nnoremap  <silent> <Leader>ub   :<C-u>UniteWithBufferDir -buffer-name=files -prompt=%\  buffer file_mru file_rec/async:!<CR>
-    nnoremap  <silent> <Leader>ux   :<C-u>Unite source<CR>
-    nnoremap  <silent> <Leader>uo   :<C-u>Unite -buffer-name=outline outline<cr>
-    nnoremap  <silent> <Leader>uy   :<C-u>Unite -buffer-name=yank history/yank<cr>
-    nnoremap  <silent> <Leader>un   :<C-u>Unite -buffer-name=files jump_point file_point buffer file_rec/async:! file file/new<CR>
-    nnoremap  <silent> <Leader>u/   :<C-u>Unite -buffer-name=search grep:.<cr>
-    nnoremap  <silent> <Leader>ub   :<C-u>Unite -buffer-name=buffer buffer<cr>
-    nnoremap  <silent> <Leader>ut   :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
-    nnoremap  <silent> <Leader>uf   :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
-    nnoremap  <silent> <Leader>ua   :<C-u>Unite -buffer-name=all buffer file_mru file_rec/async:!<CR>
-    nnoremap  <silent> <Leader>ul   :<C-u>Unite line<CR>
-    nnoremap  <silent> <Leader>uz   :<C-u>Unite -buffer-name=resume resume<CR>
-    nnoremap  <silent> <Leader>ur   :<C-u>Unite -buffer-name=register register<CR>
-    nnoremap  <silent> <Leader>um   :<C-u>Unite output:message<CR>
-    nnoremap  <silent> <Leader>uk   :<C-u>Unite -buffer-name=bookmark bookmark<cr>
-    nnoremap  <silent> <Leader>ua   :<C-u>Unite mapping<cr>
+    nnoremap  <silent> <Leader>fc   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file_rec/async:!<CR>
+    nnoremap  <silent> <Leader>fb   :<C-u>UniteWithBufferDir -buffer-name=files -prompt=%\  buffer file_mru file_rec/async:!<CR>
+    nnoremap  <silent> <Leader>fx   :<C-u>Unite source<CR>
+    nnoremap  <silent> <Leader>fo   :<C-u>Unite -buffer-name=outline outline<cr>
+    nnoremap  <silent> <Leader>fy   :<C-u>Unite -buffer-name=yank history/yank<cr>
+    nnoremap  <silent> <Leader>fn   :<C-u>Unite -buffer-name=files jump_point file_point buffer file_rec/async:! file file/new<CR>
+    nnoremap  <silent> <Leader>f/   :<C-u>Unite -buffer-name=search grep:.<cr>
+    nnoremap  <silent> <Leader>fb   :<C-u>Unite -buffer-name=buffer buffer<cr>
+    nnoremap  <silent> <Leader>ft   :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
+    nnoremap  <silent> <Leader>ff   :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
+    nnoremap  <silent> <Leader>fu   :<C-u>Unite -buffer-name=all buffer file_mru file_rec/async:!<CR>
+    nnoremap  <silent> <Leader>fl   :<C-u>Unite line<CR>
+    nnoremap  <silent> <Leader>fz   :<C-u>Unite -buffer-name=resume resume<CR>
+    nnoremap  <silent> <Leader>fr   :<C-u>Unite -buffer-name=register register<CR>
+    nnoremap  <silent> <Leader>fm   :<C-u>Unite output:message<CR>
+    nnoremap  <silent> <Leader>fk   :<C-u>Unite -buffer-name=bookmark bookmark<cr>
+    nnoremap  <silent> <Leader>fk   :<C-u>Unite mapping<cr>
 
 
     autocmd FileType unite call s:unite_my_settings()
