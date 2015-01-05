@@ -244,7 +244,7 @@ noremap <silent> <Leader>wh :highlight link ExtraWhitespace None<cr>
     nnoremap  <silent> <Leader>fr   :<C-u>Unite -buffer-name=register register<CR>
     nnoremap  <silent> <Leader>fm   :<C-u>Unite output:message<CR>
     nnoremap  <silent> <Leader>fk   :<C-u>Unite -buffer-name=bookmark bookmark<cr>
-    nnoremap  <silent> <Leader>fk   :<C-u>Unite mapping<cr>
+    nnoremap  <silent> <Leader>ma   :<C-u>Unite mapping<cr>
 
 
     autocmd FileType unite call s:unite_my_settings()
