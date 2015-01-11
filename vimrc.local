@@ -101,7 +101,7 @@ let g:bufExplorerSplitBelow=0
 " }
 
 " Ultisnips {
-    let g:UltiSnipsSnippetDirectories=["UltiSnips", "bundle/vim-snippets/UltiSnips/", "bundle/angular-vim-snippets/UltiSnips"]
+    let g:UltiSnipsSnippetDirectories=["UltiSnips", "bundle/vim-snippets/UltiSnips/", "bundle/angular-vim-snippets/UltiSnips", "bundle/vim-go/gosnippets/UltiSnips"]
 
     " make YCM compatible with UltiSnips (using supertab)
     let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
