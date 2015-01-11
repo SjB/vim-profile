@@ -332,7 +332,7 @@ augroup myfiletypes
     au FileType go nmap <Leader>gob <Plug>(go-doc-browser)
     au FileType go nmap <Leader>gos <Plug>(go-def-split)
     au FileType go nmap <Leader>govs <Plug>(go-def-vertical)
-
+    au FileType go nmap <Leader>gof call go#fmt#Format(-1)
     au FileType go nmap <leader>gor <Plug>(go-run)
     au FileType go nmap <leader>gob <Plug>(go-build)
     au FileType go nmap <leader>got <Plug>(go-test)
