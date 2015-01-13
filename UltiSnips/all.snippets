@@ -1,4 +1,4 @@
-snippet copyright
+snippet copyright "# commented copyright header" b
 	# -*- coding: UTF-8 -*-
 	#
 	# ${1:`!v expand('%')`}
@@ -6,7 +6,15 @@ snippet copyright
 	${3}
 endsnippet
 
-snippet sagacity "Copyright Sagacity" b
-// Copyright (c) `!v strftime("%Y")` Sagacity Solutions Inc. All right reserved.
+snippet copyright "generic copyright header" 
+Copyright (c) `!v strftime("%Y")` ${2:`!v g:snips_author`}. All Rights Reserved.
+endsnippet
+
+snippet copysagacity "Copyright Sagacity" 
+Copyright (c) `!v strftime("%Y")` Sagacity Solutions Inc. All right reserved.
+endsnippet
+
+snippet copynca "Copyright NCA" 
+Copyright (c) `!v strftime("%Y")` Sagacity Solutions Inc. All right reserved.
 endsnippet
 
