@@ -67,6 +67,10 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'dahu/grope'
 Plugin 'editorconfig/editorconfig-vim'
 
+Plugin 'leafgarland/typescript-vim'
+Plugin 'clausreinke/typescript-tools'
+Plugin 'jason0x43/vim-js-indent'
+
 " vim-script repos
 Plugin 'bufkill.vim'
 Plugin 'matchit.zip'
