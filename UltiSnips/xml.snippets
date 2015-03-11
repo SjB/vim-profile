@@ -1,3 +1,9 @@
 snippet Compile "Protobuild Compile entry" b
-	<Compile Include="${1}" />$0
+<Compile Include="${1}" />
+$0
+endsnippet
+
+snippet package "nuget package tag" b
+<package id="${1}" version="${2}" targetFramework="${3}" />
+$0
 endsnippet
