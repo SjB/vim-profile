@@ -32,6 +32,16 @@ interface ${1:`!p snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent
 }
 endsnippet
 
+snippet "copyright" "Page Copyright Header" b
+//
+// Copyright (c) `!v strftime("%Y")` Sagacity Solutions Inc
+//
+// Author:
+//		${1:`!v g:snips_author`}
+//
+$0
+endsnippet
+
 snippet "header nca" "Page Header" b
 //
 // `!p snip.rv = snip.fn`
