@@ -57,7 +57,6 @@ if WINDOWS()
     set shellslash
 endif
 
-"set autowrite                       " Automatically write a file when leaving a modified buffer
 set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 set virtualedit=onemore             " Allow for cursor beyond last character
@@ -112,7 +111,9 @@ set scrolljump=5                " Lines to scroll when cursor leaves screen
 set sidescrolloff=2
 set laststatus=2
 set ttyfast
-set lazyredraw
+"set lazyredraw
+set re=1
+
 
 set incsearch                   " Find as you type search
 set ignorecase                  " Case insensitive search
@@ -149,7 +150,6 @@ set splitright
 set splitbelow
 set textwidth=79
 
-
 " vim setting
 "set ch=2 	" Make command line two lines high
 "set backspace=eol,indent,start
@@ -163,9 +163,9 @@ set nowritebackup
 set noswapfile
 set directory=/tmp
 
-set synmaxcol=2048
+set synmaxcol=120
 set ttimeout
-set ttimeoutlen=500
+set ttimeoutlen=100
 
 " These commands open folds
 set foldenable                  " Auto fold code
@@ -194,18 +194,10 @@ endif
 " reset the path when entering a buffer
 " autocmd BufEnter * set path+=**
 
-" Return to last edit position when opening files
-autocmd BufReadPost * call SetCursorPosition()
-function! SetCursorPosition()
-    if &filetype !~ 'svn\|commit\c'
-        if line("'\"") > 0 && line("'\"") <= line("$")
-            exe "normal! g`\""
-            normal! zz
-        endif
-    end
-endfunction
-
 autocmd filetype svn,*commit* setlocal spell
+
+autocmd GuiEnter * set background&
+autocmd BufReadPost quickfix map <buffer> <leader>qq :cclose<cr>|map <buffer> <c-p> <up>|map <buffer> <c-n> <down>
 
 " Remember info about open buffers on close
 set viminfo^=%
@@ -232,7 +224,7 @@ if has('gui_running')
         elseif OSX() && has("gui_running")
             set guifont=Andale\ Mono\ Regular:h16,Monaco:h12,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
         elseif WINDOWS() && has("gui_running")
-            set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
+            set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h11:cANSI,Courier_New:h10
         endif
     endif
 else
