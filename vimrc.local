@@ -6,6 +6,8 @@ if gitroot != ''
 endif
 
 au BufRead,BufNewFile *.definition set filetype=xml
+au BufRead,BufNewFile packages.*.config set filetype=xml
+au BufRead,BufNewFile packages.config set filetype=xml
 
 " CSApprox {
     let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
