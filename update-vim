@@ -14,3 +14,8 @@ popd
 pushd ~/.vim/bundle/vimproc.vim
 make
 popd
+
+NPM=`which npm`
+if [ -f $NPM ]; then
+	$NPM install -g typescript-tools
+fi
