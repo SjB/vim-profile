@@ -10,14 +10,12 @@ abstract
 endsnippet
 
 snippet pclass "public class"
-public class ${1:`!p
-snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }{
+public class ${1:`!p snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }{
 	$0
 }
 
 snippet class "class" b
-class ${1:`!p
-snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }{
+class ${1:`!p snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }{
 	$0
 }
 endsnippet
@@ -85,5 +83,32 @@ snippet nfunc "Function for Nunit"
 public void ${2:TestFunction}()
 {
 	$0
+}
+endsnippet
+
+snippet EtoPanel "Eto Panel"
+using Eto.Drawing;
+using Eto.Forms;
+
+namespace ${1}
+{
+	public class ${2:`!p snip.rv = snip.basename or "untitled"`}: Panel
+	{
+		public $2 ()
+		{
+			InitializeComponent();
+			Layout();
+		}
+
+		void InitializeComponent()
+		{
+
+		}
+
+		void Layout()
+		{
+
+		}
+	}
 }
 endsnippet
