@@ -137,6 +137,13 @@ else
     colorscheme molokai
 endif
 
+if has("autocmd") && exists("+omnifunc")
+	autocmd Filetype *
+		    \	if &omnifunc == "" |
+		    \		setlocal omnifunc=syntaxcomplete#Complete |
+		    \	endif
+endif
+
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
