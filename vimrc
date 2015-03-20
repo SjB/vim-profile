@@ -199,6 +199,11 @@ autocmd filetype svn,*commit* setlocal spell
 autocmd GuiEnter * set background&
 autocmd BufReadPost quickfix map <buffer> <leader>qq :cclose<cr>|map <buffer> <c-p> <up>|map <buffer> <c-n> <down>
 
+au BufRead,BufNewFile *.definition set filetype=xml
+au BufRead,BufNewFile packages.*.config set filetype=xml
+au BufRead,BufNewFile packages.config set filetype=xml
+au BufRead,BufNewFile *.es6 set filetype=javascript
+
 " Remember info about open buffers on close
 set viminfo^=%
 
