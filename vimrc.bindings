@@ -31,8 +31,6 @@ imap <C-c> <esc>:<Space>
 " (e.g. in .bashrc or .zshrc)
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
-map <C-c><C-n> :cn<CR>
-map <C-c><C-p> :cp<CR>
 map ; :
 
 map <Leader>s :set spell!<cr>
@@ -43,22 +41,16 @@ map <Leader>s :set spell!<cr>
 map <Leader>sb  :source ~/.vimrc<cr>
 nmap <Leader>sp :source ~/.vimrc<cr>:PluginInstall<cr>
 
-map <Leader>cp ggVG"*y
-map <Leader>p :set paste<cr>o<esc>"*]p:set nopaste<cr>
-
-
 " Breaking lines with \[enter] without having to go to insert mode (myself).
 nmap <leader><cr> i<cr><Esc>
 
-" F9  - Run external make command
-noremap <silent> <f9> :echo "Running waf..."<cr>:sil! ./waf<cr>:cw<cr>:redraw!<cr>:echo "waf complete."<cr>
-
+" copy full buffer into clipboard
+map <Leader>cp ggVG"*y
+map <Leader>p :set paste<cr>o<esc>"*]p:set nopaste<cr>
 " Toggle paste mode
 nmap <silent> <Leader>sip :set invpaste<cr>:set paste?<cr>
-
 " Turn off that stupid highlight search
 nmap <silent> <Leader>hls :set invhls<cr>:set hls?<cr>
-
 " Set text wrapping toggles
 nmap <silent> <Leader>siw :set invwrap<cr>:set wrap?<cr>
 
@@ -79,9 +71,6 @@ map <F5> :execute "mksession! ".input("Save session: ", "~/.vim/session/", "file
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
-
-map <Leader>sh  :sp %%
-map <Leader>sv  :vsp %%
 
 " buffer key mapping
 noremap <silent> <C-Tab> :bnext<cr>
@@ -177,6 +166,18 @@ nmap <Leader>fa [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 " FIXME: Revert this f70be548
 " fullscreen mode for GVIM and Terminal, need 'wmctrl' in you PATH
 map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
+
+map <silent> <F1> <Esc>
+map! <sient> <F1> <Esc>
+
+nmap <silent> <F6> :if &previewwindow<Bar>pclose<Bar>elseif exists(':Gstatus')<Bar>exe 'Gstatus'<Bar>else<Bar>ls<Bar>endif<CR>
+nmap <silent> <F7> :if exists(':Lcd')<Bar>exe 'Lcd'<Bar>elseif exists(':Cd')<Bar>exe 'Cd'<Bar>else<Bar>lcd %:h<Bar>endif<CR>
+map <F8>    :Make<CR>
+map <F9>    :Dispatch<CR>
+map <F10>   :Start<CR>
+
+noremap  <S-Insert> <MiddleMouse>
+noremap! <S-Insert> <MiddleMouse>
 
 "nnoremap <leader>. :CtrlPMixed<cr>
 
