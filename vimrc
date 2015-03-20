@@ -207,16 +207,6 @@ au BufRead,BufNewFile *.es6 set filetype=javascript
 " Remember info about open buffers on close
 set viminfo^=%
 
-" make helpgrep easier to access
-cnoreabbrev H helpgrep
-
-" IMPORTANT: Uncomment one of the following lines to force
-" using 256 colors (or 88 colors) if your terminal supports it,
-" but does not automatically use 256 colors by default.
-set t_Co=256
-set t_ut=
-"set t_Co=88
-
 " GVIM- (here instead of .gvimrc)
 if has('gui_running')
     set guioptions=aegitcf
@@ -233,10 +223,12 @@ if has('gui_running')
         endif
     endif
 else
-    if &term == 'xterm' || &term == 'screen'
-        set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
-    endif
-    "set term=builtin_ansi       " Make arrow and other keys work
+	" IMPORTANT: Uncomment one of the following lines to force
+	" using 256 colors (or 88 colors) if your terminal supports it,
+	" but does not automatically use 256 colors by default.
+	set t_Co=256
+	set t_ut=
+	"set t_Co=88
 endif
 
 if filereadable(expand("~/.vim/vimrc.local"))
