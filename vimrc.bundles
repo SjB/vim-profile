@@ -139,6 +139,8 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 "Plugin 'walm/jshint.vim'
 "Plugin 'jamescarr/snipmate-nodejs'
 
+Plugin 'SyntaxComplete'
+
 Plugin 'looks'
 " Colorscheme
 Plugin 'fmeyer/vim-pigraph'

@@ -49,8 +49,6 @@ endfunction
 let g:sneak#streak = 1
 let g:sneak#s_next = 1
 
-set omnifunc=syntaxcomplete#Complete
-
 " omnicppcomplete setting {
     "set completeopt=menuone
     let g:OmniCpp_GlobalScopeSearch=1
