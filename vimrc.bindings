@@ -339,3 +339,5 @@ augroup myfiletypes
     au FileType go nmap <leader>got <Plug>(go-test)
 augroup END
 
+" make helpgrep easier to access
+cnoreabbrev H helpgrep
