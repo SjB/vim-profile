@@ -7,3 +7,17 @@ snippet package "nuget package tag" b
 <package id="${1}" version="${2}" targetFramework="${3}" />
 $0
 endsnippet
+
+snippet module "module.xml Protobuild" b
+<?xml version="1.0" encoding="utf-8"?>
+<ModuleInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>${1}</Name>
+  <DefaultAction>${2:resync}</DefaultAction>
+  <DefaultStartupProject>${3}</DefaultStartupProject>
+  <GenerateNuGetRepositories>true</GenerateNuGetRepositories>
+  <DisableSynchronisation xsi:nil="true" />
+  <ModuleAssemblies />
+</ModuleInfo>
+$0
+endsnippet
+
