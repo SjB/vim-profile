@@ -145,6 +145,9 @@ Plugin 'claco/jasmine.vim'
 "Plugin 'walm/jshint.vim'
 "Plugin 'jamescarr/snipmate-nodejs'
 
+" Vala plugins
+Plugin 'tkztmk/vim-vala'
+
 Plugin 'SyntaxComplete'
 
 Plugin 'looks'
