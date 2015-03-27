@@ -51,6 +51,8 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 
+Plugin 'myusuf3/numbers.vim'
+
 Plugin 'gregsexton/MatchTag'
 Plugin 'godlygeek/csapprox'
 Plugin 'mhinz/vim-signify'
