@@ -35,7 +35,6 @@ map ; :
 
 map <Leader>s :set spell!<cr>
 
-" xnoremap <f1> "zy:!firefox "http://www.google.com/search?q=<c-r>=substitute(@z,' ','%20','g')<cr>"<return>gv
 
 " Vundle
 map <Leader>sb  :source ~/.vimrc<cr>
@@ -65,8 +64,8 @@ nmap <silent> <Leader>md :!mkdir -p %:p:h<cr>
 nmap <silent> <Leader>rc :@"<cr>
 
 " saving and resoring session
-map <S-F5> :execute "source ".input("Load session: ", "~/.vim/session/", "file")<cr>
-map <F5> :execute "mksession! ".input("Save session: ", "~/.vim/session/", "file")\| :echo "Session saved."<CR>
+" map <S-F5> :execute "source ".input("Load session: ", "~/.vim/session/", "file")<cr>
+" map <F5> :execute "mksession! ".input("Save session: ", "~/.vim/session/", "file")\| :echo "Session saved."<CR>
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
@@ -75,12 +74,6 @@ imap <c-a> <c-o>^
 " buffer key mapping
 noremap <silent> <C-Tab> :bnext<cr>
 noremap <silent> <C-S-Tab> :bprevious<cr>
-
-" simplified buffer flipping
-noremap <silent> <C-H> :wincmd h<cr>
-noremap <silent> <C-L> :wincmd l<cr>
-noremap <silent> <C-J> :wincmd j<cr>
-noremap <silent> <C-K> :wincmd k<cr>
 
 " re-assign all windows keys
 noremap <silent> <Leader>h :wincmd h<cr>
@@ -298,8 +291,6 @@ noremap <silent> <Leader>wh :highlight link ExtraWhitespace None<cr>
 "}
 
 
-map <C-c><C-d> :Frisk -ddgoog<space>
-
 map <C-\>   <Plug>(easymotion-sn)
 
 " 1-character _inclusive_ Sneak (for enhanced 'f')
@@ -323,9 +314,16 @@ xmap T <Plug>Sneak_T
 omap t <Plug>Sneak_t
 omap T <Plug>Sneak_T
 
+map <C-k>d :Frisk -ddgoog<space>
+nmap <C-k># :Frisk -ddgoog <c-r>=expand("<cword>")<cr><cr>
+
 augroup myfiletypes
 
-    autocmd FileType go map <C-c><C-s> :Frisk -gowalker<space>
+    autocmd FileType cs map <C-k># :Frisk -ddgoog !msdn <c-r>=expand("<cword>")<cr><cr>
+    autocmd FileType cs map <C-k>s :Frisk -ddgoog !msdn<space>
+
+    autocmd FileType go map <C-k># :Frisk -gowalker <c-r>=expand("<cword>")<cr><cr>
+    autocmd FileType go map <C-k>s :Frisk -gowalker<space>
     
     au FileType go nmap <Leader>goi <Plug>(go-info)
     au FileType go nmap <Leader>god <Plug>(go-doc)
