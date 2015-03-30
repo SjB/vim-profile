@@ -4,7 +4,12 @@ vim +PluginUpdate +qall
 
 ACKGREP=`which ack-grep`
 if [ -z ${ACKGREP} ]; then
-    sudo apt-get install ack-grep
+    sudo apt-get -y install ack-grep
+fi
+
+CMAKE=`which cmake`
+if [ -z ${CMAKE} ]; then
+    sudo apt-get -y install cmake
 fi
 
 pushd ~/.vim/bundle/YouCompleteMe
