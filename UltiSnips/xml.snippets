@@ -21,3 +21,24 @@ snippet module "module.xml Protobuild" b
 $0
 endsnippet
 
+
+snippet definition "skeleton for a Protobuild definition file" b
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="${1:`!v expand('%:t:r')`}" Path="${2:$1}" Type="${3:App}" >
+	<Properties>
+		<RootNamespace>${4}</RootNamespace>
+		<FrameworkVersions>
+			<Version>v4.5</Version>
+		</FrameworkVersions>
+		<NoWarn>1591</NoWarn>
+	</Properties>
+	<References>
+		<Reference Include="System" />
+		<Reference Include="System.Core" />
+	</References>
+	<Files>
+		<Compile Include="Properties/AssemblyInfo.cs" />
+		$0
+	</Files>
+</Project>
+endsnippet
