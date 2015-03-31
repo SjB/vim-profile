@@ -222,17 +222,17 @@ noremap <silent> <Leader>wh :highlight link ExtraWhitespace None<cr>
 " Unite {
     " The prefix key.
 
-    nnoremap  <silent> <Leader>fc   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file_rec/async:!<CR>
-    nnoremap  <silent> <Leader>fd   :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru file_rec/async:!<CR>
+    nnoremap  <silent> <Leader>fc   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_rec/async file_mru:!<CR>
+    nnoremap  <silent> <Leader>fd   :<C-u>UniteWithBufferDir -buffer-name=files buffer file_rec/async file_mru:!<CR>
+    nnoremap  <silent> <Leader>fg   :<C-u>Unite -buffer-name=gitfiles buffer file_rec/git file_mru:!<CR>
     nnoremap  <silent> <Leader>fx   :<C-u>Unite source<CR>
     nnoremap  <silent> <Leader>fo   :<C-u>Unite -buffer-name=outline outline<cr>
     nnoremap  <silent> <Leader>fy   :<C-u>Unite -buffer-name=yank history/yank<cr>
     nnoremap  <silent> <Leader>fn   :<C-u>Unite -buffer-name=files jump_point file_point buffer file_rec/async:! file file/new<CR>
     nnoremap  <silent> <Leader>f/   :<C-u>Unite -buffer-name=search grep:.<cr>
     nnoremap  <silent> <Leader>fb   :<C-u>Unite -buffer-name=buffer buffer<cr>
-    nnoremap  <silent> <Leader>ft   :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
-    nnoremap  <silent> <Leader>ff   :<C-u>Unite -buffer-name=files file_mru file_rec/async:!<cr>
-    nnoremap  <silent> <Leader>fu   :<C-u>Unite -buffer-name=all buffer file_mru file_rec/async:!<CR>
+    nnoremap  <silent> <Leader>ff   :<C-u>Unite -buffer-name=files file_rec/git file_rec/async file_mru:!<cr>
+    nnoremap  <silent> <Leader>fu   :<C-u>Unite -buffer-name=all buffer file_rec/git file_rec/async file_mru:!<CR>
     nnoremap  <silent> <Leader>fl   :<C-u>Unite line<CR>
     nnoremap  <silent> <Leader>fz   :<C-u>Unite -buffer-name=resume resume<CR>
     nnoremap  <silent> <Leader>fr   :<C-u>Unite -buffer-name=register register<CR>
