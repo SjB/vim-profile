@@ -8,11 +8,11 @@ cnoremap %% <C-R>=escape(expand('%:h'), ' ').'/'<cr>
 map <Leader>ef  :e %%
 map <Leader>el  :e .lvimrc<cr>
 map <Leader>eb :e ~/.vim/vimrc.bindings"<cr><cr>
-map <Leader>ev :e ~/Dropbox/Notes/vim-cheatsheet.txt<cr>
-map <Leader>ec :e ~/Dropbox/Notes/coding-journals.txt<cr>
-map <Leader>ed :e ~/Dropbox/Notes/debugging-journals.txt<cr>
-map <Leader>en :e ~/Dropbox/Notes/nca-journals.txt<cr>
-map <Leader>ej :e ~/Dropbox/Notes/sagacity-journals.txt<cr>
+map <Leader>ev :e ~/Dropbox/Notes/vim-cheatsheet.md<cr>
+map <Leader>ec :e ~/Dropbox/Notes/coding-journals.md<cr>
+map <Leader>ed :e ~/Dropbox/Notes/debugging-journals.md<cr>
+map <Leader>en :e ~/Dropbox/Notes/nca-journals.md<cr>
+map <Leader>ej :e ~/Dropbox/Notes/sagacity-journals.md<cr>
 map <Leader>es :UltiSnipsEdit<cr>
 
 map <Leader>0 :e#<cr>
