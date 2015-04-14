@@ -186,7 +186,7 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
 autocmd filetype svn,*commit* setlocal spell
 autocmd GuiEnter * set background&
-autocmd BufReadPost quickfix map <buffer> <leader>qq :cclose<cr>|map <buffer> <c-p> <up>|map <buffer> <c-n> <down>
+"autocmd BufReadPost quickfix map <buffer> <leader>qq :cclose<cr>|map <buffer> <c-p> <up>|map <buffer> <c-n> <down>
 
 au BufRead,BufNewFile *.definition set filetype=xml
 au BufRead,BufNewFile packages.*.config set filetype=xml
