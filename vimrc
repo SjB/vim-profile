@@ -177,11 +177,6 @@ if has("persistent_undo")
     set undofile
 endif
 
-" Mark the ideal max text width
-"if v:version >= 703
-"	set colorcolumn=+1
-"endif
-
 " reset the path when entering a buffer
 " autocmd BufEnter * set path+=**
 
