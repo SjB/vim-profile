@@ -169,7 +169,6 @@ set diffopt+=iwhite
 " Set vim search path
 set path=/usr/include/**
 set path+=/usr/local/include/**
-set path+=~/Projects/lib/**
 
 " Starting from  vim 7.3 undo can be persisted across sessions
 " http://www.reddit.com/r/vim/comments/kz84u/what_are_some_simple_yet_mindblowing_tweaks_to/c2onmqe
