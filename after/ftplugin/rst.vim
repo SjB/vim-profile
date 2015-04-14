@@ -20,4 +20,3 @@ inoremap <C-u>4 <esc>yypVr-A
 noremap <C-u>5 yypVr^
 inoremap <C-u>5 <esc>yypVr^A
 
-

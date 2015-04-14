@@ -1,1 +1,0 @@
-setlocal omnifunc=syntaxcomplete#Complete
