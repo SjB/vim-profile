@@ -16,11 +16,6 @@ endfunction
 " fix ubuntu filetype bug
 set nocompatible
 
-if !WINDOWS()
-    set shell=/bin/sh
-endif
-
-
 " On Windows this make synchronization across system easier
 if WINDOWS()
     set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
@@ -57,18 +52,17 @@ if WINDOWS()
     set shellslash
 endif
 
+if !WINDOWS()
+    set shell=/bin/zsh
+endif
+
 set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 set virtualedit=onemore             " Allow for cursor beyond last character
 set history=50                    " Store a ton of history (default is 20)
 set spell                           " Spell checking on
 set hidden                          " Allow buffer switching without saving
-
 set showtabline=0
-
-" Instead of reverting the cursor to the last position in the buffer, we
-" set it to the first line when editing a git commit message
-au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
 if has('persistent_undo')
     set undofile                " So is persistent undo ...
@@ -77,7 +71,6 @@ if has('persistent_undo')
 endif
 
 set tabpagemax=15               " Only show 15 tabs
-
 set cursorline                  " Highlight current line
 
 highlight clear SignColumn      " SignColumn should match background
@@ -194,8 +187,11 @@ endif
 " reset the path when entering a buffer
 " autocmd BufEnter * set path+=**
 
-autocmd filetype svn,*commit* setlocal spell
+" Instead of reverting the cursor to the last position in the buffer, we
+" set it to the first line when editing a git commit message
+au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
+autocmd filetype svn,*commit* setlocal spell
 autocmd GuiEnter * set background&
 autocmd BufReadPost quickfix map <buffer> <leader>qq :cclose<cr>|map <buffer> <c-p> <up>|map <buffer> <c-n> <down>
 
