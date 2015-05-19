@@ -5,3 +5,15 @@ snippet copypy "commented copyright header" b
 # Copyright `!v &enc[:2] == "utf" ? "©" : "(c)"` `!v strftime("%Y")` ${2:`!v g:snips_author`}. All Rights Reserved.
 ${3}
 endsnippet
+
+snippet copyright "Generic copyright header" w
+Copyright (c) `!v strftime("%Y")` ${1:`!v g:snips_author`}. All Rights Reserved.
+${0}
+endsnippet
+
+snippet copynca "NCA copyright header" w
+Copyright (c) `!v strftime("%Y")` Steve Beaulac <steve@nca.uwo.ca>. All Rights Reserved.
+${0}
+endsnippet
+
+
