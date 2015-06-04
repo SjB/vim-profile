@@ -70,7 +70,7 @@ Plugin 'dahu/grope'
 Plugin 'editorconfig/editorconfig-vim'
 
 Plugin 'leafgarland/typescript-vim'
-Plugin 'clausreinke/typescript-tools'
+Plugin 'clausreinke/typescript-tools.vim'
 Plugin 'jason0x43/vim-js-indent'
 
 " vim-script repos
