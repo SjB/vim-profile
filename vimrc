@@ -203,7 +203,7 @@ if has('gui_running')
     set lines=40                " 40 lines of text instead of 24
     set antialias
 	if LINUX() && has("gui_running")
-		set guifont=Andale\ Mono\ Regular\ 16,Ubuntu\ Mono\ 12,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
+		set guifont=Ubuntu\ Mono\ 12,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
 	elseif OSX() && has("gui_running")
 		set guifont=Andale\ Mono\ Regular:h16,Monaco:h12,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
 	elseif WINDOWS() && has("gui_running")
