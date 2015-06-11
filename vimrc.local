@@ -176,3 +176,9 @@ call frisk#AddEngine('gowalker', 'https://gowalker.org/?q=')
 call frisk#AddEngine('ddgoog', 'http://www.duckduckgoog.com/?q=')
 
 command! -nargs=1 Ngrep vimgrep "<args>" ~/Dropbox/Notes/**/*
+
+if filereadable(expand("~/.vim/vimrc.omnisharp"))
+    source ~/.vim/vimrc.omnisharp
+endif
+
+
