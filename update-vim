@@ -13,7 +13,11 @@ if [ -z ${CMAKE} ]; then
 fi
 
 pushd ~/.vim/bundle/YouCompleteMe
-./install.sh --omnisharp-completer --clang-completer
+./install.sh --clang-completer
+popd
+
+pushd ~/.vim/bundle/omnisharp-vim/server
+xbuild
 popd
 
 pushd ~/.vim/bundle/vimproc.vim
