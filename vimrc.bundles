@@ -31,7 +31,7 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'OrangeT/vim-csharp'
+"Plugin 'OrangeT/vim-csharp'
 "Plugin 'jalcine/cmake.vim'
 
 Plugin 'Shougo/context_filetype.vim'
@@ -63,7 +63,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'SjB/refactor'
 Plugin 'SjB/devhelp.vim'
 Plugin 'SjB/gtk-vim-syntax'
-"Plugin 'SjB/vim-csharp'
+Plugin 'SjB/vim-csharp'
 
 Plugin 'localvimrc'
 Plugin 'arecarn/frisk.vim'
