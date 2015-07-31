@@ -132,6 +132,9 @@ let g:bufExplorerSplitBelow=0
         endif
 " }
 
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
+
 set background=dark
 let g:airline_theme="dark"
 if has("gui_running")

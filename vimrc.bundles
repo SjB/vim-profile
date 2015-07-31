@@ -76,6 +76,7 @@ Plugin 'clausreinke/typescript-tools.vim'
 Plugin 'jason0x43/vim-js-indent'
 
 " vim-script repos
+Plugin 'PreserveNoEOL'
 Plugin 'bufkill.vim'
 Plugin 'matchit.zip'
 Plugin 'argtextobj.vim'
