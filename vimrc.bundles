@@ -68,7 +68,6 @@ Plugin 'SjB/vim-csharp'
 Plugin 'localvimrc'
 Plugin 'arecarn/frisk.vim'
 Plugin 'tommcdo/vim-exchange'
-Plugin 'dahu/grope'
 Plugin 'editorconfig/editorconfig-vim'
 
 Plugin 'leafgarland/typescript-vim'
